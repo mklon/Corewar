@@ -16,7 +16,7 @@ void display()
 {
         glClear(GL_COLOR_BUFFER_BIT);
        
-        glColor3ub( 239, 211, 52);
+        glColor3ub( 0, 255, 0);
 		glRectf(-0.2f, 0.4f, 0.2f, 0.0f);
 		glEnd();
        
