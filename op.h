@@ -93,8 +93,4 @@ typedef struct		s_header
 	char				comment[COMMENT_LENGTH + 1];
 }					t_header;
 
-
-void	ft_usage(void);
-
-
 #endif
