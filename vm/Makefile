@@ -4,7 +4,7 @@ NAME = corewar
 CC = gcc
 CFLAGS = -g -Wall -Wextra -Werror
 
-FIL_I = ../op.h
+FIL_I = vm.h
 INCLUDES = -I $(FIL_I)
 
 SOURCE = corewar_main.c \
