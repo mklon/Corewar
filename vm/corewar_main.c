@@ -24,17 +24,18 @@ int		main(int ar, char **av)
 	if (ar == 1)
 		ft_usage();
 	else
+//		ft_printf("args"); // test
 		while (++i < ar)
 		{
 			if (is_flag(av[i])) // checks if arg is a flag and executes(?) one
 				;
-			else if (is_champ(av[i])) // checks if arg is a champ (*.cor) 
+			else if (is_champ(av[i])) // checks if arg is a champ (*.cor)
 			{
 				champs = get_champ(av[i], champs, j); // if !champs-array - malloc. reads bytecode to array, calls validate_champ function, returns array
 				j++;
 			}
 			else
-				error("invalid input"); // proper error message 
+				error("invalid input"); // proper error message
 		}
 	return (0);
 }
