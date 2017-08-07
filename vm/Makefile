@@ -9,6 +9,7 @@ INCLUDES = -I $(FIL_I)
 
 SOURCE = corewar_main.c \
 		ft_usage.c \
+		check_args.c \
         
 OBJECTS = $(SOURCE:.c=.o)
 
