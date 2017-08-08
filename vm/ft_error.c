@@ -2,7 +2,7 @@
 
 int 	ft_error(char *message)
 {
-	write(2, message, sizeof(message));
-	write(1, message, sizeof(message));
+
+	write(2, message, ft_strlen(message));
 	exit(1);
 }

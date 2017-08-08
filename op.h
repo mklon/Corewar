@@ -71,6 +71,8 @@ typedef char	t_arg_type;
 # define PROG_NAME_LENGTH		(128) // 132 = 128 + 4
 # define COMMENT_LENGTH			(2048) // 2052 = 2048 + 4
 # define COREWAR_EXEC_MAGIC		0xea83f3
+# define PROG_HEADER_LENGTH		(PROG_NAME_LENGTH + COMMENT_LENGTH + 16)
+# define FILE_MAX_LENGTH		(PROG_HEADER_LENGTH + CHAMP_MAX_SIZE)
 
 typedef struct		s_op
 {
