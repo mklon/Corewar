@@ -13,8 +13,8 @@ int		validate_champ(char *av)//(char **line, int i)
 	unsigned char *mag;
 	int fd;
 	unsigned int magic;
-	unsigned int prog_size=0;
-int i = 2215;
+//int i = 2215;//for zork.cor
+int i = 2216;
 
 	mag = ft_memalloc(2200);
 	fd = open(av, O_RDONLY);
@@ -40,6 +40,9 @@ int i = 2215;
 	magic |= (unsigned int)mag[139];
 	if (!((unsigned int)magic == i - 2192))
 	{
+	printf("i - 2192: %d\n", (i - 2192));
+	printf("magic: %u\n", magic);
+
 		ft_error("bad prog_size\n");
 		return (0);
 	}
@@ -48,7 +51,7 @@ int i = 2215;
 
 // void	read_error(char *line)
 // {
-	
+
 // }
 
 // int		validate_champ(char **line, int i)
