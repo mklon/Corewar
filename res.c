@@ -14,27 +14,34 @@
 
 int main()
 {
+	char	*c;
 	WINDOW *win;
         
 	initscr();
 	raw();
 	start_color();
-	init_color(COLOR_BLUE, 128, 128, 128);
+	init_pair(1, COLOR_GREEN, COLOR_MAGENTA);
+	init_color(COLOR_MAGENTA, 400, 400, 400);
 	attron(COLOR_PAIR(1));
-	hline(' ', 100);
-	vline(' ', 100);
-	init_pair(1, COLOR_GREEN, COLOR_BLUE);
-	init_pair(2, COLOR_BLUE, COLOR_RED);
-	mvprintw(2, 15, "Dialog     ");
-	attroff(COLOR_PAIR(1));
-	attron(COLOR_PAIR(2));
-	getch();
-	refresh();
+	hline(' ', 254);
+	vline(' ', 67);
+	move(0, 1);
+	vline(' ', 67);
+	move(66, 0);
+	hline(' ', 254);
+	move(0, 254);
+	vline(' ', 67);
+	move(0, 255);
+	vline(' ', 67);
+	move(0, 197);
+	vline(' ', 67);
 	move(0, 0);
-	printw("84845");
-	attroff(COLOR_PAIR(2));
-	while (getch() != 27)
-		;
+	while ((*c = getch()) != 27)
+	{
+		if (*c == 13)
+			move(0, 10);
+	}
+	attroff(COLOR_PAIR(1));
 	endwin();
 	return 0;
 }
