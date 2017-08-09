@@ -24,19 +24,14 @@ int		main(int ar, char **av)
 	if (ar == 1)
 		ft_usage();
 	else
-//		ft_printf("args"); // test
-//		check_magic(av[1]); // test magic
 		while (++i < ar)
 		{
 			if (is_flag(av, &i)) // checks if arg is a flag and adds to struct(yet to come)
 				;
 			else if (is_valid_champ(av[i], &champs, j)) // checks if arg is a champ (*.cor)
-//					else if (is_valid_champ(av[i], open(av[i], O_RDONLY), &champs, j)) // checks if arg is a champ (*.cor)
 				j++;
-//			else
-//			{
-//				ft_error("invalid input"); // proper error message
-//			}
 		}
+//	while(1)
+//		;
 	return (0);
 }
