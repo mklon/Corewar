@@ -1,5 +1,26 @@
 #include "vm.h"
 
+void	dump_map(char *line)
+{
+	int		i;
+	int		k;
+	int		j;
+
+	i = -1;
+	k = -1;
+	j = -1;
+	while (++k < 4096)
+	{
+		i = -1;
+		ft_printf("%d:", ++j);
+		while (++i < 32)
+		{
+			ft_printf("%d", (unsigned int)line[k]);
+		}
+		ft_printf("\n");
+	}
+}
+
 unsigned int 	is_valid_num(char *arg, char flag)
 {
 	int		num;
