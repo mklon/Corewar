@@ -2,7 +2,15 @@
 
 unsigned int 	is_valid_num(char *arg, char flag)
 {
-	return(num);
+	int		num;
+
+	num = ft_atoi(arg);
+	if (num <= 0)
+		ft_error("bad numb in input line\n");
+	if ((flag == 'n' && num <= MAX_PLAYERS) || flag == 'd')
+		return(num);
+	else
+		ft_error("bad numb of players in input line\n");
 }
 
 int 	is_flag(char **args, size_t *i)
@@ -79,7 +87,7 @@ int 	is_valid_champ(char *arg, char ***champs, size_t j)
 	if (!(*champs))
 	{
 		*champs = (char **)malloc(sizeof(char*) * (MAX_PLAYERS + 1));
-		*champs[MAX_PLAYERS] = NULL;
+        (*champs)[MAX_PLAYERS] = NULL;
 	}
 	fd = open(arg, O_RDONLY);
 	len = read(fd, line, FILE_MAX_LENGTH);
