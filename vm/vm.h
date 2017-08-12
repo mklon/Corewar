@@ -3,6 +3,20 @@
 
 #include "../op.h"
 
+typedef struct s_general	t_general;
+
+struct		s_general
+{
+	char	*field;
+	unsigned int	total_cycles;
+	unsigned int	cycle_to_die;
+	unsigned int	nbr_lives;
+	unsigned int	last_live;
+	unsigned int	dump;
+	char		**champs;
+
+
+};
 
 void	ft_usage(void);
 int 	ft_error(char *message);

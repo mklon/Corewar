@@ -2,7 +2,16 @@
 
 unsigned int 	is_valid_num(char *arg, char flag)
 {
-	return(num);
+
+	int		num;
+
+	num = ft_atoi(arg);
+	if (num <= 0)
+		ft_error("bad numb in input line\n");
+	if ((flag == 'n' && num <= MAX_PLAYERS) || flag == 'd')
+		return((unsigned int)num);
+	else
+		ft_error("bad numb of players in input line\n");
 }
 
 int 	is_flag(char **args, size_t *i)
@@ -10,11 +19,17 @@ int 	is_flag(char **args, size_t *i)
 	if (args[*(i)][0] == '-')
 	{
 		if (ft_strequ(args[*i], "-v"))
+		{
 			ft_printf("switch on vizualization");
+		}
 		else if (ft_strequ(args[*i], "-d"))
+		{
 			ft_printf("dumps nbr of cycles");
+		}
 		else if (ft_strequ(args[*i], "-n"))
+		{
 			ft_printf("adds num to player");
+		}
 		else
 			ft_error("invalid flag"); // proper error message
 		return (1);
