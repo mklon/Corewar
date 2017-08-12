@@ -11,6 +11,7 @@ SOURCE = corewar_main.c \
 		ft_usage.c \
 		ft_error.c \
 		check_args.c \
+		general_struct.c \
         
 OBJECTS = $(SOURCE:.c=.o)
 

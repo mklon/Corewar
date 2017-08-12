@@ -13,7 +13,7 @@
 NAME = libft.a
 
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = #-Wall -Wextra -Werror
 
 LIBFT_I = ./includes/libft.h
 PRINTF_I = ./includes/libftprintf.h
@@ -108,7 +108,7 @@ $(NAME): $(OBJECTS)
 	ranlib $(NAME)
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c -o $@ $< $(INCLUDES)
+	$(CC) $(CFLAGS) -c -o $@ $<
 
 clean:
 	rm -rf $(OBJECTS)

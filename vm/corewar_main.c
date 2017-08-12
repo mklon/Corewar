@@ -12,7 +12,7 @@
 
 #include "vm.h"
 
-int		main(int ar, char **av)
+void	read_args(int ar, char **av)
 {
 	size_t		i;
 	char		**champs;
@@ -21,16 +21,23 @@ int		main(int ar, char **av)
 	i = 0;
 	j = 0;
 	champs = NULL;
-	if (ar == 1)
-		ft_usage();
-	else
-		while (++i < ar)
-		{
-			if (is_flag(av, &i)) // checks if arg is a flag and adds to struct(yet to come)
-				;
-			else if (is_valid_champ(av[i], &champs, j)) // checks if arg is a champ (*.cor)
-				j++;
-		}
+	while (++i < ar)
+	{
+		if (is_flag(av, &i)) // checks if arg is a flag and adds to struct(yet to come)
+			;
+		else if (is_valid_champ(av[i], &champs, j)) // checks if arg is a champ (*.cor)
+			j++;
+	}
+}
+
+int		main(int ar, char **av)
+{
+    t_general   *gen;
+
+    if (ar == 1)
+        ft_usage();
+    gen = gen_init();
+	read_args(ar, av);
 //	while(1)
 //		;
 	return (0);

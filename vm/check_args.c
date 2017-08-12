@@ -2,7 +2,6 @@
 
 unsigned int 	is_valid_num(char *arg, char flag)
 {
-
 	int		num;
 
 	num = ft_atoi(arg);
@@ -94,7 +93,7 @@ int 	is_valid_champ(char *arg, char ***champs, size_t j)
 	if (!(*champs))
 	{
 		*champs = (char **)malloc(sizeof(char*) * (MAX_PLAYERS + 1));
-		*champs[MAX_PLAYERS] = NULL;
+        (*champs)[MAX_PLAYERS] = NULL;
 	}
 	fd = open(arg, O_RDONLY);
 	len = read(fd, line, FILE_MAX_LENGTH);
