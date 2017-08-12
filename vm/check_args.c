@@ -7,13 +7,12 @@ unsigned int 	is_valid_num(char *arg, char flag)
 	num = ft_atoi(arg);
 	if (num <= 0)
 		ft_error("bad numb in input line\n");
-	if ((flag == 'n' && num <= MAX_PLAYERS) || flag == 'd')
-		return((unsigned int)num);
-	else
+	if (!((flag == 'n' && num <= MAX_PLAYERS) || flag == 'd'))
 		ft_error("bad numb of players in input line\n");
+	return((unsigned int)num);
 }
 
-int 	is_flag(char **args, size_t *i)
+int 	is_flag(char **args, size_t *i, t_general *gen)
 {
 	if (args[*(i)][0] == '-')
 	{
@@ -23,7 +22,8 @@ int 	is_flag(char **args, size_t *i)
 		}
 		else if (ft_strequ(args[*i], "-d"))
 		{
-			ft_printf("dumps nbr of cycles");
+			gen->dump = is_valid_num(args[(*i)++], 'd');
+			ft_printf("dumps %d cycles", gen->dump); // test
 		}
 		else if (ft_strequ(args[*i], "-n"))
 		{
