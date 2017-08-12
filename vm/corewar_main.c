@@ -15,17 +15,15 @@
 void	read_args(int ar, char **av, t_general *gen)
 {
 	size_t		i;
-	char		**champs;
 	size_t		j;
 
 	i = 0;
 	j = 0;
-	champs = NULL;
 	while (++i < ar)
 	{
 		if (is_flag(av, &i, gen)) // checks if arg is a flag and adds to struct
 			;
-		else if (is_valid_champ(av[i], &champs, j))
+		else if (is_valid_champ(av[i], gen->champs, j))
 			j++;
 	}
 }

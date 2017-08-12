@@ -79,7 +79,7 @@ int		validate_champ(unsigned char **line, int i)
 	return (1);
 }
 
-int 	is_valid_champ(char *arg, char ***champs, size_t j)
+int 	is_valid_champ(char *arg, unsigned char **champs, size_t j)
 {
 	int 	fd;
 	unsigned char 	*line;
@@ -89,12 +89,12 @@ int 	is_valid_champ(char *arg, char ***champs, size_t j)
 	ft_printf("header: %u\n", PROG_HEADER_LENGTH); // test
 	ft_printf("FILE_MAX_LENGTH: %u\n", FILE_MAX_LENGTH); // test
 	if (!is_champ(arg))
-		ft_error("invalid input\n");
-	if (!(*champs))
-	{
-		*champs = (char **)malloc(sizeof(char*) * (MAX_PLAYERS + 1));
-        (*champs)[MAX_PLAYERS] = NULL;
-	}
+		ft_error("wrong type of file\n");
+//	if (!(*champs))
+//	{
+//		*champs = (char **)malloc(sizeof(char*) * (MAX_PLAYERS + 1));
+//        (*champs)[MAX_PLAYERS] = NULL;
+//	}
 	fd = open(arg, O_RDONLY);
 	len = read(fd, line, FILE_MAX_LENGTH);
 	if (fd == -1 || len == -1)
@@ -105,8 +105,10 @@ int 	is_valid_champ(char *arg, char ***champs, size_t j)
 		ft_error("the size of champion is to big\n");
 	if (validate_champ(&line, len))
 	{
-		(*champs)[j] = ft_memalloc(len);
-		ft_memcpy((*champs)[j], line, len);
+		while (!champs[j])
+			j++;
+		champs[j] = ft_memalloc(len);
+		ft_memcpy(champs[j], line, len);
 	}
 	free(line);
 	ft_printf("valid champion\n"); // test
