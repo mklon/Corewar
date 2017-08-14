@@ -34,11 +34,21 @@ void	read_args(int ar, char **av, t_general *gen)
 int		main(int ar, char **av)
 {
     t_general   *gen;
+	size_t 		j; //test
 
+	j = 1; // test
     if (ar == 1)
         ft_usage();
     gen = gen_init();
-	read_args(ar, av, gen);
+//	read_args(ar, av, gen);
+	while (j <= 3) // test
+	{
+		is_valid_champ(av[j], gen, 0);
+		j++;
+	}
+	gen->champ_num = 3; // test
+	write_to_map(gen);
+
 //	while(1)
 //		;
 	return (0);

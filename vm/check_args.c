@@ -27,7 +27,7 @@ int 	is_flag(char **args, size_t *i, t_general *gen)
 		}
 		else if (ft_strequ(args[*i], "-n"))
 		{
-			gen->champs_args[0] write num
+//			gen->champs_args[0] write num
 
 			ft_printf("adds num to player");
 		}
@@ -81,12 +81,13 @@ int		validate_champ(unsigned char **line, int i)
 	return (1);
 }
 
-int 	is_valid_champ(char *arg, unsigned char **champs, size_t j)
+int 	is_valid_champ(char *arg, t_general *gen, size_t j)
 {
 	int 	fd;
 	unsigned char 	*line;
 	ssize_t len;
 
+	len = 0;
 	line = ft_memalloc(FILE_MAX_LENGTH);
 	ft_printf("header: %u\n", PROG_HEADER_LENGTH); // test
 	ft_printf("FILE_MAX_LENGTH: %u\n", FILE_MAX_LENGTH); // test
@@ -99,6 +100,7 @@ int 	is_valid_champ(char *arg, unsigned char **champs, size_t j)
 //	}
 	fd = open(arg, O_RDONLY);
 	len = read(fd, line, FILE_MAX_LENGTH);
+	ft_printf("len: %u\n", len); // test
 	if (fd == -1 || len == -1)
 		ft_error("can't read the file\n");
 	if (len < PROG_HEADER_LENGTH)
@@ -107,10 +109,10 @@ int 	is_valid_champ(char *arg, unsigned char **champs, size_t j)
 		ft_error("the size of champion is to big\n");
 	if (validate_champ(&line, len))
 	{
-		while (!champs[j])
+		while (gen->champs[j])
 			j++;
-		champs[j] = ft_memalloc(len);
-		ft_memcpy(champs[j], line, len);
+		gen->champs[j] = ft_memalloc(CHAMP_MAX_SIZE);
+		ft_memcpy(gen->champs[j], line, len);
 	}
 	free(line);
 	ft_printf("valid champion\n"); // test

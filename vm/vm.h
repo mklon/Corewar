@@ -25,9 +25,11 @@ void	ft_usage(void);
 int 	ft_error(char *message);
 void	read_args(int ar, char **av, t_general *gen);
 int 	is_flag(char **args, size_t *i, t_general *gen);
-int 	is_valid_champ(char *arg, char ***champs, size_t j);
+int 	is_valid_champ(char *arg, t_general *gen, size_t j);
 int 	is_champ(char *arg);
 int		validate_champ(unsigned char **line, int i);
 t_general   *gen_init(void);
+void 	write_to_map(t_general *gen);
+void	dump_map(unsigned char *line);
 
 #endif

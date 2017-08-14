@@ -12,6 +12,7 @@ SOURCE = corewar_main.c \
 		ft_error.c \
 		check_args.c \
 		general_struct.c \
+		playground_prep.c \
         
 OBJECTS = $(SOURCE:.c=.o)
 
