@@ -23,9 +23,12 @@ void	read_args(int ar, char **av, t_general *gen)
 	{
 		if (is_flag(av, &i, gen)) // checks if arg is a flag and adds to struct
 			;
-		else if (is_valid_champ(av[i], gen->champs, j))
-			j++;
+		else if (is_champ(av[i]))
+		{
+		}
+
 	}
+//	is_valid_champ(av[i], gen->champs, j);
 }
 
 int		main(int ar, char **av)

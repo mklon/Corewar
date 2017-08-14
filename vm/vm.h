@@ -15,9 +15,9 @@ struct		s_general
 	unsigned int	nbr_lives;
 	unsigned int	last_live;
 	int		dump;
-	unsigned char		**champs;
+	unsigned char	**champs;
+	char	**champs_args;
     int             champ_num;
-//    unsigned int    ;
 //    unsigned int    ;
 };
 

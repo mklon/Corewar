@@ -27,6 +27,8 @@ int 	is_flag(char **args, size_t *i, t_general *gen)
 		}
 		else if (ft_strequ(args[*i], "-n"))
 		{
+			gen->champs_args[0] write num
+
 			ft_printf("adds num to player");
 		}
 		else
@@ -88,8 +90,8 @@ int 	is_valid_champ(char *arg, unsigned char **champs, size_t j)
 	line = ft_memalloc(FILE_MAX_LENGTH);
 	ft_printf("header: %u\n", PROG_HEADER_LENGTH); // test
 	ft_printf("FILE_MAX_LENGTH: %u\n", FILE_MAX_LENGTH); // test
-	if (!is_champ(arg))
-		ft_error("wrong type of file\n");
+//	if (!is_champ(arg))
+//		ft_error("wrong type of file\n");
 //	if (!(*champs))
 //	{
 //		*champs = (char **)malloc(sizeof(char*) * (MAX_PLAYERS + 1));
