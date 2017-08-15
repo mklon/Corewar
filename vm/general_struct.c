@@ -13,13 +13,9 @@ t_general		*gen_init(void)
 	gen->total_cycles = 0;
 	gen->process = 0;
 	gen->cycle_to_die = 0;
-	gen->nbr_lives = 0;
-	gen->last_live = 0;
+	gen->nbr_live = 0;
 	gen->dump = -1;
-	gen->champs = (unsigned char **)malloc(sizeof(char*) * (MAX_PLAYERS + 1));
-	while (j <= MAX_PLAYERS)
-		gen->champs[j++] = NULL;
-//	gen->champs_args = (unsigned char **)malloc(sizeof(char*) * 3);
+	//	gen->champs_args = (unsigned char **)malloc(sizeof(char*) * 3);
 //	gen->champs_args[0] = (unsigned char *)ft_strnew(MAX_PLAYERS );
 //	gen->champs_args[1] = (unsigned char *)ft_strnew(MAX_PLAYERS);
 	gen->champ_num = 0;

@@ -18,7 +18,7 @@ void	read_args(int ar, char **av, t_general *gen)
 	size_t		j;
 
 	i = 0;
-	j = 0;
+	j = 1;
 	while (++i < ar)
 	{
 		if (is_flag(av, &i, gen)) // checks if arg is a flag and adds to struct
@@ -31,6 +31,7 @@ void	read_args(int ar, char **av, t_general *gen)
 			gen->champ_num++;
 		}
 	}
+	check_n_flag(gen);
 //	is_valid_champ(av[i], gen->champs, j);
 }
 

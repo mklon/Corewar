@@ -21,22 +21,22 @@ void	dump_map(unsigned char *line)
 	}
 }
 
-void 	write_to_map(t_general *gen)
-{
-	size_t		i;
-	size_t		j;
-	size_t		step;
-	void		*ptr;
-
-	i = 0;
-	j = 0;
-	step = MEM_SIZE / gen->champ_num;
-	while (j < gen->champ_num)
-	{
-		ptr = gen->champs[j];
-		ft_memcpy(gen->field + i, ptr + PROG_HEADER_LENGTH, CHAMP_MAX_SIZE);
-		j++;
-		i += step;
-	}
-	dump_map(gen->field);
-}
+//void 	write_to_map(t_general *gen)
+//{
+//	size_t		i;
+//	size_t		j;
+//	size_t		step;
+//	void		*ptr;
+//
+//	i = 0;
+//	j = 0;
+//	step = MEM_SIZE / gen->champ_num;
+//	while (j < gen->champ_num)
+//	{
+//		ptr = gen->champs[j];
+//		ft_memcpy(gen->field + i, ptr + PROG_HEADER_LENGTH, CHAMP_MAX_SIZE);
+//		j++;
+//		i += step;
+//	}
+//	dump_map(gen->field);
+//}

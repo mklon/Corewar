@@ -21,8 +21,8 @@ struct		s_general
 //	t_champ				*champ_args;
 	t_player			**players;
 	int					champ_num;
-	size_t				n_flag[MAX_PLAYERS];
-	size_t				no_flag[MAX_PLAYERS];
+	size_t				n_flag[MAX_PLAYERS + 1];
+	size_t				no_flag[MAX_PLAYERS + 1];
 };
 
 //struct	s_champ

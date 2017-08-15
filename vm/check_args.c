@@ -30,14 +30,16 @@ int 	is_flag(char **args, size_t *i, t_general *gen)
 		}
 		else if (ft_strequ(args[*i], "-n"))
 		{
+			if (!args[*i + 1] || !args[*i + 2])
+				ft_error("Not enough argumets");
+			if (gen->champ_num == MAX_PLAYERS)
+				ft_error("To many champions");
 			j = is_valid_num(args[++(*i)], 'n');
 			(gen->n_flag[j]) ? ft_error("Wrong num of player") : 0;
 			if (is_champ(args[++(*i)]))
 				gen->n_flag[j] = *i;
 			else
-				ft_error("wrong type of file\n");
-			if (gen->champ_num == MAX_PLAYERS)
-				ft_error("To many champions");
+				ft_error("Wrong type of file (-n flag)\n");
 			gen->champ_num++;
 			ft_printf("adds num to player");	// test
 		}
