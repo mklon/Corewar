@@ -13,8 +13,8 @@ int		validate_champ(char *av)//(char **line, int i)
 	unsigned char *mag;
 	int fd;
 	unsigned int magic;
-//int i = 2215;//for zork.cor
-int i = 2216;
+int i = 2215;//for zork.cor
+// int i = 2216;//bad
 
 	mag = ft_memalloc(2200);
 	fd = open(av, O_RDONLY);
@@ -46,6 +46,19 @@ int i = 2216;
 		ft_error("bad prog_size\n");
 		return (0);
 	}
+	return (1);
+}
+
+int 	is_champ(char *arg)
+{
+	size_t		k;
+
+	k = ft_strlen(arg);
+	if (arg[k - 4] == '.' && arg[k - 3] == 'c' && arg[k - 2] == 'o'
+		&& arg[k - 1] == 'r' && (arg[k] == '\0' || arg[k] == '\n'))
+		return (1);
+	else
+		return (0);
 	return (1);
 }
 

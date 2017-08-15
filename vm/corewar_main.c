@@ -12,30 +12,70 @@
 
 #include "vm.h"
 
-int		main(int ar, char **av)
+void	check_n_flag(t_general *gen)
+{
+	int		i;
+	int		k;
+	int		j;
+
+	i = 0;
+	j = 1;
+	k = MAX_PLAYERS - gen->champ_num;
+	if (k > 0)
+		if (gen->n_flag[gen->champ_num + 1] != 0)
+			ft_error("bad order of numb after flag -n");
+	while (gen->n_flag[++i] && gen->no_flag[j])
+	{
+		if (gen->n_flag[i] == 0 && gen->no_flag[j] != 0)
+		{
+			gen->n_flag[i] = gen->no_flag[j];
+			j++;
+		}
+	}
+}
+
+void	read_args(int ar, char **av, t_general *gen)
 {
 	size_t		i;
-	char		**champs;
 	size_t		j;
 
 	i = 0;
-	j = 0;
-	champs = NULL;
-	if (ar == 1)
-		ft_usage();
-	else
-//		ft_printf("args"); // test
-		while (++i < ar)
+	j = 1;
+	while (++i < ar)
+	{
+		if (is_flag(av, &i, gen)) // checks if arg is a flag and adds to struct
+			;
+		else if (is_champ(av[i]))
 		{
-			if (is_flag(av[i])) // checks if arg is a flag and executes(?) one
-				;
-			else if (is_champ(av[i])) // checks if arg is a champ (*.cor)
-			{
-				champs = get_champ(av[i], champs, j); // if !champs-array - malloc. reads bytecode to array, calls validate_champ function, returns array
-				j++;
-			}
-			else
-				error("invalid input"); // proper error message
+			if (gen->champ_num == MAX_PLAYERS)
+				ft_error("To many champions");
+			gen->no_flag[j++] = i;
+			gen->champ_num++;
 		}
+	}
+	check_n_flag(gen);
+//	is_valid_champ(av[i], gen->champs, j);
+}
+
+int		main(int ar, char **av)
+{
+    t_general   *gen;
+	size_t 		j; //test
+
+	j = 1; // test
+    if (ar == 1)
+        ft_usage();
+    gen = gen_init();
+	read_args(ar, av, gen);
+//	while (j <= 3) // test
+//	{
+//		is_valid_champ(av[j], gen, 0);
+//		j++;
+//	}
+//	gen->champ_num = 3; // test
+//	write_to_map(gen);
+
+//	while(1)
+//		;
 	return (0);
 }
