@@ -25,8 +25,11 @@ void	read_args(int ar, char **av, t_general *gen)
 			;
 		else if (is_champ(av[i]))
 		{
+			if (gen->champ_num == MAX_PLAYERS)
+				ft_error("To many champions");
+			gen->no_flag[j++] = i;
+			gen->champ_num++;
 		}
-
 	}
 //	is_valid_champ(av[i], gen->champs, j);
 }
@@ -40,14 +43,14 @@ int		main(int ar, char **av)
     if (ar == 1)
         ft_usage();
     gen = gen_init();
-//	read_args(ar, av, gen);
-	while (j <= 3) // test
-	{
-		is_valid_champ(av[j], gen, 0);
-		j++;
-	}
-	gen->champ_num = 3; // test
-	write_to_map(gen);
+	read_args(ar, av, gen);
+//	while (j <= 3) // test
+//	{
+//		is_valid_champ(av[j], gen, 0);
+//		j++;
+//	}
+//	gen->champ_num = 3; // test
+//	write_to_map(gen);
 
 //	while(1)
 //		;
