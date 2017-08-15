@@ -6,7 +6,6 @@
 
 typedef struct s_general	t_general;
 typedef struct s_player		t_player;
-//typedef struct s_champ		t_champ;
 
 struct		s_general
 {
@@ -18,17 +17,11 @@ struct		s_general
 	unsigned int		nbr_live;
 	unsigned int		live_checks;
 	int					dump;
-//	t_champ				*champ_args;
 	t_player			**players;
 	int					champ_num;
 	size_t				n_flag[MAX_PLAYERS + 1];
 	size_t				no_flag[MAX_PLAYERS + 1];
 };
-
-//struct	s_champ
-//{
-//
-//};
 
 struct	s_player
 {
@@ -45,11 +38,12 @@ void		ft_usage(void);
 int			ft_error(char *message);
 void		read_args(int ar, char **av, t_general *gen);
 int			is_flag(char **args, size_t *i, t_general *gen);
-int			is_valid_champ(char *arg, t_general *gen, size_t j);
+int			is_valid_champ(char *arg);
 int			is_champ(char *arg);
 int			validate_champ(unsigned char **line, int i);
 t_general	*gen_init(void);
 void		write_to_map(t_general *gen);
 void		dump_map(unsigned char *line);
+void		read_players(char **av, t_general *gen);
 
 #endif

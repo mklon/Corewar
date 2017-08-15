@@ -33,6 +33,7 @@ void	read_args(int ar, char **av, t_general *gen)
 	}
 	check_n_flag(gen);
 //	is_valid_champ(av[i], gen->champs, j);
+	read_players(av, gen);
 }
 
 int		main(int ar, char **av)
