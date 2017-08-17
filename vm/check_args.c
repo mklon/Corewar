@@ -122,20 +122,29 @@ int 	is_valid_champ(char *arg)
 	return (1);
 }
 
+int 	write_player(char *arg)
+{
+
+}
+
 void		read_players(char **av, t_general *gen)
 {
 	size_t		j;
+	size_t		i;
 
 	j = 0;
 	gen->players = (t_player **)malloc(sizeof(t_player *) * gen->champ_num);
 	while (j < gen->champ_num)
 	{
-		if (is_valid_champ(av[gen->n_flag[j + 1]]))
+		i = gen->n_flag[j + 1];
+		if (is_valid_champ(av[i]))
 		{
 			gen->players[j] = (t_player *)malloc(sizeof(t_player));
 			gen->players[j]->num = (j + 1) * -1;
+			gen->players[j] = write_player(av[i]);
 			j++;
 		}
 	}
+
 
 }
