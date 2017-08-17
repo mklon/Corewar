@@ -34,6 +34,7 @@ $(LIBFT_DIR)libft.a:
 clean:
 	make clean -C $(LIBFT_DIR)
 	rm -f $(OBJECTS)
+	rm -f *~ *#
 
 fclean: clean
 	make fclean -C $(LIBFT_DIR)
