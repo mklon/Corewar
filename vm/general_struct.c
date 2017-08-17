@@ -17,5 +17,6 @@ t_general		*gen_init(void)
 	gen->dump = -1;
 	gen->players = NULL;
 	gen->champ_num = 0;
+	gen->line = NULL;
 	return(gen);
 }

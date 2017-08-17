@@ -1,6 +1,6 @@
 #include "vm.h"
 
-unsigned int 	is_valid_num(char *arg, char flag)
+unsigned int		is_valid_num(char *arg, char flag)
 {
 	int		num;
 
@@ -12,7 +12,7 @@ unsigned int 	is_valid_num(char *arg, char flag)
 	return((unsigned int)num);
 }
 
-int 	is_flag(char **args, size_t *i, t_general *gen)
+int					is_flag(char **args, size_t *i, t_general *gen)
 {
 	unsigned int	j;
 
@@ -26,7 +26,7 @@ int 	is_flag(char **args, size_t *i, t_general *gen)
 		else if (ft_strequ(args[*i], "-d"))
 		{
 			if (!args[*i + 1])
-				ft_error("Not enough argumets")
+				ft_error("Not enough argumets");
 			gen->dump = is_valid_num(args[++(*i)], 'd');
 			ft_printf("dumps %d cycles", gen->dump); // test
 		}
@@ -52,7 +52,7 @@ int 	is_flag(char **args, size_t *i, t_general *gen)
 	return (0);
 }
 
-int 	is_champ(char *arg)
+int 				is_champ(char *arg)
 {
 	int		k;
 
@@ -64,29 +64,29 @@ int 	is_champ(char *arg)
 		return (0);
 }
 
-int		validate_champ(unsigned char **line, int i)
+int		validate_champ(unsigned char *line, int i)
 {
  	unsigned int	magic;
 
-	magic = (unsigned int)(*line)[0];
+	magic = (unsigned int)line[0];
 	magic = magic << 8;
-	magic |= (unsigned int)(*line)[1];
+	magic |= (unsigned int)line[1];
 	magic = magic << 8;
-	magic |= (unsigned int)(*line)[2];
+	magic |= (unsigned int)line[2];
 	magic = magic << 8;
-	magic |= (unsigned int)(*line)[3];
+	magic |= (unsigned int)line[3];
 	if (!(magic == COREWAR_EXEC_MAGIC))
 	{
 		ft_error("bad magic\n");
 //		return (0);
 	}
-	magic = (unsigned int)(*line)[136];
+	magic = (unsigned int)line[136];
 	magic = magic << 8;
-	magic |= (unsigned int)(*line)[137];
+	magic |= (unsigned int)line[137];
 	magic = magic << 8;
-	magic |= (unsigned int)(*line)[138];
+	magic |= (unsigned int)line[138];
 	magic = magic << 8;
-	magic |= (unsigned int)(*line)[139];
+	magic |= (unsigned int)line[139];
 	if (!(magic == i - PROG_HEADER_LENGTH) || magic > CHAMP_MAX_SIZE)
 	{
 		ft_error("bad prog_size\n");
@@ -95,18 +95,16 @@ int		validate_champ(unsigned char **line, int i)
 	return (1);
 }
 
-int 	is_valid_champ(char *arg)
+int 	is_valid_champ(char *arg, t_general *gen, size_t j)
 {
 	int 	fd;
-	unsigned char 	*line;
 	ssize_t len;
 
 	ft_printf("header: %u\n", PROG_HEADER_LENGTH); // test
 	ft_printf("FILE_MAX_LENGTH: %u\n", FILE_MAX_LENGTH); // test
-	len = 0;
-	line = ft_memalloc(FILE_MAX_LENGTH);
+	gen->line = ft_memalloc(FILE_MAX_LENGTH);
 	fd = open(arg, O_RDONLY);
-	len = read(fd, line, FILE_MAX_LENGTH);
+	len = read(fd, gen->line, FILE_MAX_LENGTH);
 	ft_printf("len: %u\n", len); // test
 	if (fd == -1 || len == -1)
 		ft_error("can't read the file\n");
@@ -114,20 +112,21 @@ int 	is_valid_champ(char *arg)
 		ft_error("the size of champion is to small\n");
 	if (read(fd, NULL, 1))
 		ft_error("the size of champion is to big\n");
-	if (validate_champ(&line, len))
+	if (validate_champ(gen->line, len))
 	{
-		free(line);
+		write_player(gen, j);
+		free(&gen->line);
 		ft_printf("valid champion\n"); // test
 	}
 	return (1);
 }
 
-int 	write_player(char *arg)
+void		write_player(t_general *gen, size_t j)
 {
-
+	gen->players[j] = (t_player *)malloc(sizeof(t_player));
 }
 
-void		read_players(char **av, t_general *gen)
+void				read_players(char **av, t_general *gen)
 {
 	size_t		j;
 	size_t		i;
@@ -137,14 +136,10 @@ void		read_players(char **av, t_general *gen)
 	while (j < gen->champ_num)
 	{
 		i = gen->n_flag[j + 1];
-		if (is_valid_champ(av[i]))
+		if (is_valid_champ(av[i], gen, j))
 		{
-			gen->players[j] = (t_player *)malloc(sizeof(t_player));
 			gen->players[j]->num = (j + 1) * -1;
-			gen->players[j] = write_player(av[i]);
 			j++;
 		}
 	}
-
-
 }
