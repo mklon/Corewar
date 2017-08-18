@@ -15,9 +15,10 @@ t_general		*gen_init(void)
 	gen->cycle_to_die = 0;
 	gen->nbr_live = 0;
 	gen->dump = -1;
-	//	gen->champs_args = (unsigned char **)malloc(sizeof(char*) * 3);
-//	gen->champs_args[0] = (unsigned char *)ft_strnew(MAX_PLAYERS );
-//	gen->champs_args[1] = (unsigned char *)ft_strnew(MAX_PLAYERS);
+	gen->players = NULL;
 	gen->champ_num = 0;
+	gen->line = NULL;
+	ft_bzero(gen->n_flag, MAX_PLAYERS + 1);
+	ft_bzero(gen->no_flag, MAX_PLAYERS + 1);
 	return(gen);
 }

@@ -54,7 +54,8 @@ void	read_args(int ar, char **av, t_general *gen)
 		}
 	}
 	check_n_flag(gen);
-//	is_valid_champ(av[i], gen->champs, j);
+	read_players(av, gen);
+	//	write_to_map(gen);
 }
 
 int		main(int ar, char **av)
@@ -67,13 +68,6 @@ int		main(int ar, char **av)
         ft_usage();
     gen = gen_init();
 	read_args(ar, av, gen);
-//	while (j <= 3) // test
-//	{
-//		is_valid_champ(av[j], gen, 0);
-//		j++;
-//	}
-//	gen->champ_num = 3; // test
-//	write_to_map(gen);
 
 //	while(1)
 //		;

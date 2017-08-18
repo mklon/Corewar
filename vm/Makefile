@@ -9,7 +9,10 @@ INCLUDES = -I $(FIL_I)
 
 SOURCE = corewar_main.c \
 		ft_usage.c \
-		validate_champ.c \
+		ft_error.c \
+		check_args.c \
+		general_struct.c \
+		playground_prep.c \
         
 OBJECTS = $(SOURCE:.c=.o)
 
@@ -31,9 +34,11 @@ $(LIBFT_DIR)libft.a:
 clean:
 	make clean -C $(LIBFT_DIR)
 	rm -f $(OBJECTS)
+	rm -f *~ *#
 
 fclean: clean
 	make fclean -C $(LIBFT_DIR)
 	rm -f $(NAME)
 
 re: fclean all
+	
