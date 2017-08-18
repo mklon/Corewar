@@ -6,9 +6,9 @@ unsigned int		is_valid_num(char *arg, char flag)
 
 	num = ft_atoi(arg);
 	if (num <= 0)
-		ft_error("bad numb in input line\n");
+		ft_error("Bad numb in input line\n");
 	if (!((flag == 'n' && num <= MAX_PLAYERS) || flag == 'd'))
-		ft_error("bad numb of players in input line\n");
+		ft_error("Bad numb of players in input line\n");
 	return((unsigned int)num);
 }
 
@@ -21,32 +21,32 @@ int					is_flag(char **args, size_t *i, t_general *gen)
 	{
 		if (ft_strequ(args[*i], "-v"))
 		{
-			ft_printf("switch on vizualization");
+			ft_printf("switch on vizualization\n");
 		}
 		else if (ft_strequ(args[*i], "-d"))
 		{
 			if (!args[*i + 1])
-				ft_error("Not enough argumets");
+				ft_error("Not enough argumets\n");
 			gen->dump = is_valid_num(args[++(*i)], 'd');
-			ft_printf("dumps %d cycles", gen->dump); // test
+			ft_printf("dumps %d cycles\n", gen->dump); // test
 		}
 		else if (ft_strequ(args[*i], "-n"))
 		{
 			if (!args[*i + 1] || !args[*i + 2])
-				ft_error("Not enough argumets");
+				ft_error("Not enough argumets\n");
 			if (gen->champ_num == MAX_PLAYERS)
-				ft_error("To many champions");
+				ft_error("To many champions\n");
 			j = is_valid_num(args[++(*i)], 'n');
-			(gen->n_flag[j]) ? ft_error("Wrong num of player") : 0;
+			(gen->n_flag[j]) ? ft_error("Wrong num of player\n") : 0;
 			if (is_champ(args[++(*i)]))
 				gen->n_flag[j] = *i;
 			else
 				ft_error("Wrong type of file (-n flag)\n");
 			gen->champ_num++;
-			ft_printf("adds num to player");	// test
+			ft_printf("adds num to player\n");	// test
 		}
 		else
-			ft_error("invalid flag"); // proper error message
+			ft_error("Invalid flag\n"); // proper error message
 		return (1);
 	}
 	return (0);
@@ -77,7 +77,7 @@ int		validate_champ(unsigned char *line, int i)
 	magic |= (unsigned int)line[3];
 	if (!(magic == COREWAR_EXEC_MAGIC))
 	{
-		ft_error("bad magic\n");
+		ft_error("Wrong magic number\n");
 //		return (0);
 	}
 	magic = (unsigned int)line[136];
@@ -89,7 +89,7 @@ int		validate_champ(unsigned char *line, int i)
 	magic |= (unsigned int)line[139];
 	if (!(magic == i - PROG_HEADER_LENGTH) || magic > CHAMP_MAX_SIZE)
 	{
-		ft_error("bad prog_size\n");
+		ft_error("Program size mismatch\n");
 //		return (0);
 	}
 	return (1);
@@ -100,12 +100,12 @@ int 	is_valid_champ(char *arg, t_general *gen, size_t j)
 	int 	fd;
 	ssize_t len;
 
-	ft_printf("header: %u\n", PROG_HEADER_LENGTH); // test
-	ft_printf("FILE_MAX_LENGTH: %u\n", FILE_MAX_LENGTH); // test
+//	ft_printf("header: %u\n", PROG_HEADER_LENGTH); // test
+//	ft_printf("FILE_MAX_LENGTH: %u\n", FILE_MAX_LENGTH); // test
 	gen->line = ft_memalloc(FILE_MAX_LENGTH);
 	fd = open(arg, O_RDONLY);
 	len = read(fd, gen->line, FILE_MAX_LENGTH);
-	ft_printf("len: %u\n", len); // test
+//	ft_printf("len: %u\n", len); // test
 	if (fd == -1 || len == -1)
 		ft_error("can't read the file\n");
 	if (len < PROG_HEADER_LENGTH)
@@ -115,7 +115,8 @@ int 	is_valid_champ(char *arg, t_general *gen, size_t j)
 	if (validate_champ(gen->line, len))
 	{
 		write_player(gen, j);
-		free(&gen->line);
+		free(gen->line);
+		gen->line = NULL;
 		ft_printf("valid champion\n"); // test
 	}
 	return (1);
