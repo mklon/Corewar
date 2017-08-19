@@ -15,19 +15,21 @@
 void	check_n_flag(t_general *gen)
 {
 	int		i;
+	int		k;
 	int		j;
 
-	j = 1;
-	i = gen->champ_num + 1;
-	while (i <= MAX_PLAYERS)
-	{
-		if (gen->n_flag[i++] != 0)
-			ft_error("To big number after flag -n\n");
-	}
 	i = 0;
+	j = 1;
+	k = MAX_PLAYERS - gen->champ_num;
+	while (k > 0)
+	{
+		if (gen->n_flag[gen->champ_num + k] != 0)
+			ft_error("bad order of numb after flag -n\n");
+		k--;
+	}
 	while (++i <= gen->champ_num)
 	{
-		if (gen->n_flag[i] == 0 && gen->no_flag[j] != 0)
+		if (gen->n_flag[i] == 0)
 		{
 			gen->n_flag[i] = gen->no_flag[j];
 			j++;

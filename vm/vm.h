@@ -26,8 +26,8 @@ struct		s_general
 
 struct	s_player
 {
-	unsigned char	*name;
-	unsigned char	*comment;
+	char	*name;
+	char	*comment;
 	unsigned char	*opcode;
 	size_t			size;
 	int 			num;

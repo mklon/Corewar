@@ -124,7 +124,35 @@ int 	is_valid_champ(char *arg, t_general *gen, size_t j)
 
 void		write_player(t_general *gen, size_t j)
 {
-	gen->players[j] = (t_player *)malloc(sizeof(t_player));
+	unsigned int	size;
+	int				i;
+	int				k;
+
+	i = 0;
+	size = (unsigned int)(gen->line)[136];
+	size = size << 8;
+	size |= (unsigned int)(gen->line)[137];
+	size = size << 8;
+	size |= (unsigned int)(gen->line)[138];
+	size = size << 8;
+	size |= (unsigned int)(gen->line)[139];
+	k = (int)size;
+	gen->players[j] = (t_player *)ft_memalloc(sizeof(t_player));
+	(gen->players)[j]->size = (size_t)size;
+	(gen->players)[j]->name = ft_strdup((char *)gen->line + 4);
+	(gen->players)[j]->comment = ft_strdup((char *)gen->line + PROG_NAME_LENGTH + 12);
+	(gen->players)[j]->opcode = (unsigned char *)ft_memalloc((k) * sizeof(unsigned char));
+	while (--k)
+	{
+		(gen->players)[j]->opcode[i] = (char)(gen->line)[i + PROG_HEADER_LENGTH];
+		i++;
+	}
+	ft_printf("[%d]name = %s\n", j,(gen->players)[j]->name);             //test
+	ft_printf("[%d]comment = %s\n", j,(gen->players)[j]->comment);       //test
+	ft_printf("[%d]opcode = %s\n", j,(char *)(gen->players)[j]->opcode); //test
+	ft_printf("size = %d\n", (int)size);                                 //test
+	ft_printf("a5=%c\n\n", (char)(gen->line)[4]);                        //test
+	ft_printf("a6=%c\n\n", (char)(gen->line)[5]);                        //test
 }
 
 void				read_players(char **av, t_general *gen)
