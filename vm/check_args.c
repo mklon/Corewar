@@ -21,32 +21,32 @@ int					is_flag(char **args, size_t *i, t_general *gen)
 	{
 		if (ft_strequ(args[*i], "-v"))
 		{
-			ft_printf("switch on vizualization");
+			ft_printf("switch on vizualization\n");
 		}
 		else if (ft_strequ(args[*i], "-d"))
 		{
 			if (!args[*i + 1])
-				ft_error("Not enough argumets");
+				ft_error("Not enough argumets\n");
 			gen->dump = is_valid_num(args[++(*i)], 'd');
 			ft_printf("dumps %d cycles", gen->dump); // test
 		}
 		else if (ft_strequ(args[*i], "-n"))
 		{
 			if (!args[*i + 1] || !args[*i + 2])
-				ft_error("Not enough argumets");
+				ft_error("Not enough argumets\n");
 			if (gen->champ_num == MAX_PLAYERS)
-				ft_error("To many champions");
+				ft_error("To many champions\n");
 			j = is_valid_num(args[++(*i)], 'n');
-			(gen->n_flag[j]) ? ft_error("Wrong num of player") : 0;
+			(gen->n_flag[j]) ? ft_error("Wrong num of player\n") : 0;
 			if (is_champ(args[++(*i)]))
 				gen->n_flag[j] = *i;
 			else
 				ft_error("Wrong type of file (-n flag)\n");
 			gen->champ_num++;
-			ft_printf("adds num to player");	// test
+			ft_printf("adds num to player\n");	// test
 		}
 		else
-			ft_error("invalid flag"); // proper error message
+			ft_error("invalid flag\n"); // proper error message
 		return (1);
 	}
 	return (0);
@@ -98,7 +98,10 @@ int		validate_champ(unsigned char *line, int i)
 void		write_player(t_general *gen, size_t j)
 {
 	unsigned int	magic;
+	int				i;
+	int				k;
 
+	i = -1;
 	magic = (unsigned int)(gen->line)[136];
 	magic = magic << 8;
 	magic |= (unsigned int)(gen->line)[137];
@@ -106,23 +109,28 @@ void		write_player(t_general *gen, size_t j)
 	magic |= (unsigned int)(gen->line)[138];
 	magic = magic << 8;
 	magic |= (unsigned int)(gen->line)[139];
+	k = (int)magic;
 	gen->players[j] = (t_player *)ft_memalloc(sizeof(t_player));
 	(gen->players)[j]->name = ft_strdup((char *)gen->line + 4);
 	(gen->players)[j]->comment = ft_strdup((char *)gen->line + PROG_NAME_LENGTH + 12);
-	(gen->players)[j]->opcode = (char *)ft_memalloc(((int)magic + 1) * sizeof(char));
-	(gen->players)[j]->opcode = ft_strsub((char *)gen->line, 2192, (int)magic);
-
+	(gen->players)[j]->opcode = (unsigned char *)ft_memalloc((k + 1) * sizeof(unsigned char));
+	// (gen->players)[j]->opcode = ft_strsub((char *)gen->line, 2192, (int)magic);
+	while (--k)
+	{
+		(gen->players)[j]->opcode[++i] = (char)(gen->line)[i + 2192];
+	}
+	(gen->players)[j]->opcode[++i] = '\0';
 //	while (gen->line[i])
 //	{
 //		(gen->players)[j]->name[i - 4] = (char)gen->line[i];
 //		i++;
-//	}
+//	}r
 
 	// (gen->line) = (unsigned char *)ft_strdup("aaaazxcvbn");
 	// (gen->players)[j]->name = (unsigned char *)ft_strsub((char *)gen->line[4], 0, PROG_NAME_LENGTH - 4);//4 + ft_strlen((char *)gen->line[4]));
 	ft_printf("[%d]name = %s\n", j,(gen->players)[j]->name);
 	ft_printf("[%d]comment = %s\n", j,(gen->players)[j]->comment);
-	ft_printf("[%d]opcode = %s\n", j,(unsigned char)(gen->players)[j]->opcode);
+	ft_printf("[%d]opcode = %s\n", j,(char *)(gen->players)[j]->opcode);
 	ft_printf("magic = %d\n", (int)magic);
 	ft_printf("a5=%c\n\n", (char)(gen->line)[4]);
 	ft_printf("a6=%c\n\n", (char)(gen->line)[5]);
@@ -149,7 +157,6 @@ int 	is_valid_champ(char *arg, t_general *gen, size_t j)
 		ft_error("the size of champion is to big\n");
 	if (validate_champ(gen->line, len))
 	{
-		ft_printf("line = %s\n", gen->line);
 		write_player(gen, j);
 		free(&gen->line);
 		ft_printf("valid champion\n"); // test

@@ -21,9 +21,12 @@ void	check_n_flag(t_general *gen)
 	i = 0;
 	j = 1;
 	k = MAX_PLAYERS - gen->champ_num;
-	if (k > 0)
-		if (gen->n_flag[gen->champ_num + 1] != 0)
-			ft_error("bad order of numb after flag -n");
+	while (k > 0)
+	{
+		if (gen->n_flag[gen->champ_num + k] != 0)
+			ft_error("bad order of numb after flag -n\n");
+		k--;
+	}
 	while (gen->n_flag[++i] && gen->no_flag[j])
 	{
 		if (gen->n_flag[i] == 0 && gen->no_flag[j] != 0)
