@@ -113,29 +113,16 @@ void		write_player(t_general *gen, size_t j)
 	gen->players[j] = (t_player *)ft_memalloc(sizeof(t_player));
 	(gen->players)[j]->name = ft_strdup((char *)gen->line + 4);
 	(gen->players)[j]->comment = ft_strdup((char *)gen->line + PROG_NAME_LENGTH + 12);
-	(gen->players)[j]->opcode = (unsigned char *)ft_memalloc((k + 1) * sizeof(unsigned char));
-	// (gen->players)[j]->opcode = ft_strsub((char *)gen->line, 2192, (int)magic);
+	(gen->players)[j]->opcode = (unsigned char *)ft_memalloc(k * sizeof(unsigned char));
 	while (--k)
-	{
 		(gen->players)[j]->opcode[++i] = (char)(gen->line)[i + 2192];
-	}
-	(gen->players)[j]->opcode[++i] = '\0';
-//	while (gen->line[i])
-//	{
-//		(gen->players)[j]->name[i - 4] = (char)gen->line[i];
-//		i++;
-//	}r
 
-	// (gen->line) = (unsigned char *)ft_strdup("aaaazxcvbn");
-	// (gen->players)[j]->name = (unsigned char *)ft_strsub((char *)gen->line[4], 0, PROG_NAME_LENGTH - 4);//4 + ft_strlen((char *)gen->line[4]));
-	ft_printf("[%d]name = %s\n", j,(gen->players)[j]->name);
+	ft_printf("[%d]name = %s\n", j,(gen->players)[j]->name);//delete
 	ft_printf("[%d]comment = %s\n", j,(gen->players)[j]->comment);
 	ft_printf("[%d]opcode = %s\n", j,(char *)(gen->players)[j]->opcode);
 	ft_printf("magic = %d\n", (int)magic);
 	ft_printf("a5=%c\n\n", (char)(gen->line)[4]);
 	ft_printf("a6=%c\n\n", (char)(gen->line)[5]);
-
-
 }
 
 int 	is_valid_champ(char *arg, t_general *gen, size_t j)
@@ -158,7 +145,7 @@ int 	is_valid_champ(char *arg, t_general *gen, size_t j)
 	if (validate_champ(gen->line, len))
 	{
 		write_player(gen, j);
-		free(&gen->line);
+		free(gen->line);
 		ft_printf("valid champion\n"); // test
 	}
 	return (1);

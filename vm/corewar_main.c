@@ -27,9 +27,9 @@ void	check_n_flag(t_general *gen)
 			ft_error("bad order of numb after flag -n\n");
 		k--;
 	}
-	while (gen->n_flag[++i] && gen->no_flag[j])
+	while (++i <= gen->champ_num)
 	{
-		if (gen->n_flag[i] == 0 && gen->no_flag[j] != 0)
+		if (gen->n_flag[i] == 0)
 		{
 			gen->n_flag[i] = gen->no_flag[j];
 			j++;
