@@ -9,6 +9,7 @@ typedef struct s_player		t_player;
 
 struct		s_general
 {
+//	unsigned char		field[MEM_SIZE];
 	unsigned char		*field;
 	unsigned int		total_cycles;
 	unsigned int		process;
@@ -43,9 +44,10 @@ int			is_valid_champ(char *arg, t_general *gen, size_t j);
 int			is_champ(char *arg);
 int			validate_champ(unsigned char *line, int i);
 t_general	*gen_init(void);
-void		write_to_map(t_general *gen);
-void		dump_map(unsigned char *line);
 void		read_players(char **av, t_general *gen);
 void		write_player(t_general *gen, size_t j);
+
+void		write_to_map(t_general *gen);
+void		dump_map(unsigned char *line);
 
 #endif

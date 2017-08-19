@@ -62,15 +62,13 @@ void	read_args(int ar, char **av, t_general *gen)
 		ft_error("No champions\n");
 	check_n_flag(gen);
 	read_players(av, gen);
-	//	write_to_map(gen);
+	write_to_map(gen);
 }
 
 int		main(int ar, char **av)
 {
     t_general   *gen;
-	size_t 		j; //test
 
-	j = 1; // test
     if (ar == 1)
         ft_usage();
     gen = gen_init();

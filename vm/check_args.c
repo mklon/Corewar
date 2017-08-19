@@ -142,7 +142,7 @@ void		write_player(t_general *gen, size_t j)
 	(gen->players)[j]->name = ft_strdup((char *)gen->line + 4);
 	(gen->players)[j]->comment = ft_strdup((char *)gen->line + PROG_NAME_LENGTH + 12);
 	(gen->players)[j]->opcode = (unsigned char *)ft_memalloc((k) * sizeof(unsigned char));
-	while (--k)
+	while (k--)
 	{
 		(gen->players)[j]->opcode[i] = (char)(gen->line)[i + PROG_HEADER_LENGTH];
 		i++;
