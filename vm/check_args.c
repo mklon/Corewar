@@ -97,30 +97,31 @@ int		validate_champ(unsigned char *line, int i)
 
 void		write_player(t_general *gen, size_t j)
 {
-	unsigned int	magic;
+	unsigned int	size;
 	int				i;
 	int				k;
 
 	i = -1;
-	magic = (unsigned int)(gen->line)[136];
-	magic = magic << 8;
-	magic |= (unsigned int)(gen->line)[137];
-	magic = magic << 8;
-	magic |= (unsigned int)(gen->line)[138];
-	magic = magic << 8;
-	magic |= (unsigned int)(gen->line)[139];
-	k = (int)magic;
+	size = (unsigned int)(gen->line)[136];
+	size = size << 8;
+	size |= (unsigned int)(gen->line)[137];
+	size = size << 8;
+	size |= (unsigned int)(gen->line)[138];
+	size = size << 8;
+	size |= (unsigned int)(gen->line)[139];
+	k = (int)size;
 	gen->players[j] = (t_player *)ft_memalloc(sizeof(t_player));
 	(gen->players)[j]->name = ft_strdup((char *)gen->line + 4);
 	(gen->players)[j]->comment = ft_strdup((char *)gen->line + PROG_NAME_LENGTH + 12);
 	(gen->players)[j]->opcode = (unsigned char *)ft_memalloc(k * sizeof(unsigned char));
+	(gen->players)[j]->size = (size_t)size;
 	while (--k)
 		(gen->players)[j]->opcode[++i] = (char)(gen->line)[i + 2192];
 
 	ft_printf("[%d]name = %s\n", j,(gen->players)[j]->name);//delete
 	ft_printf("[%d]comment = %s\n", j,(gen->players)[j]->comment);
 	ft_printf("[%d]opcode = %s\n", j,(char *)(gen->players)[j]->opcode);
-	ft_printf("magic = %d\n", (int)magic);
+	ft_printf("size = %d\n", (int)size);
 	ft_printf("a5=%c\n\n", (char)(gen->line)[4]);
 	ft_printf("a6=%c\n\n", (char)(gen->line)[5]);
 }
