@@ -1,6 +1,6 @@
 #include "vm.h"
 
-unsigned int		is_valid_num(char *arg, char flag)
+int		is_valid_num(char *arg, char flag)
 {
 	int		num;
 
@@ -9,59 +9,7 @@ unsigned int		is_valid_num(char *arg, char flag)
 		ft_error("Bad numb in input line\n");
 	if (!((flag == 'n' && num <= MAX_PLAYERS) || flag == 'd'))
 		ft_error("Bad numb of players in input line\n");
-	return((unsigned int)num);
-}
-
-int					is_flag(char **args, size_t *i, t_general *gen)
-{
-	unsigned int	j;
-
-	j = 0;
-	if (args[*(i)][0] == '-')
-	{
-		if (ft_strequ(args[*i], "-v"))
-		{
-			ft_printf("switch on vizualization\n");
-		}
-		else if (ft_strequ(args[*i], "-d"))
-		{
-			if (!args[*i + 1])
-				ft_error("Not enough argumets\n");
-			gen->dump = is_valid_num(args[++(*i)], 'd');
-			ft_printf("dumps %d cycles\n", gen->dump); // test
-		}
-		else if (ft_strequ(args[*i], "-n"))
-		{
-			if (!args[*i + 1] || !args[*i + 2])
-				ft_error("Not enough argumets\n");
-			if (gen->champ_num == MAX_PLAYERS)
-				ft_error("To many champions\n");
-			j = is_valid_num(args[++(*i)], 'n');
-			(gen->n_flag[j]) ? ft_error("Wrong num of player\n") : 0;
-			if (is_champ(args[++(*i)]))
-				gen->n_flag[j] = *i;
-			else
-				ft_error("Wrong type of file (-n flag)\n");
-			gen->champ_num++;
-			ft_printf("adds num to player\n");	// test
-		}
-		else
-			ft_error("Invalid flag\n"); // proper error message
-		return (1);
-	}
-	return (0);
-}
-
-int 				is_champ(char *arg)
-{
-	int		k;
-
-	k = ft_strlen(arg);
-	if (arg[k - 4] == '.' && arg[k - 3] == 'c' && arg[k - 2] == 'o'
-		&& arg[k - 1] == 'r' && (arg[k] == '\0' || arg[k] == '\n'))
-		return (1);
-	else
-		return (0);
+	return(num);
 }
 
 int		validate_champ(unsigned char *line, int i)
