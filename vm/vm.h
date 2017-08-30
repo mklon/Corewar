@@ -12,6 +12,7 @@ struct		s_general
 //	unsigned char		field[MEM_SIZE];
 	unsigned char		*field;
 	unsigned int		total_cycles;
+	unsigned int		current_cycles;
 	unsigned int		process;
 	unsigned int		cycle_to_die;
 	unsigned int		cycle_delta;
@@ -20,6 +21,7 @@ struct		s_general
 	int					dump;
 	t_player			**players;
 	int					champ_num;
+	int 				winner; //processing
 	size_t				n_flag[MAX_PLAYERS + 1];
 	size_t				no_flag[MAX_PLAYERS + 1];
 	unsigned char 		*line;
@@ -34,6 +36,7 @@ struct	s_player
 	int 			num;
 	unsigned int	last_live;
 	unsigned int	nbr_lives;
+	int 			reg[REG_NUMBER];
 };
 
 void		ft_usage(void);

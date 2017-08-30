@@ -21,7 +21,14 @@ int		main(int ar, char **av)
         ft_usage();
     gen = gen_init();
 	read_args(ar, av, gen);
-
+	while (!gen->winner)
+	{
+		if (gen->current_cycles == gen->cycle_to_die)
+			check_lives();
+		process();
+		gen->total_cycles++;
+		gen->current_cycles++;
+	}
 //	while(1)
 //		;
 	return (0);

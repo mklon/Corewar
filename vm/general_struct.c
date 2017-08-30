@@ -10,6 +10,7 @@ t_general		*gen_init(void)
 	gen->field = ft_memalloc(MEM_SIZE);
 //	ft_bzero(gen->field, MEM_SIZE);
 	gen->total_cycles = 0;
+	gen->current_cycles = 0;
 	gen->process = 0;
 	gen->cycle_to_die = 0;
 	gen->nbr_live = 0;
