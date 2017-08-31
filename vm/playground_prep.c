@@ -11,7 +11,7 @@ void	dump_map(unsigned char *line)
 	while (k < MEM_SIZE)
 	{
 		i = 0;
-		ft_printf("%-5d:", (j++ * 64));
+		ft_printf("%-5d: ", (j++ * 64));
 		while (i++ < 64)
 		{
 			ft_printf("%.2hhx ", line[k++]);
