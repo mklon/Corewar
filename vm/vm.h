@@ -7,6 +7,7 @@
 typedef struct s_general	t_general;
 typedef struct s_player		t_player;
 typedef struct s_process	t_process;
+typedef struct s_oparations	t_operations;
 
 struct				s_general
 {
@@ -14,10 +15,9 @@ struct				s_general
 	unsigned char	*field;
 	unsigned int	total_cycles;
 	unsigned int	current_cycles;
-	unsigned int	process;
+	unsigned int	nbr_process;
 	unsigned int	cycle_to_die;
 	unsigned int	cycle_delta;
-	unsigned int	nbr_live;
 	unsigned int	live_checks;
 	int				dump;
 	t_player		**players;
@@ -36,8 +36,9 @@ struct				s_player
 	size_t			size;
 	int				num;
 	unsigned int	last_live;
-	unsigned int	nbr_lives;
-	t_process		process; //processing
+	unsigned int	declared_live;
+	unsigned int	all_live;
+	t_process		*process; //processing
 };
 
 struct				s_process //processing
@@ -46,7 +47,19 @@ struct				s_process //processing
 	char			carry;
 	int				reg[REG_NUMBER];
 	unsigned int	live;
-	t_process		next;
+	t_process		*next;
+};
+
+struct				s_operations
+{
+	char			*name;
+	int				count_arg;
+	int				arg[MAX_ARGS_NUMBER];
+	int				op_code;
+	int				cycle;
+	char			*full_name;
+	int				coding_byte;
+	int				flag_direct_size;
 };
 
 void				ft_usage(void);
@@ -64,5 +77,9 @@ void				write_player(t_general *gen, size_t j);
 
 void				write_to_map(t_general *gen);
 void				dump_map(unsigned char *line);
+
+void				check_lives(t_general *gen);
+void				new_process(t_process *parent, t_process **head);
+size_t				kill_process(t_process **head);
 
 #endif

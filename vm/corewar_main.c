@@ -15,12 +15,14 @@
 
 int		main(int ar, char **av)
 {
-    t_general   *gen;
+    t_general   	*gen;
+//	t_operations	*op_ta;
 
     if (ar == 1)
         ft_usage();
     gen = gen_init();
 	read_args(ar, av, gen);
+//	op = op_init();
 	while (!gen->winner)
 	{
 		if (gen->dump >= 0 && gen->total_cycles == gen->dump)
@@ -30,9 +32,9 @@ int		main(int ar, char **av)
 		}
 		if (gen->current_cycles == gen->cycle_to_die)
 			check_lives(gen);
-		process();
+//		process();
 		gen->total_cycles++;
-		gen->current_cycles++;
+ 		gen->current_cycles++;
 	}
 //	while(1)
 //		;

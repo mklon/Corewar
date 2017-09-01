@@ -1,0 +1,52 @@
+#include "vm.h"
+
+void	new_process(t_process *parent, t_process **head)
+{
+	t_process	*new;
+	size_t		i;
+
+	i = 0;
+	new = (t_process *)malloc(sizeof(t_process));
+//	new->pc = parent->pc + 1st arg; //fork
+//	new->pc = parent->pc + (1st arg % IDX_MOD); // lfork
+	new->carry = parent->carry;
+	new->live = 0;
+	while (i < REG_NUMBER)
+	{
+		new->reg[i] = parent->reg[i];
+		i++;
+	}
+	new->next = *head;
+	*head = new;
+
+//	gen->nbr_process++; //in previous function
+}
+
+size_t		kill_process(t_process **head)
+{
+	size_t		dead_process;
+	t_process	*ptr;
+	t_process	*tail;
+
+	dead_process = 0;
+	ptr = *head;
+	if (!(*head)->live)
+	{
+		*head = NULL;
+		return (1);
+	}
+	(*head)->live = 0;
+	while (ptr->next)
+	{
+		ptr->live = 0;
+		if (!ptr->next->live)
+		{
+			tail = ptr->next->next;
+			ptr->next = tail;
+			dead_process++;
+		}
+		else
+			ptr = ptr->next;
+	}
+	return (dead_process);
+}

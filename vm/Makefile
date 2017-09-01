@@ -14,7 +14,8 @@ SOURCE = corewar_main.c \
 		check_args.c \
 		general_struct.c \
 		playground_prep.c \
-
+        process_struct.c \
+        processing.c \
         
 OBJECTS = $(SOURCE:.c=.o)
 
