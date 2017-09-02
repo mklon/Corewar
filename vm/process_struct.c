@@ -35,18 +35,20 @@ size_t		kill_process(t_process **head)
 		*head = NULL;
 		return (1);
 	}
-	(*head)->live = 0;
 	while (ptr->next)
 	{
-		ptr->live = 0;
+		ptr->live = 0; // null last node
 		if (!ptr->next->live)
 		{
 			tail = ptr->next->next;
+//			free(ptr->next);
+//			ptr->next = NULL;
 			ptr->next = tail;
 			dead_process++;
 		}
 		else
 			ptr = ptr->next;
 	}
+	ptr->live = 0;
 	return (dead_process);
 }

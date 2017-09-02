@@ -8,24 +8,25 @@ void		check_lives(t_general *gen)
 
 	i = 0;
 	dead_players = 0;
+	live_sum = 0;
 	while (i < gen->champ_num)
 	{
 		live_sum += gen->players[i]->all_live;
 		gen->players[i]->all_live = 0;
 		if (gen->players[i]->process)
 			gen->nbr_process -= kill_process(&gen->players[i]->process);
-		else
+		if (!gen->players[i]->process)
 			dead_players++; // check if player alive
 		i++;
 	}
-	if (live_sum >= NBR_LIVE)
-		gen->cycle_to_die -= CYCLE_DELTA;
-	else if (gen->live_checks == 1)
+	if (live_sum >= NBR_LIVE || gen->live_checks == 1)
 	{
 		gen->live_checks = MAX_CHECKS;
 		gen->cycle_to_die -= CYCLE_DELTA;
 	}
+	else
+		gen->live_checks--;
 	if (gen->cycle_to_die <= 0 || dead_players == gen->champ_num)
-		return ; // winner is??????
+		gen->game_over = 1; // winner is??????
 	gen->current_cycles = 0;
 }

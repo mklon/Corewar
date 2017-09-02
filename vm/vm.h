@@ -16,13 +16,14 @@ struct				s_general
 	unsigned int	total_cycles;
 	unsigned int	current_cycles;
 	unsigned int	nbr_process;
-	unsigned int	cycle_to_die;
-	unsigned int	cycle_delta;
+	int				cycle_to_die;
+//	unsigned int	cycle_delta;
 	unsigned int	live_checks;
 	int				dump;
 	t_player		**players;
 	int				champ_num;
-	int				winner; //processing
+	int				game_over; //processing
+	int				winner; //last reported alive
 	size_t			n_flag[MAX_PLAYERS + 1];
 	size_t			no_flag[MAX_PLAYERS + 1];
 	unsigned char	*line;
