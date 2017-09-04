@@ -17,7 +17,7 @@ struct				s_general
 	unsigned int	current_cycles;
 	unsigned int	nbr_process;
 	int				cycle_to_die;
-//	unsigned int	cycle_delta;
+	unsigned int	live_per_period;
 	unsigned int	live_checks;
 	int				dump;
 	t_player		**players;
@@ -27,6 +27,7 @@ struct				s_general
 	size_t			n_flag[MAX_PLAYERS + 1];
 	size_t			no_flag[MAX_PLAYERS + 1];
 	unsigned char	*line;
+	t_process		*process; //processing
 };
 
 struct				s_player
@@ -38,8 +39,6 @@ struct				s_player
 	int				num;
 	unsigned int	last_live;
 	unsigned int	declared_live;
-	unsigned int	all_live;
-	t_process		*process; //processing
 };
 
 struct				s_process //processing
@@ -49,18 +48,6 @@ struct				s_process //processing
 	int				reg[REG_NUMBER];
 	unsigned int	live;
 	t_process		*next;
-};
-
-struct				s_operations
-{
-	char			*name;
-	int				count_arg;
-	int				arg[MAX_ARGS_NUMBER];
-	int				op_code;
-	int				cycle;
-	char			*full_name;
-	int				coding_byte;
-	int				flag_direct_size;
 };
 
 void				ft_usage(void);

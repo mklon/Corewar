@@ -3,30 +3,24 @@
 void		check_lives(t_general *gen)
 {
 	size_t		i;
-	size_t		live_sum;
-	size_t		dead_players;
 
 	i = 0;
-	dead_players = 0;
-	live_sum = 0;
+	if (gen->process)
+		gen->nbr_process -= kill_process(&gen->process);
 	while (i < gen->champ_num)
 	{
-		live_sum += gen->players[i]->all_live;
-		gen->players[i]->all_live = 0;
-		if (gen->players[i]->process)
-			gen->nbr_process -= kill_process(&gen->players[i]->process);
-		if (!gen->players[i]->process)
-			dead_players++; // check if player alive
+		gen->players[i]->declared_live = 0;
 		i++;
 	}
-	if (live_sum >= NBR_LIVE || gen->live_checks == 1)
+	if (gen->live_per_period >= NBR_LIVE || gen->live_checks == 1)
 	{
 		gen->live_checks = MAX_CHECKS;
 		gen->cycle_to_die -= CYCLE_DELTA;
 	}
 	else
 		gen->live_checks--;
-	if (gen->cycle_to_die <= 0 || dead_players == gen->champ_num)
-		gen->game_over = 1; // winner is??????
+	if (gen->cycle_to_die <= 0 || !gen->process)
+		gen->game_over = 1;
 	gen->current_cycles = 0;
+	gen->live_per_period = 0;
 }

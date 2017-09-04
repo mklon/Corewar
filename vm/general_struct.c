@@ -21,6 +21,7 @@ t_general		*gen_init(void)
 	gen->game_over = 0;
 	gen->winner = 0;
 	gen->line = NULL;
+	gen->process = NULL;
 //	ft_bzero(gen->n_flag, MAX_PLAYERS + 1);
 //	ft_bzero(gen->no_flag, MAX_PLAYERS + 1);
 	return(gen);
