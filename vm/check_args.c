@@ -95,12 +95,12 @@ void		write_player(t_general *gen, size_t j)
 		(gen->players)[j]->opcode[i] = (char)(gen->line)[i + PROG_HEADER_LENGTH];
 		i++;
 	}
-	ft_printf("[%d]name = %s\n", j,(gen->players)[j]->name);             //test
-	ft_printf("[%d]comment = %s\n", j,(gen->players)[j]->comment);       //test
-	ft_printf("[%d]opcode = %s\n", j,(char *)(gen->players)[j]->opcode); //test
-	ft_printf("size = %d\n", (int)size);                                 //test
-	ft_printf("a5=%c\n\n", (char)(gen->line)[4]);                        //test
-	ft_printf("a6=%c\n\n", (char)(gen->line)[5]);                        //test
+//	ft_printf("[%d]name = %s\n", j,(gen->players)[j]->name);             //test
+//	ft_printf("[%d]comment = %s\n", j,(gen->players)[j]->comment);       //test
+//	ft_printf("[%d]opcode = %s\n", j,(char *)(gen->players)[j]->opcode); //test
+//	ft_printf("size = %d\n", (int)size);                                 //test
+//	ft_printf("a5=%c\n\n", (char)(gen->line)[4]);                        //test
+//	ft_printf("a6=%c\n\n", (char)(gen->line)[5]);                        //test
 }
 
 void				read_players(char **av, t_general *gen)

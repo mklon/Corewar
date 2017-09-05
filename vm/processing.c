@@ -24,3 +24,8 @@ void		check_lives(t_general *gen)
 	gen->current_cycles = 0;
 	gen->live_per_period = 0;
 }
+
+void 	processing(t_general *gen)
+{
+
+}

@@ -74,19 +74,6 @@ typedef char	t_arg_type;
 # define PROG_HEADER_LENGTH		(PROG_NAME_LENGTH + COMMENT_LENGTH + 16) //2192
 # define FILE_MAX_LENGTH		(PROG_HEADER_LENGTH + CHAMP_MAX_SIZE) //2874
 
-typedef struct		s_op
-{
-	char			*name;
-	int				count_arg;
-	int				arg[MAX_ARGS_NUMBER];
-	int				op_code;
-	int				cycle;
-	char			*full_name;
-	int				coding_byte;
-	int				flag_direct_size;
-}					t_op;
-
-
 typedef struct		s_header
 {
 	unsigned int		magic;

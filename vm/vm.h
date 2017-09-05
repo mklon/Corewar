@@ -7,7 +7,8 @@
 typedef struct s_general	t_general;
 typedef struct s_player		t_player;
 typedef struct s_process	t_process;
-typedef struct s_oparations	t_operations;
+typedef struct s_op			t_op;
+t_op op[17];
 
 struct				s_general
 {
@@ -49,6 +50,18 @@ struct				s_process //processing
 	unsigned int	live;
 	t_process		*next;
 };
+
+struct				s_op
+{
+	void			(*f)(t_general *gen);
+	int				nbr_arg;
+	int				arg[MAX_ARGS_NUMBER];
+	int				op_code;
+	int				cycle;
+	int				coding_byte;
+	int				flag_direct_size;
+};
+
 
 void				ft_usage(void);
 int					ft_error(char *message);

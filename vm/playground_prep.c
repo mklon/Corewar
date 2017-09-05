@@ -26,6 +26,7 @@ void 	write_to_map(t_general *gen)
 	size_t		j;
 	size_t		step;
 	void		*ptr;
+	t_process	*head;
 
 	i = 0;
 	j = 0;
@@ -33,7 +34,10 @@ void 	write_to_map(t_general *gen)
 	step = (size_t)(MEM_SIZE) / gen->champ_num;
 	while (j < gen->champ_num)
 	{
-//		gen->process = (t_process *)malloc(sizeof(t_process));
+		head = (t_process *)ft_memalloc(sizeof(t_process));
+		(gen->process->reg)[1] = (gen->players)[j]->num;
+		head->next = gen->process;
+		gen->process = head;
 
 		ptr = gen->players[j]->opcode;
 		ft_memcpy(gen->field + i, ptr, gen->players[j]->size);
