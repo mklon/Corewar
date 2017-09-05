@@ -12,6 +12,14 @@
 
 #include "vm.h"
 
+void	the_winner_is(t_general *gen)
+{
+	int 	w;
+
+	w = ((gen->winner) ? -gen->winner : gen->champ_num);
+	ft_printf("Player %d (%s) won\n", w, gen->players[w - 1]->name);
+}
+
 int		main(int ar, char **av)
 {
     t_general   	*gen;
@@ -35,6 +43,8 @@ int		main(int ar, char **av)
 		if (gen->current_cycles == gen->cycle_to_die)
 			check_lives(gen);
 	}
+
+	the_winner_is(gen);
 //	while(1)
 //		;
 	return (0);
