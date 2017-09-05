@@ -2,41 +2,47 @@
 
 void	dump_map(unsigned char *line)
 {
-	int		i;
-	int		k;
-	int		j;
+	size_t	i;
+	size_t	k;
+	size_t	j;
 
-//	i = -1;
-	k = -1;
-	j = -1;
+	k = 0;
+	j = 0;
 	while (k < MEM_SIZE)
 	{
-		i = -1;
-		ft_printf("%-5d:", ++j);
-		while (++i < 64)
+		i = 0;
+		ft_printf("%-5d: ", (j++ * 64));
+		while (i++ < 64)
 		{
-			ft_printf("%.2hhX ", line[++k]);
+			ft_printf("%.2hhx ", line[k++]);
 		}
 		ft_printf("\n");
 	}
 }
 
-//void 	write_to_map(t_general *gen)
-//{
-//	size_t		i;
-//	size_t		j;
-//	size_t		step;
-//	void		*ptr;
-//
-//	i = 0;
-//	j = 0;
-//	step = MEM_SIZE / gen->champ_num;
-//	while (j < gen->champ_num)
-//	{
-//		ptr = gen->champs[j];
-//		ft_memcpy(gen->field + i, ptr + PROG_HEADER_LENGTH, CHAMP_MAX_SIZE);
-//		j++;
-//		i += step;
-//	}
-//	dump_map(gen->field);
-//}
+void 	write_to_map(t_general *gen)
+{
+	size_t		i;
+	size_t		j;
+	size_t		step;
+	void		*ptr;
+	t_process	*head;
+
+	i = 0;
+	j = 0;
+//	dump_map(gen->field); //test
+	step = (size_t)(MEM_SIZE) / gen->champ_num;
+	while (j < gen->champ_num)
+	{
+		head = (t_process *)ft_memalloc(sizeof(t_process));
+		(gen->process->reg)[1] = (gen->players)[j]->num;
+		head->next = gen->process;
+		gen->process = head;
+
+		ptr = gen->players[j]->opcode;
+		ft_memcpy(gen->field + i, ptr, gen->players[j]->size);
+		j++;
+		i += step;
+	}
+	dump_map(gen->field); //test
+}

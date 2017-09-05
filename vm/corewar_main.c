@@ -12,66 +12,39 @@
 
 #include "vm.h"
 
-void	check_n_flag(t_general *gen)
+void	the_winner_is(t_general *gen)
 {
-	int		i;
-	int		k;
-	int		j;
+	int 	w;
 
-	i = 0;
-	j = 1;
-	k = MAX_PLAYERS - gen->champ_num;
-	while (k > 0)
-	{
-		if (gen->n_flag[gen->champ_num + k] != 0)
-			ft_error("bad order of numb after flag -n\n");
-		k--;
-	}
-	while (++i <= gen->champ_num)
-	{
-		if (gen->n_flag[i] == 0)
-		{
-			gen->n_flag[i] = gen->no_flag[j];
-			j++;
-		}
-	}
-}
-
-void	read_args(int ar, char **av, t_general *gen)
-{
-	size_t		i;
-	size_t		j;
-
-	i = 0;
-	j = 1;
-	while (++i < ar)
-	{
-		if (is_flag(av, &i, gen)) // checks if arg is a flag and adds to struct
-			;
-		else if (is_champ(av[i]))
-		{
-			if (gen->champ_num == MAX_PLAYERS)
-				ft_error("To many champions");
-			gen->no_flag[j++] = i;
-			gen->champ_num++;
-		}
-	}
-	check_n_flag(gen);
-	read_players(av, gen);
-	//	write_to_map(gen);
+	w = ((gen->winner) ? -gen->winner : gen->champ_num);
+	ft_printf("Player %d (%s) won\n", w, gen->players[w - 1]->name);
 }
 
 int		main(int ar, char **av)
 {
-    t_general   *gen;
-	size_t 		j; //test
+    t_general   	*gen;
+//	t_operations	*op_tab;
 
-	j = 1; // test
     if (ar == 1)
         ft_usage();
     gen = gen_init();
 	read_args(ar, av, gen);
+//	op = op_init();
+	while (!gen->game_over)
+	{
+//		process();
+		gen->total_cycles++;
+		gen->current_cycles++;
+		if (gen->dump >= 0 && gen->total_cycles == gen->dump)
+		{
+			dump_map(gen->field);
+			exit(0);
+		}
+		if (gen->current_cycles == gen->cycle_to_die)
+			check_lives(gen);
+	}
 
+	the_winner_is(gen);
 //	while(1)
 //		;
 	return (0);
