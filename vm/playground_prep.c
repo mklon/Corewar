@@ -35,9 +35,10 @@ void 	write_to_map(t_general *gen)
 	while (j < gen->champ_num)
 	{
 		head = (t_process *)ft_memalloc(sizeof(t_process));
-		ft_printf("write_to_map 1\n"); // test
-		(gen->process->reg)[1] = (gen->players)[j]->num;
-		ft_printf("write_to_map 1\n"); // test
+		(head->reg)[1] = (gen->players)[j]->num;
+		head->pc = 0;
+		head->carry = 0;
+		head->live = 0;
 		head->next = gen->process;
 		gen->process = head;
 		ptr = gen->players[j]->opcode;
