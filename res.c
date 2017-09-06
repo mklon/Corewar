@@ -40,11 +40,10 @@ int main()
 	int		i = 0;
 	attroff(COLOR_PAIR(1));
 	refresh();
-	while (i++ < 8192)
+	while (i++ < 4096)
 	{
-		mvprintw(y, x++, "%c", str[i]);
-		if (i % 2 == 0)
-			mvprintw(y, x++," ");
+		mvprintw(y, x++, "%x", str[i]);
+		mvprintw(y, ++x," ");
 		if (i % 128 == 0)
 		{
 			x = 4;
