@@ -32,7 +32,7 @@ int		main(int ar, char **av)
 //	op = op_init();
 	while (!gen->game_over)
 	{
-//		process();
+//		process(gen);
 		gen->total_cycles++;
 		gen->current_cycles++;
 		if (gen->dump >= 0 && gen->total_cycles == gen->dump)

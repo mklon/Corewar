@@ -8,7 +8,6 @@ typedef struct s_general	t_general;
 typedef struct s_player		t_player;
 typedef struct s_process	t_process;
 typedef struct s_op			t_op;
-t_op op[17];
 
 struct				s_general
 {
@@ -46,8 +45,9 @@ struct				s_process //processing
 {
 	size_t			pc;
 	char			carry;
-	int				reg[REG_NUMBER];
+	int				reg[REG_NUMBER + 1];
 	unsigned int	live;
+	int				on_hold;
 	t_process		*next;
 };
 
@@ -62,6 +62,7 @@ struct				s_op
 	int				flag_direct_size;
 };
 
+t_op op[17];
 
 void				ft_usage(void);
 int					ft_error(char *message);

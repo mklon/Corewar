@@ -25,7 +25,21 @@ void		check_lives(t_general *gen)
 	gen->live_per_period = 0;
 }
 
-void 	processing(t_general *gen)
+void 	process(t_general *gen)
 {
+	t_process	*ptr;
+	int			curr_byte;
 
+	ptr = gen->process;
+	while (ptr)
+	{
+		curr_byte = gen->field[ptr->pc];
+		if ()
+		if (ptr->on_hold != op[].cycle)
+		{
+
+		}
+		ptr = ptr->next;
+	}
 }
+
