@@ -1,35 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   corewar_main.c                                     :+:      :+:    :+:   */
+/*   ft_print_list.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msymkany <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/03 17:52:03 by msymkany          #+#    #+#             */
-/*   Updated: 2017/08/03 18:01:51 by msymkany         ###   ########.fr       */
+/*   Created: 2016/12/08 11:42:24 by msymkany          #+#    #+#             */
+/*   Updated: 2016/12/10 14:52:32 by msymkany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "vm.h"
+#include "../includes/libft.h"
 
-
-int		main(int ar, char **av)
+void	ft_print_list(t_list *list)
 {
-    t_general   *gen;
-
-    if (ar == 1)
-        ft_usage();
-    gen = gen_init();
-	read_args(ar, av, gen);
-	while (!gen->winner)
+	while (list)
 	{
-		if (gen->current_cycles == gen->cycle_to_die)
-			;//check_lives();
-		//process();
-		gen->total_cycles++;
-		gen->current_cycles++;
+		ft_putstr((char *)list->content);
+		ft_putchar('\n');
+		list = list->next;
 	}
-//	while(1)
-//		;
-	return (0);
 }

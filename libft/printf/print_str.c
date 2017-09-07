@@ -1,35 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   corewar_main.c                                     :+:      :+:    :+:   */
+/*   print_str.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msymkany <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/03 17:52:03 by msymkany          #+#    #+#             */
-/*   Updated: 2017/08/03 18:01:51 by msymkany         ###   ########.fr       */
+/*   Created: 2017/03/13 16:36:57 by msymkany          #+#    #+#             */
+/*   Updated: 2017/03/13 16:37:00 by msymkany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "vm.h"
+#include "../includes/libftprintf.h"
 
-
-int		main(int ar, char **av)
+void	print_str(t_magic *m, int l)
 {
-    t_general   *gen;
+	int		i;
 
-    if (ar == 1)
-        ft_usage();
-    gen = gen_init();
-	read_args(ar, av, gen);
-	while (!gen->winner)
+	i = 0;
+	while (l-- && m->buf[i])
 	{
-		if (gen->current_cycles == gen->cycle_to_die)
-			;//check_lives();
-		//process();
-		gen->total_cycles++;
-		gen->current_cycles++;
+		print_char(m->buf[i], m);
+		i++;
 	}
-//	while(1)
-//		;
-	return (0);
 }

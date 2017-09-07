@@ -1,35 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   corewar_main.c                                     :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msymkany <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/03 17:52:03 by msymkany          #+#    #+#             */
-/*   Updated: 2017/08/03 18:01:51 by msymkany         ###   ########.fr       */
+/*   Created: 2016/12/03 10:43:22 by msymkany          #+#    #+#             */
+/*   Updated: 2016/12/03 18:30:01 by msymkany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "vm.h"
+#include "../includes/libft.h"
 
-
-int		main(int ar, char **av)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-    t_general   *gen;
+	size_t	i;
+	char	*cat;
 
-    if (ar == 1)
-        ft_usage();
-    gen = gen_init();
-	read_args(ar, av, gen);
-	while (!gen->winner)
+	if (s1 && s2)
 	{
-		if (gen->current_cycles == gen->cycle_to_die)
-			;//check_lives();
-		//process();
-		gen->total_cycles++;
-		gen->current_cycles++;
+		i = ft_strlen(s1) + ft_strlen(s2) + 1;
+		cat = (char *)malloc(i * sizeof(char));
+		if (cat)
+		{
+			ft_strcpy(cat, s1);
+			ft_strcat(cat, s2);
+			return (cat);
+		}
 	}
-//	while(1)
-//		;
 	return (0);
 }

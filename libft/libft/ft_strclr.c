@@ -1,35 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   corewar_main.c                                     :+:      :+:    :+:   */
+/*   ft_strclr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msymkany <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/03 17:52:03 by msymkany          #+#    #+#             */
-/*   Updated: 2017/08/03 18:01:51 by msymkany         ###   ########.fr       */
+/*   Created: 2016/11/30 13:28:39 by msymkany          #+#    #+#             */
+/*   Updated: 2016/11/30 14:31:58 by msymkany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "vm.h"
+#include "../includes/libft.h"
 
-
-int		main(int ar, char **av)
+void	ft_strclr(char *s)
 {
-    t_general   *gen;
-
-    if (ar == 1)
-        ft_usage();
-    gen = gen_init();
-	read_args(ar, av, gen);
-	while (!gen->winner)
-	{
-		if (gen->current_cycles == gen->cycle_to_die)
-			;//check_lives();
-		//process();
-		gen->total_cycles++;
-		gen->current_cycles++;
-	}
-//	while(1)
-//		;
-	return (0);
+	if (s)
+		ft_bzero(s, ft_strlen(s));
 }

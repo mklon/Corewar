@@ -1,35 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   corewar_main.c                                     :+:      :+:    :+:   */
+/*   ft_trim.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msymkany <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/03 17:52:03 by msymkany          #+#    #+#             */
-/*   Updated: 2017/08/03 18:01:51 by msymkany         ###   ########.fr       */
+/*   Created: 2016/12/03 13:44:06 by msymkany          #+#    #+#             */
+/*   Updated: 2016/12/09 22:37:17 by msymkany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "vm.h"
+#include "../includes/libft.h"
 
-
-int		main(int ar, char **av)
+char	*ft_trim(char const *s, int begin, int end)
 {
-    t_general   *gen;
+	char		*n;
+	size_t		i;
 
-    if (ar == 1)
-        ft_usage();
-    gen = gen_init();
-	read_args(ar, av, gen);
-	while (!gen->winner)
+	i = 0;
+	if (end < begin)
+		return (0);
+	n = (char *)malloc((end - begin + 2) * sizeof(char));
+	if (n)
 	{
-		if (gen->current_cycles == gen->cycle_to_die)
-			;//check_lives();
-		//process();
-		gen->total_cycles++;
-		gen->current_cycles++;
+		while (begin <= end && s[begin])
+		{
+			n[i] = s[begin];
+			i++;
+			begin++;
+		}
+		n[i] = '\0';
+		return (n);
 	}
-//	while(1)
-//		;
 	return (0);
 }

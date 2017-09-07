@@ -1,35 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   corewar_main.c                                     :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msymkany <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/03 17:52:03 by msymkany          #+#    #+#             */
-/*   Updated: 2017/08/03 18:01:51 by msymkany         ###   ########.fr       */
+/*   Created: 2016/11/23 20:47:31 by msymkany          #+#    #+#             */
+/*   Updated: 2016/12/06 21:57:02 by msymkany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "vm.h"
+#include "../includes/libft.h"
 
-
-int		main(int ar, char **av)
+int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-    t_general   *gen;
-
-    if (ar == 1)
-        ft_usage();
-    gen = gen_init();
-	read_args(ar, av, gen);
-	while (!gen->winner)
+	if (n == 0)
+		return (0);
+	while (*s1 && *s1 == *s2 && --n)
 	{
-		if (gen->current_cycles == gen->cycle_to_die)
-			;//check_lives();
-		//process();
-		gen->total_cycles++;
-		gen->current_cycles++;
+		s1++;
+		s2++;
 	}
-//	while(1)
-//		;
-	return (0);
+	return (*(unsigned char *)s1 - *(unsigned char *)s2);
 }

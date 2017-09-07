@@ -1,35 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   corewar_main.c                                     :+:      :+:    :+:   */
+/*   ft_strmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msymkany <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/03 17:52:03 by msymkany          #+#    #+#             */
-/*   Updated: 2017/08/03 18:01:51 by msymkany         ###   ########.fr       */
+/*   Created: 2016/11/30 17:51:35 by msymkany          #+#    #+#             */
+/*   Updated: 2016/12/09 22:26:41 by msymkany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "vm.h"
+#include "../includes/libft.h"
 
-
-int		main(int ar, char **av)
+char	*ft_strmap(char const *s, char (*f)(char))
 {
-    t_general   *gen;
+	char	*n;
+	size_t	l;
+	size_t	i;
 
-    if (ar == 1)
-        ft_usage();
-    gen = gen_init();
-	read_args(ar, av, gen);
-	while (!gen->winner)
+	i = 0;
+	if (s && f)
 	{
-		if (gen->current_cycles == gen->cycle_to_die)
-			;//check_lives();
-		//process();
-		gen->total_cycles++;
-		gen->current_cycles++;
+		l = ft_strlen(s) + 1;
+		n = (char *)malloc(l * sizeof(char));
+		if (n)
+		{
+			while (s[i])
+			{
+				n[i] = f(s[i]);
+				i++;
+			}
+			n[i] = '\0';
+		}
+		return (n);
 	}
-//	while(1)
-//		;
 	return (0);
 }

@@ -1,35 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   corewar_main.c                                     :+:      :+:    :+:   */
+/*   ft_w_c.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msymkany <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/03 17:52:03 by msymkany          #+#    #+#             */
-/*   Updated: 2017/08/03 18:01:51 by msymkany         ###   ########.fr       */
+/*   Created: 2016/12/08 18:19:56 by msymkany          #+#    #+#             */
+/*   Updated: 2016/12/10 14:02:19 by msymkany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "vm.h"
+#include "../includes/libft.h"
 
-
-int		main(int ar, char **av)
+int		ft_w_c(char const *s, char c)
 {
-    t_general   *gen;
+	size_t		w;
+	char		*pt;
 
-    if (ar == 1)
-        ft_usage();
-    gen = gen_init();
-	read_args(ar, av, gen);
-	while (!gen->winner)
+	if (s == '\0')
+		return (0);
+	pt = (char *)s;
+	w = 0;
+	while (*pt)
 	{
-		if (gen->current_cycles == gen->cycle_to_die)
-			;//check_lives();
-		//process();
-		gen->total_cycles++;
-		gen->current_cycles++;
+		while (*pt && *pt == c)
+			pt++;
+		if (*pt)
+		{
+			while (*pt && *pt != c)
+				pt++;
+			w++;
+		}
 	}
-//	while(1)
-//		;
-	return (0);
+	return (w);
 }

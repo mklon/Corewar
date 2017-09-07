@@ -1,35 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   corewar_main.c                                     :+:      :+:    :+:   */
+/*   ft_extract_digits.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msymkany <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/03 17:52:03 by msymkany          #+#    #+#             */
-/*   Updated: 2017/08/03 18:01:51 by msymkany         ###   ########.fr       */
+/*   Created: 2017/05/06 13:33:11 by msymkany          #+#    #+#             */
+/*   Updated: 2017/05/06 13:33:26 by msymkany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "vm.h"
+#include "../includes/libft.h"
 
-
-int		main(int ar, char **av)
+size_t		ft_extract_digits(int *res, char *str, size_t i)
 {
-    t_general   *gen;
+	long int	n;
 
-    if (ar == 1)
-        ft_usage();
-    gen = gen_init();
-	read_args(ar, av, gen);
-	while (!gen->winner)
+	n = 0;
+	while (ft_isdigit(str[i]))
 	{
-		if (gen->current_cycles == gen->cycle_to_die)
-			;//check_lives();
-		//process();
-		gen->total_cycles++;
-		gen->current_cycles++;
+		n = n * 10 + (str[i] - '0');
+		if (!(ft_isint(n)))
+			return (0);
+		i++;
 	}
-//	while(1)
-//		;
-	return (0);
+	*res = (int)n;
+	return (i);
 }

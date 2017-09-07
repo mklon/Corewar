@@ -1,35 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   corewar_main.c                                     :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msymkany <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/03 17:52:03 by msymkany          #+#    #+#             */
-/*   Updated: 2017/08/03 18:01:51 by msymkany         ###   ########.fr       */
+/*   Created: 2016/11/29 18:42:56 by msymkany          #+#    #+#             */
+/*   Updated: 2016/12/04 18:44:03 by msymkany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "vm.h"
+#include "../includes/libft.h"
 
-
-int		main(int ar, char **av)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-    t_general   *gen;
+	size_t	dlen;
+	size_t	n;
+	char	*d;
+	char	*s;
 
-    if (ar == 1)
-        ft_usage();
-    gen = gen_init();
-	read_args(ar, av, gen);
-	while (!gen->winner)
+	d = dst;
+	s = (char *)src;
+	n = size;
+	while (n-- && *d)
+		d++;
+	dlen = d - dst;
+	n = size - dlen;
+	if (!n)
+		return (dlen + ft_strlen(s));
+	while (*s)
 	{
-		if (gen->current_cycles == gen->cycle_to_die)
-			;//check_lives();
-		//process();
-		gen->total_cycles++;
-		gen->current_cycles++;
+		if (n != 1)
+		{
+			*d++ = *s;
+			n--;
+		}
+		s++;
 	}
-//	while(1)
-//		;
-	return (0);
+	*d = '\0';
+	return (dlen + (s - src));
 }

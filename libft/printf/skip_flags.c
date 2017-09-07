@@ -1,35 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   corewar_main.c                                     :+:      :+:    :+:   */
+/*   skip_flags.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msymkany <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/03 17:52:03 by msymkany          #+#    #+#             */
-/*   Updated: 2017/08/03 18:01:51 by msymkany         ###   ########.fr       */
+/*   Created: 2017/03/13 16:35:57 by msymkany          #+#    #+#             */
+/*   Updated: 2017/03/13 16:36:02 by msymkany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "vm.h"
+#include "../includes/libftprintf.h"
 
-
-int		main(int ar, char **av)
+const char		*skip_flags(const char *fr, char *fl)
 {
-    t_general   *gen;
-
-    if (ar == 1)
-        ft_usage();
-    gen = gen_init();
-	read_args(ar, av, gen);
-	while (!gen->winner)
+	while ((FLAG_SIG(*fr) || FLAG_NUM(*fr) || FLAG_MOD(*fr) || FLAG_SKIP(*fr)
+			|| FLAG_SIG2(*fr)) && *fr)
 	{
-		if (gen->current_cycles == gen->cycle_to_die)
-			;//check_lives();
-		//process();
-		gen->total_cycles++;
-		gen->current_cycles++;
+		if (FLAG_MOD(*fr))
+			*fl = get_mod(*fr, *fl);
+		fr++;
 	}
-//	while(1)
-//		;
-	return (0);
+	return (fr);
 }
