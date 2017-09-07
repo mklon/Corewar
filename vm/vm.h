@@ -53,7 +53,7 @@ struct				s_process //processing
 
 struct				s_op
 {
-	void			(*f)(t_general *gen);
+	void			(*f)(t_general *gen, t_process *proc);
 	int				nbr_arg;
 	int				arg[MAX_ARGS_NUMBER];
 	int				op_code;
@@ -81,6 +81,7 @@ void				write_to_map(t_general *gen);
 void				dump_map(unsigned char *line);
 
 void				check_lives(t_general *gen);
+void				process(t_general *gen);
 void				new_process(t_process *parent, t_process **head);
 size_t				kill_process(t_process **head);
 

@@ -1,5 +1,6 @@
 #include "vm.h"
 
+
 void		check_lives(t_general *gen)
 {
 	size_t		i;
@@ -24,6 +25,11 @@ void		check_lives(t_general *gen)
 	gen->current_cycles = 0;
 	gen->live_per_period = 0;
 }
+//
+//int 	check_coding_byte(int num_op)
+//{
+//
+//}
 
 void 	process(t_general *gen)
 {
@@ -42,7 +48,7 @@ void 	process(t_general *gen)
 				ptr->on_hold++;
 			else
 			{
-				op[curr_byte - 1].f(gen);
+				op[curr_byte - 1].f(gen, ptr);
 				ptr->on_hold = 0;
 			}
 		}
