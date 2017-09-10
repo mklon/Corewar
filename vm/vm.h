@@ -53,7 +53,7 @@ struct				s_process //processing
 
 struct				s_op
 {
-	void			(*f)(t_general *gen, t_process *proc);
+	void			(*f)(t_general *gen, t_process *current, int num);
 	int				nbr_arg;
 	int				arg[MAX_ARGS_NUMBER];
 	int				op_code;
