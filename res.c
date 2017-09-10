@@ -95,13 +95,3 @@ int		main()
 	endwin();
 	return 0;
 }
-
-/*
-mvprintw(y, x++, "%02x", str[i]);
-		mvprintw(y, x++,"  ");
-		if (i % 96 == 0)
-		{
-			x = 4;
-			y++;
-		}
-*/
