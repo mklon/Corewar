@@ -54,16 +54,15 @@ void	draw_border(void)
 void	map_display(WINDOW *map, int i, int j)
 {
 	wmove(map, 0, 0);
-	wattron(map, COLOR_PAIR(6));
 	while (i < 4096)
 	{
 		while (i < j * 64)
 		{
 			if (i < 4096)
 			{
-				//wattron(map, A_BOLD | COLOR_PAIR(1));
+				wattron(map, COLOR_PAIR(6));
 				wprintw(map, "%02x", str[i]);
-				//wattroff(map, A_BOLD | COLOR_PAIR(1));
+				wattroff(map, COLOR_PAIR(6));
 			}
 			if (i != j * 64 - 1)
 				wprintw(map, " ");
@@ -73,7 +72,6 @@ void	map_display(WINDOW *map, int i, int j)
 		wrefresh(map);
 		j++;
 	}
-	wattroff(map, COLOR_PAIR(6));
 }
 
 
