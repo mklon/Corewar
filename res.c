@@ -32,22 +32,32 @@ void	color_init(void)
 	init_pair(6, COLOR_MAGENTA, COLOR_BLACK);
 }
 
+void	dashboard(WINDOW *dboard)
+{
+	wmove(dboard, 0, 0);
+	wprintw(dboard, "1232ddddddddddddddddddddddddddddddddddddddddddddddddddddddddds");
+	wrefresh(dboard);
+}
+
 void	draw_border(void)
 {
+	char	c;
 	WINDOW *win;
+
+	c = ' ';
 	attron(COLOR_PAIR(5));
-	hline(' ', 254);
-	vline(' ', 67);
+	hline(c, 254);
+	vline(c, 67);
 	move(0, 1);
-	vline(' ', 67);
+	vline(c, 67);
 	move(67, 0);
-	hline(' ', 254);
+	hline(c, 254);
 	move(0, 254);
-	vline(' ', 68);
+	vline(c, 68);
 	move(0, 255);
-	vline(' ', 68);
+	vline(c, 68);
 	move(0, 197);
-	vline(' ', 67);
+	vline(c, 67);
 	attroff(COLOR_PAIR(5));
 }
 
@@ -78,7 +88,7 @@ void	map_display(WINDOW *map, int i, int j)
 int		main()
 {
 	int		x = 4, y = 2;
-	WINDOW *map, *text;
+	WINDOW *map, *text, *dboard;
 
 	initscr();
 	raw();
@@ -87,9 +97,10 @@ int		main()
 	draw_border();
 	map = newwin(65, 193, 2, 4);
 	text = newwin(1, 1, 67, 256);
+	dboard = newwin(64, 54, 2, 199);
 	refresh();
 	map_display(map, 0, 1);
-	wrefresh(map);
+	dashboard(dboard);
 	while (wgetch(text) != 'q')
 		wprintw(text ," ");
 	endwin();
