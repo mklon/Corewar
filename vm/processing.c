@@ -42,7 +42,8 @@ void 	process(t_general *gen)
 				ptr->on_hold++;
 			else
 			{
-				op[curr_byte - 1].f(gen, ptr, curr_byte - 1);
+//				op[curr_byte - 1].f(gen, ptr, curr_byte - 1);
+ 				fetch(gen, ptr, curr_byte - 1);
 				ptr->on_hold = 0;
 			}
 		}

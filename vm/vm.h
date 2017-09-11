@@ -53,7 +53,7 @@ struct				s_process //processing
 
 struct				s_op
 {
-	void			(*f)(t_general *gen, t_process *current, int num);
+	void			(*f)(t_general *gen, t_process *current, int op_num, int *args);
 	int				nbr_arg;
 	int				arg[MAX_ARGS_NUMBER];
 	int				op_code;
@@ -85,4 +85,8 @@ void				process(t_general *gen);
 void				new_process(t_process *parent, t_process **head);
 size_t				kill_process(t_process **head);
 
+void				fetch(t_general *gen, t_process *process, int op_num);
+void				fetch_args(unsigned char *field, t_process *proc, int op_num, int **args);
+int					check_cod_byte(int op_num, unsigned char codbyte, int *step, int **args);
+int					validate_cod_byte(int op_num, int *args);
 #endif
