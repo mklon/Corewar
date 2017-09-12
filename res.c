@@ -30,12 +30,15 @@ void	color_init(void)
 	init_pair(40, COLOR_WHITE, COLOR_YELLOW);
 	init_pair(5, COLOR_MAGENTA, COLOR_MAGENTA);
 	init_pair(6, COLOR_MAGENTA, COLOR_BLACK);
+	init_pair(7, COLOR_WHITE, COLOR_BLACK);
 }
 
 void	dashboard(WINDOW *dboard)
 {
 	wmove(dboard, 0, 0);
+	attron(COLOR_PAIR(7));
 	wprintw(dboard, "1232ddddddddddddddddddddddddddddddddddddddddddddddddddddddddds");
+	attroff(COLOR_PAIR(7));
 	wrefresh(dboard);
 }
 
@@ -101,7 +104,7 @@ int		main()
 	refresh();
 	map_display(map, 0, 1);
 	dashboard(dboard);
-	while (wgetch(text) != 'q')
+	while (wgetch(text) != 'z')
 		wprintw(text ," ");
 	endwin();
 	return 0;
