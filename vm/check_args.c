@@ -52,6 +52,7 @@ int 	is_valid_champ(char *arg, t_general *gen, size_t j)
 //	ft_printf("FILE_MAX_LENGTH: %u\n", FILE_MAX_LENGTH); // test
 	gen->line = ft_memalloc(FILE_MAX_LENGTH);
 	fd = open(arg, O_RDONLY);
+//	fd = open("../champs/examqples/big_zork.cor", O_RDONLY);
 	len = read(fd, gen->line, FILE_MAX_LENGTH);
 //	ft_printf("len: %u\n", len); // test
 	if (fd == -1 || len == -1)
@@ -95,12 +96,12 @@ void		write_player(t_general *gen, size_t j)
 		(gen->players)[j]->opcode[i] = (char)(gen->line)[i + PROG_HEADER_LENGTH];
 		i++;
 	}
-	ft_printf("[%d]name = %s\n", j,(gen->players)[j]->name);             //test
-	ft_printf("[%d]comment = %s\n", j,(gen->players)[j]->comment);       //test
-	ft_printf("[%d]opcode = %s\n", j,(char *)(gen->players)[j]->opcode); //test
-	ft_printf("size = %d\n", (int)size);                                 //test
-	ft_printf("a5=%c\n\n", (char)(gen->line)[4]);                        //test
-	ft_printf("a6=%c\n\n", (char)(gen->line)[5]);                        //test
+//	ft_printf("[%d]name = %s\n", j,(gen->players)[j]->name);             //test
+//	ft_printf("[%d]comment = %s\n", j,(gen->players)[j]->comment);       //test
+//	ft_printf("[%d]opcode = %s\n", j,(char *)(gen->players)[j]->opcode); //test
+//	ft_printf("size = %d\n", (int)size);                                 //test
+//	ft_printf("a5=%c\n\n", (char)(gen->line)[4]);                        //test
+//	ft_printf("a6=%c\n\n", (char)(gen->line)[5]);                        //test
 }
 
 void				read_players(char **av, t_general *gen)

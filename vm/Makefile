@@ -14,8 +14,26 @@ SOURCE = corewar_main.c \
 		check_args.c \
 		general_struct.c \
 		playground_prep.c \
+        process_struct.c \
+        processing.c \
+        fetch.c \
+        operations/1_live.c \
+        operations/2_ld.c \
+        operations/3_st.c \
+        operations/4_add.c \
+        operations/5_sub.c \
+        operations/6_and.c \
+        operations/7_or.c \
+        operations/8_xor.c \
+        operations/9_zjmp.c \
+        operations/10_ldi.c \
+        operations/11_sti.c \
+        operations/12_fork.c \
+        operations/13_lld.c \
+        operations/14_lldi.c \
+        operations/15_lfork.c \
+        operations/16_aff.c \
 
-        
 OBJECTS = $(SOURCE:.c=.o)
 
 LIBFT_DIR = ../libft/
