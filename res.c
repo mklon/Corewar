@@ -12,8 +12,12 @@
 
 #include <unistd.h> 
 #include <ncurses.h>
+#include "vm/vm.h"
+#include "graph.h"
 
 char	*str = ".,((.;(..);;!;!;)(!;)(;.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjopre";
+
+
 
 void	color_init(void)
 {
@@ -33,13 +37,14 @@ void	color_init(void)
 	init_pair(7, COLOR_WHITE, COLOR_BLACK);
 }
 
-void	dashboard(WINDOW *dboard)
+void	dashboard(WINDOW *board)
 {
-	wmove(dboard, 0, 0);
+	wmove(board, 0, 0);
 	attron(COLOR_PAIR(7));
-	wprintw(dboard, "1232ddddddddddddddddddddddddddddddddddddddddddddddddddddddddds");
+	wprintw(board, "1232ddddddddddddddddddddddddddddddddddddddddddddddddddddddddds");
+	if ()
 	attroff(COLOR_PAIR(7));
-	wrefresh(dboard);
+	wrefresh(board);
 }
 
 void	draw_border(void)
@@ -87,25 +92,31 @@ void	map_display(WINDOW *map, int i, int j)
 	}
 }
 
+void	start_graph(void)
+{
+	initscr();
+	raw();
+	color_init();
+	use_default_colors();
+	curs_set(0);
+	draw_border();
+}
 
 int		main()
 {
 	int		x = 4, y = 2;
-	WINDOW *map, *text, *dboard;
+	t_g		m;
+	struct s_general	*l;
 
-	initscr();
-	raw();
-	color_init();
-	curs_set(0);
-	draw_border();
-	map = newwin(65, 193, 2, 4);
-	text = newwin(1, 1, 67, 256);
-	dboard = newwin(64, 54, 2, 199);
+	start_graph();
+	m.map = newwin(65, 193, 2, 4);
+	m.text = newwin(1, 1, 67, 256);
+	m.board = newwin(64, 54, 2, 199);
 	refresh();
-	map_display(map, 0, 1);
-	dashboard(dboard);
-	while (wgetch(text) != 'z')
-		wprintw(text ," ");
+	map_display(m.map, 0, 1);
+	dashboard(m.board);
+	while (wgetch(m.text) != 'z')
+		wprintw(m.text ," ");
 	endwin();
 	return 0;
 }
