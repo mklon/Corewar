@@ -42,7 +42,7 @@ void	dashboard(WINDOW *board)
 	wmove(board, 0, 0);
 	attron(COLOR_PAIR(7));
 	wprintw(board, "1232ddddddddddddddddddddddddddddddddddddddddddddddddddddddddds");
-	if ()
+	//if ()
 	attroff(COLOR_PAIR(7));
 	wrefresh(board);
 }
