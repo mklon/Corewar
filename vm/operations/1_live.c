@@ -1,6 +1,6 @@
 #include "../vm.h"
 
-void	live(t_general *gen, t_process *process, int op_num)
+void	live_op(t_general *gen, t_process *process, int op_num, int *args)
 {
-
+	return ;
 }
