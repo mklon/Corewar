@@ -17,7 +17,19 @@
 
 char	*str = ".,((.;(..);;!;!;)(!;)(;.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjoprejgapkfldmkfndgreigj.,((.;(..);;!;!;)(!;)(;;_);_;(*=--+=_+_)_+)1gwegwegwe,fklhesifseoijgegewpijgd[pglvz,v;lrjopre";
 
+int kbhit(void)
+{
+	int ch = getch();
 
+	if (ch != ERR)
+	{
+		ungetch(ch);
+		return ch;
+	}
+	else {
+		return 0;
+	}
+}
 
 void	color_init(void)
 {
@@ -37,14 +49,31 @@ void	color_init(void)
 	init_pair(7, COLOR_WHITE, COLOR_BLACK);
 }
 
-void	dashboard(WINDOW *board)
+void	dashboard(t_g *m, t_general *old)
 {
-	wmove(board, 0, 0);
+	int		i = -1;
+	char	c;
+
+	i < 0 ? wprintw(m->board, "# PAUSED # ") : wprintw(m->board, "# RUNNING #");
 	attron(COLOR_PAIR(7));
-	wprintw(board, "1232ddddddddddddddddddddddddddddddddddddddddddddddddddddddddds");
-	//if ()
+	while (true)
+	{
+		wmove(m->board, 0, 0);
+		wmove(m->text, 0, 0);
+		if (kbhit())
+		{
+			c = wgetch(m->text);
+			if (c == 'p')
+			{
+				i *= -1;
+				i < 0 ? wprintw(m->board, "# PAUSED  #") : wprintw(m->board, "# RUNNING #");
+			}
+			else if (c == 'z')
+				break ;
+		}
+		wrefresh(m->board);
+	}
 	attroff(COLOR_PAIR(7));
-	wrefresh(board);
 }
 
 void	draw_border(void)
@@ -100,23 +129,26 @@ void	start_graph(void)
 	use_default_colors();
 	curs_set(0);
 	draw_border();
+	cbreak();
+    noecho();
+    nodelay(stdscr, TRUE);
+    scrollok(stdscr, TRUE);
 }
 
 int		main()
 {
-	int		x = 4, y = 2;
-	t_g		m;
-	struct s_general	*l;
+	int					x = 4, y = 2;
+	t_g					m;
+	t_general 			old;
 
 	start_graph();
 	m.map = newwin(65, 193, 2, 4);
 	m.text = newwin(1, 1, 67, 256);
 	m.board = newwin(64, 54, 2, 199);
 	refresh();
+	old.pause = 1;
 	map_display(m.map, 0, 1);
-	dashboard(m.board);
-	while (wgetch(m.text) != 'z')
-		wprintw(m.text ," ");
+	dashboard(&m, &old);
 	endwin();
 	return 0;
 }
