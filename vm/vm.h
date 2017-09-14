@@ -45,7 +45,7 @@ struct				s_process //processing
 {
 	size_t			pc;
 	char			carry;
-	int				reg[REG_NUMBER + 1];
+	uint32_t		reg[REG_NUMBER + 1];
 	unsigned int	live;
 	int				on_hold;
 	t_process		*next;
@@ -53,7 +53,7 @@ struct				s_process //processing
 
 struct				s_op
 {
-	void			(*f)(t_general *gen, t_process *current, int op_num, int *args);
+	void			(*f)(t_general *gen, t_process *current, int op_num, uint32_t *args);
 	int				nbr_arg;
 	int				arg[MAX_ARGS_NUMBER];
 	int				op_code;
@@ -85,26 +85,27 @@ void				process(t_general *gen);
 void				new_process(t_process *parent, t_process **head);
 size_t				kill_process(t_process **head);
 
+size_t				check_pc(size_t pc);
 void				fetch(t_general *gen, t_process *process, int op_num);
-void				fetch_args(unsigned char *field, t_process *proc, int op_num, int **args);
-int					check_cod_byte(int op_num, unsigned char codbyte, int *step, int *args);
-int					validate_cod_byte(int op_num, int *args);
+void				fetch_args(unsigned char *field, t_process *proc, int op_num, uint32_t *args);
+int					check_cod_byte(int op_num, unsigned char codbyte, int *step, uint32_t *args);
+int					validate_cod_byte(int op_num, uint32_t *args);
 
-void				live_op(t_general *gen, t_process *process, int op_num, int *args);
-void				ld_op(t_general *gen, t_process *process, int op_num, int *args);
-void				st_op(t_general *gen, t_process *process, int op_num, int *args);
-void				add_op(t_general *gen, t_process *process, int op_num, int *args);
-void				sub_op(t_general *gen, t_process *process, int op_num, int *args);
-void				and_op(t_general *gen, t_process *process, int op_num, int *args);
-void				or_op(t_general *gen, t_process *process, int op_num, int *args);
-void				xor_op(t_general *gen, t_process *process, int op_num, int *args);
-void				zjmp_op(t_general *gen, t_process *process, int op_num, int *args);
-void				ldi_op(t_general *gen, t_process *process, int op_num, int *args);
-void				sti_op(t_general *gen, t_process *process, int op_num, int *args);
-void				fork_op(t_general *gen, t_process *process, int op_num, int *args);
-void				lld_op(t_general *gen, t_process *process, int op_num, int *args);
-void				lldi_op(t_general *gen, t_process *process, int op_num, int *args);
-void				lfork_op(t_general *gen, t_process *process, int op_num, int *args);
-void				aff_op(t_general *gen, t_process *process, int op_num, int *args);
+void				live_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
+void				ld_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
+void				st_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
+void				add_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
+void				sub_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
+void				and_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
+void				or_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
+void				xor_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
+void				zjmp_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
+void				ldi_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
+void				sti_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
+void				fork_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
+void				lld_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
+void				lldi_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
+void				lfork_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
+void				aff_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
 
 #endif
