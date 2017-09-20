@@ -16,7 +16,7 @@ void	the_winner_is(t_general *gen)
 {
 	int 	w;
 
-	w = ((gen->winner) ? -gen->winner : gen->champ_num);
+	w = ((gen->winner) ? gen->winner : gen->champ_num);
 	ft_printf("Player %d (%s) won\n", w, gen->players[w - 1]->name);
 }
 

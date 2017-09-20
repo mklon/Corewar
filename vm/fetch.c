@@ -79,7 +79,7 @@ void	fetch_args(unsigned char *field, t_process *proc, int op_num, uint32_t *arg
 	size_t		i;
 	size_t		curr;
 
-	curr = check_pc(proc->pc + 2);
+	curr = check_pc(proc->pc + 1 + (op[op_num].coding_byte));
 	i = 0;
 	while (i < op[op_num].nbr_arg)
 	{
@@ -98,30 +98,4 @@ void	fetch_args(unsigned char *field, t_process *proc, int op_num, uint32_t *arg
 		}
 		i++;
 	}
-}
-
-size_t		check_pc(size_t pc)
-{
-	if (pc > MEM_SIZE)
-		pc = pc % MEM_SIZE;
-	return (pc);
-}
-
-void	fetch(t_general *gen, t_process *process, int op_num)
-{
-	int 		step;
-	uint32_t	args[MAX_ARGS_NUMBER];
-	size_t		curr;
-
-	step = 0;
-	curr = check_pc(process->pc + 1);
-	while (step < MAX_ARGS_NUMBER)
-		args[step++] = 0;
-	step = 1;
-	if (check_cod_byte(op_num, gen->field[curr], &step, args))
-	{
-		fetch_args(gen->field, process, op_num, args);
-		op[op_num].f(gen, process, op_num, args);
-	}
-	process->pc += step;
 }
