@@ -54,7 +54,7 @@ void	dashboard(t_g *m, t_general *old)
 	int		i = -1;
 	char	c;
 
-	i < 0 ? wprintw(m->board, "# PAUSED # ") : wprintw(m->board, "# RUNNING #");
+	i < 0 ? wprintw(m->board, "# PAUSED  #") : wprintw(m->board, "# RUNNING #");
 	attron(COLOR_PAIR(7));
 	while (true)
 	{
