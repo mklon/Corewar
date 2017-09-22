@@ -72,7 +72,7 @@ void		fetch(t_general *gen, t_process *process, int op_num)
 	step = 1;
 	if (check_cod_byte(op_num, gen->field[curr], &step, args))
 	{
-		fetch_args(gen->field, process, op_num, args);
+//		fetch_args(gen->field, process, op_num, args);
 		op[op_num].f(gen, process, op_num, args);
 	}
 	process->pc += step;

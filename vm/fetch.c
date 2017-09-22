@@ -93,6 +93,7 @@ void	fetch_args(unsigned char *field, t_process *proc, int op_num, uint32_t *arg
 		else if (args[i] == T_IND)
 		{
 			args[i] = uncode_arg(field, &curr, IND_READ);
+
 			curr = proc->pc + args[i];
 			args[i] = uncode_arg(field, &curr, IND_SIZE);
 		}
