@@ -4,6 +4,7 @@ void	live_op(t_general *gen, t_process *process, int op_num, uint32_t *args)
 {
 	int 	player_num;
 
+	uncode_args(gen->field, process, op_num, args);
 	player_num = -1 * ((int)args[0]);
 	if (player_num > 0 && player_num <= gen->champ_num)
 	{
