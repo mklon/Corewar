@@ -23,17 +23,16 @@ void	the_winner_is(t_general *gen)
 int		main(int ar, char **av)
 {
     t_general   	*gen;
-//	t_operations	*op_tab;
 
     if (ar == 1)
         ft_usage();
     gen = gen_init();
 	read_args(ar, av, gen);
-//	op = op_init();
 	while (!gen->game_over)
 	{
-//		process();
+//		process(gen);
 		gen->total_cycles++;
+		// ft_printf("%u\n", gen->total_cycles);
 		gen->current_cycles++;
 		if (gen->dump >= 0 && gen->total_cycles == gen->dump)
 		{
@@ -43,9 +42,13 @@ int		main(int ar, char **av)
 		if (gen->current_cycles == gen->cycle_to_die)
 			check_lives(gen);
 	}
-
 	the_winner_is(gen);
+	ft_printf("1\n");
+	add(gen);
+	ft_printf("\n2\n");
+
 //	while(1)
 //		;
 	return (0);
 }
+

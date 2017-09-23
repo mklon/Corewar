@@ -3,8 +3,8 @@
 make
 
 //change your way to project corewar
-TST_VAL="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017"
-TST_WORK="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/test_file"
+TST_VAL=".."
+TST_WORK="../../test_file"
 
 COL="\033[;35m";
 COL2="\033[;91m";

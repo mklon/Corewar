@@ -1,5 +1,6 @@
 #include "vm.h"
 
+
 void		check_lives(t_general *gen)
 {
 	size_t		i;
@@ -23,4 +24,34 @@ void		check_lives(t_general *gen)
 		gen->game_over = 1;
 	gen->current_cycles = 0;
 	gen->live_per_period = 0;
+}
+//
+//int 	check_coding_byte(int num_op)
+//{
+//
+//}
+
+void 	process(t_general *gen)
+{
+	t_process	*ptr;
+	int			curr_byte;
+
+	ptr = gen->process;
+	while (ptr)
+	{
+		curr_byte = gen->field[ptr->pc];
+		if (!ptr->on_hold)
+			(curr_byte && curr_byte < 17) ? ptr->on_hold++ : ptr->pc++; // what if pc > MEM_size
+		else
+		{
+			if (ptr->on_hold != op[curr_byte - 1].cycle)
+				ptr->on_hold++;
+			else
+			{
+				op[curr_byte - 1].f(gen, ptr);
+				ptr->on_hold = 0;
+			}
+		}
+		ptr = ptr->next;
+	}
 }

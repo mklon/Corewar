@@ -13,7 +13,6 @@ t_general		*gen_init(void)
 	gen->current_cycles = 0;
 	gen->nbr_process = 0;
 	gen->cycle_to_die = CYCLE_TO_DIE;
-//	gen->cycle_delta = CYCLE_DELTA; //maybe unnecessary
 	gen->live_checks = MAX_CHECKS;
 	gen->dump = -1;
 	gen->players = NULL;

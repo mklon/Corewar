@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="04_08_2017"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="04_08_2017">
+				<Option output="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/04_08_2017" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/Makefile&quot;  VERBOSE=1 04_08_2017"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="04_08_2017/fast">
+				<Option output="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/04_08_2017" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/Makefile&quot;  VERBOSE=1 04_08_2017/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/includes/libft.h">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/includes/libftprintf.h">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_atoi.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_bzero.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_extract_digits.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_int_strnew.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_isalnum.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_isalpha.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_isascii.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_isdigit.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_isint.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_isprint.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_isspace.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_itoa.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_lstadd.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_lstdel.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_lstdelone.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_lstiter.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_lstmap.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_lstnew.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_memalloc.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_memccpy.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_memchr.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_memcmp.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_memcpy.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_memdel.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_memmove.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_memset.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_print_list.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_putchar.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_putchar_fd.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_putendl.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_putendl_fd.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_putnbr.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_putnbr_fd.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_putstr.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_putstr_fd.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_strcat.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_strchr.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_strclr.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_strcmp.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_strcpy.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_strdel.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_strdup.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_strequ.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_striter.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_striteri.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_strjoin.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_strlcat.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_strlen.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_strmap.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_strmapi.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_strncat.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_strncmp.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_strncpy.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_strnequ.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_strnew.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_strnstr.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_strrchr.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_strsplit.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_strstr.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_strsub.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_strtrim.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_tolower.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_toupper.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_trim.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/ft_w_c.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/libft/get_next_line.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/printf/arg_cast_conversion.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/printf/convert_digit.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/printf/convert_wchar.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/printf/ft_printf.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/printf/get_mod.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/printf/manage_struct.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/printf/parce_it.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/printf/print_char.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/printf/print_it.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/printf/print_order.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/printf/print_str.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/printf/put_txt.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/printf/skip_flags.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/op.h">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/check_args.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/corewar_main.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/ft_error.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/ft_usage.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/general_struct.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/playground_prep.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/process_struct.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/processing.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/read_args.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/vm.h">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

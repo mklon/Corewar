@@ -25,3 +25,6 @@ int 	check_magic(char *av)
 	printf("magic: %u", magic);
 	return (0);
 }
+
+//15369203
+//ea83f3
