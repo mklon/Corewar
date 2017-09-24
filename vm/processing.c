@@ -45,7 +45,7 @@ void		process(t_general *gen)
 			(curr_byte && curr_byte < 17) ? (ptr->on_hold)++ : (ptr->pc)++; // what if pc > MEM_size
 		else
 		{
-			ft_printf("%d\n", op[curr_byte - 1].cycle);
+//			ft_printf("%d\n", op[curr_byte - 1].cycle); //test
 			if (ptr->on_hold != op[curr_byte - 1].cycle)
 				ptr->on_hold++;
 			else
@@ -54,6 +54,7 @@ void		process(t_general *gen)
 				ptr->on_hold = 0;
 			}
 		}
+//		dump_map(gen->field); // debug
 		ptr->pc = check_pc(ptr->pc);
 		ptr = ptr->next;
 	}

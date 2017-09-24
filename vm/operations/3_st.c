@@ -6,7 +6,7 @@ void	st(t_general *gen, t_process *process, int op_num, int *args)
 		&& args[3] >= 0 && args[3] <= 16)
 	{
 		args[2] = args[2] % IDX_MOD;
-		proc->reg[args[1]] = args[2];
+		process->reg[args[1]] = args[2];
 		// process->carry = (proc->reg[args[3]] == 0) ? 1 : 0;//??
 	}
 }

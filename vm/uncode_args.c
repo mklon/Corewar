@@ -30,6 +30,14 @@ uint32_t	convert_arg(unsigned char *field, size_t *curr, int size)
 	return (res);
 }
 
+uint32_t		get_ind(unsigned char *field, size_t curr)
+{
+	uint32_t		arg;
+
+	arg = convert_arg(field, &curr, IND_SIZE);
+	return (arg);
+}
+
 void	uncode_args(unsigned char *field, t_process *proc, int op_num, uint32_t *args)
 {
 	size_t		i;
@@ -45,21 +53,14 @@ void	uncode_args(unsigned char *field, t_process *proc, int op_num, uint32_t *ar
 			curr = check_pc(curr + 1);
 		}
 		else if (args[i] == T_DIR)
-		{
-			args[i] = uncode_arg(field, &curr, op[op_num].flag_direct_size);
-//			if (!(op_num >= 12 && op_num <= 14)) // ??
-//				args[i] = args[i] % IDX_MOD;
-		}
+			args[i] = convert_arg(field, &curr, op[op_num].flag_direct_size);
 		else if (args[i] == T_IND)
 		{
-			args[i] = uncode_arg(field, &curr, IND_READ);
+			args[i] = convert_arg(field, &curr, IND_READ);
 			if (!(op_num >= 12 && op_num <= 14))
 				args[i] = args[i] % IDX_MOD;
 //			if (op_num == )
-//			{
-//				curr = proc->pc + args[i];
-//				args[i] = uncode_arg(field, &curr, IND_SIZE);
-//			}
+//				args[i] = get_ind(field, (proc->pc + args[i]));
 		}
 		i++;
 	}
