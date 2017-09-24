@@ -16,6 +16,8 @@ SOURCE = corewar_main.c \
 		playground_prep.c \
         process_struct.c \
         processing.c \
+        fetch.c \
+        uncode_args.c \
         operations/1_live.c \
         operations/2_ld.c \
         operations/3_st.c \

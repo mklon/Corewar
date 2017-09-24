@@ -16,7 +16,7 @@ void	the_winner_is(t_general *gen)
 {
 	int 	w;
 
-	w = ((gen->winner) ? -gen->winner : gen->champ_num);
+	w = ((gen->winner) ? gen->winner : gen->champ_num);
 	ft_printf("Player %d (%s) won\n", w, gen->players[w - 1]->name);
 }
 
@@ -30,9 +30,9 @@ int		main(int ar, char **av)
 	read_args(ar, av, gen);
 	while (!gen->game_over)
 	{
-//		process(gen);
+		process(gen);
 		gen->total_cycles++;
-		// ft_printf("%u\n", gen->total_cycles);
+//		ft_printf("%u\n", gen->total_cycles);
 		gen->current_cycles++;
 		if (gen->dump >= 0 && gen->total_cycles == gen->dump)
 		{
@@ -43,10 +43,6 @@ int		main(int ar, char **av)
 			check_lives(gen);
 	}
 	the_winner_is(gen);
-	ft_printf("1\n");
-	add(gen);
-	ft_printf("\n2\n");
-
 //	while(1)
 //		;
 	return (0);

@@ -1,13 +1,14 @@
 
 #include "../vm.h"
 
-void	add(t_general *gen, t_process *process, int op_num, int *args)
+void	add_op(t_general *gen, t_process *process, int op_num, uint32_t *args)
 {
-	if (args[1] >= 0 && args[1] <= 16 && args[2] >= 0 && args[2] <= 16
-		&& args[3] >= 0 && args[3] <= 16)
+	uncode_args(gen->field, process, op_num, args);
+	if (args[0] >= 1 && args[0] <= REG_NUMBER &&
+		args[1] >= 1 && args[1] <= REG_NUMBER &&
+		args[2] >= 1 && args[2] <= REG_NUMBER)
 	{
-		process->reg[args[3]] = args[1] + args[2];
-	// ft_printf("\n reg = %d", gen->process->reg[args[2]]);
-		process->carry = (proc->reg[args[3]] == 0) ? 1 : 0;
+		process->reg[args[2]] = args[0] + args[1];
+		process->carry = (char)((process->reg[args[3]] == 0) ? 1 : 0); //?
 	}
 }
