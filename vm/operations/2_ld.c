@@ -1,10 +1,5 @@
 #include "../vm.h"
 
-int		download(t_general *gen, t_process process)
-{
-
-}
-
 void	ld_op(t_general *gen, t_process *process, int op_num, uint32_t *args)
 {
 	uint32_t		args_val[MAX_ARGS_NUMBER];
