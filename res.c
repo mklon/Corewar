@@ -130,9 +130,9 @@ void	start_graph(void)
 	curs_set(0);
 	draw_border();
 	cbreak();
-    noecho();
-    nodelay(stdscr, TRUE);
-    scrollok(stdscr, TRUE);
+	noecho();
+	nodelay(stdscr, TRUE);
+	scrollok(stdscr, TRUE);
 }
 
 int		main()

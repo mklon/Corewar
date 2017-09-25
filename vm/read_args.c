@@ -51,7 +51,8 @@ int		is_flag(char **args, size_t *i, t_general *gen)
 	{
 		if (ft_strequ(args[*i], "-v"))
 		{
-			ft_printf("switch on vizualization\n");
+			gen->vis = 1;
+			printf("f\n");
 		}
 		else if (ft_strequ(args[*i], "-d"))
 		{
