@@ -29,7 +29,6 @@ void		is_n_flag(char **args, size_t *i, t_general *gen)
 {
 	unsigned int	j;
 
-//	j = 0;
 	if (!args[*i + 1] || !args[*i + 2])
 		ft_error("Not enough argumets\n");
 	if (gen->champ_num == MAX_PLAYERS)
