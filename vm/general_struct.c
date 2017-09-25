@@ -15,7 +15,6 @@ t_general		*gen_init(void)
 	gen->cycle_to_die = CYCLE_TO_DIE;
 	gen->live_checks = MAX_CHECKS;
 	gen->dump = -1;
-	gen->vis = 0;
 	gen->players = NULL;
 	gen->champ_num = 0;
 	gen->game_over = 0;

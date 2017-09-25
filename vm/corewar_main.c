@@ -28,14 +28,11 @@ int		main(int ar, char **av)
         ft_usage();
     gen = gen_init();
 	read_args(ar, av, gen);
-	printf("%d\n", gen->vis);
 	while (!gen->game_over)
 	{
-		if (gen->vis)
-			printf("sdf\n");
 //		process(gen);
 		gen->total_cycles++;
-		//ft_printf("%u\n", gen->total_cycles);
+		ft_printf("%u\n", gen->total_cycles);
 		gen->current_cycles++;
 		if (gen->dump >= 0 && gen->total_cycles == gen->dump)
 		{
