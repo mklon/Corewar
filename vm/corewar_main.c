@@ -30,6 +30,8 @@ int		main(int ar, char **av)
 	read_args(ar, av, gen);
 	while (!gen->game_over)
 	{
+		if (gen->visual)
+			visualization(gen);
 //		process(gen);
 		gen->total_cycles++;
 		ft_printf("%u\n", gen->total_cycles);
@@ -43,6 +45,8 @@ int		main(int ar, char **av)
 			check_lives(gen);
 	}
 	the_winner_is(gen);
+	if (gen->visual)
+		endwin();
 //	while(1)
 //		;
 	return (0);

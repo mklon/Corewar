@@ -17,6 +17,7 @@ SOURCE = corewar_main.c \
         process_struct.c \
         processing.c \
         fetch.c \
+        visual_1.c \
         operations/1_live.c \
         operations/2_ld.c \
         operations/3_st.c \
@@ -41,7 +42,7 @@ LIBFT_DIR = ../libft/
 all: $(NAME)
 
 $(NAME): $(OBJECTS) $(LIBFT_DIR)libft.a
-		$(CC) $(FL) $(OBJECTS) -o $(NAME) -L$(LIBFT_DIR) -lft
+		$(CC) $(FL) $(OBJECTS) -o $(NAME) -L$(LIBFT_DIR) -lft -lncurses
 
 %.o: %.c
 	$(CC) $(FL) -c $< -o $@

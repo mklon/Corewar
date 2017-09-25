@@ -20,6 +20,8 @@ struct				s_general
 	unsigned int	live_per_period;
 	unsigned int	live_checks;
 	int				dump;
+	int				visual;
+	int				pause;
 	t_player		**players;
 	int				champ_num;
 	int				game_over; //processing
