@@ -1,8 +1,8 @@
 
 #include "../vm.h"
 
-void	sub(t_general *gen, t_process *process, int op_num, int *args)
+void	sub_op(t_general *gen, t_process *process, int op_num, uint32_t *args)
 {
-
+	return ;
 }
 
