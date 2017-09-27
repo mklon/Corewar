@@ -1,5 +1,12 @@
 #include "vm.h"
 
+size_t		check_pc(size_t pc)
+{
+	if (pc >= MEM_SIZE)
+		pc = pc % MEM_SIZE;
+	return (pc);
+}
+
 void		check_lives(t_general *gen)
 {
 	size_t		i;
@@ -25,7 +32,7 @@ void		check_lives(t_general *gen)
 	gen->live_per_period = 0;
 }
 
-void 	process(t_general *gen)
+void		process(t_general *gen)
 {
 	t_process	*ptr;
 	int			curr_byte;
@@ -35,20 +42,23 @@ void 	process(t_general *gen)
 	{
 		curr_byte = gen->field[ptr->pc];
 		if (!ptr->on_hold)
-			(curr_byte && curr_byte < 17) ? ptr->on_hold++ : ptr->pc++; // what if pc > MEM_size
+		{
+			(curr_byte && curr_byte < 17) ? (ptr->on_hold)++ : (ptr->pc)++;
+			ptr->pc = check_pc(ptr->pc);
+		}
 		else
 		{
+			ft_printf("%d\n", op[curr_byte - 1].cycle); ///test
 			if (ptr->on_hold != op[curr_byte - 1].cycle)
 				ptr->on_hold++;
 			else
 			{
-//				op[curr_byte - 1].f(gen, ptr, curr_byte - 1);
  				fetch(gen, ptr, curr_byte - 1);
+				ptr->pc = check_pc(ptr->pc);
 				ptr->on_hold = 0;
 			}
 		}
-		if (ptr->pc > MEM_SIZE)
-			ptr->pc = ptr->pc % MEM_SIZE;
+///		dump_map(gen->field); // debug
 		ptr = ptr->next;
 	}
 }

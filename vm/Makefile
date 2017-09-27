@@ -17,6 +17,8 @@ SOURCE = corewar_main.c \
         process_struct.c \
         processing.c \
         fetch.c \
+        uncode_args.c \
+        op.c \
         v_first.c \
         v_second.c \
         operations/1_live.c \

@@ -16,7 +16,7 @@ void	the_winner_is(t_general *gen)
 {
 	int 	w;
 
-	w = ((gen->winner) ? -gen->winner : gen->champ_num);
+	w = ((gen->winner) ? gen->winner : gen->champ_num);
 	ft_printf("Player %d (%s) won\n", w, gen->players[w - 1]->name);
 }
 
@@ -29,14 +29,12 @@ int		main(int ar, char **av)
     gen = gen_init();
 	read_args(ar, av, gen);
 	visualization(gen);
-	//printf("\n\n\n%d\n", gen->champ_num);
-	pause();
 	while (!gen->game_over)
 	{
-//		process(gen);
-		gen->total_cycles++;
-		ft_printf("%u\n", gen->total_cycles);
-		gen->current_cycles++;
+		process(gen);
+		(gen->total_cycles)++;
+//		ft_printf("%u\n", gen->total_cycles);
+		(gen->current_cycles)++;
 		if (gen->dump >= 0 && gen->total_cycles == gen->dump)
 		{
 			dump_map(gen->field);

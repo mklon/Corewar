@@ -29,7 +29,6 @@ void		is_n_flag(char **args, size_t *i, t_general *gen)
 {
 	unsigned int	j;
 
-//	j = 0;
 	if (!args[*i + 1] || !args[*i + 2])
 		ft_error("Not enough argumets\n");
 	if (gen->champ_num == MAX_PLAYERS)
@@ -41,30 +40,28 @@ void		is_n_flag(char **args, size_t *i, t_general *gen)
 	else
 		ft_error("Wrong type of file (-n flag)\n");
 	gen->champ_num++;
-	ft_printf("adds num to player\n");	// test
+//	ft_printf("adds num to player\n");	// test
 }
 
 int		is_flag(char **args, size_t *i, t_general *gen)
 {
-
 	if (args[*(i)][0] == '-')
 	{
 		if (ft_strequ(args[*i], "-v"))
 		{
 			ft_printf("switch on vizualization\n");
-			gen->v = 1;
 		}
+		else if (ft_strequ(args[*i], "-a"))
+			gen->aff = 1;
 		else if (ft_strequ(args[*i], "-d"))
 		{
 			if (!args[*i + 1])
 				ft_error("Not enough argumets\n");
 			gen->dump = is_valid_num(args[++(*i)], 'd');
-			ft_printf("dumps %d cycles\n", gen->dump); // test
+//			ft_printf("Dumps %d cycles\n", gen->dump); // test
 		}
 		else if (ft_strequ(args[*i], "-n"))
-		{
 			is_n_flag(args, i, gen);
-		}
 		else
 			ft_error("Invalid flag\n"); // proper error message
 		return (1);

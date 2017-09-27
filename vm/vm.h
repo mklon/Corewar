@@ -2,19 +2,18 @@
 # define VM_H
 
 # include "../op.h"
-# include <ncurses.h>
 # include <stdint.h>
+# include <ncurses.h>
 
 typedef struct s_general	t_general;
-typedef struct s_visual		t_visual;
 typedef struct s_player		t_player;
 typedef struct s_process	t_process;
 typedef struct s_op			t_op;
 
 struct				s_general
 {
-//	unsigned char	field[MEM_SIZE];
-	unsigned char	*field;
+	unsigned char	field[MEM_SIZE];
+//	unsigned char	*field;
 	unsigned int	total_cycles;
 	unsigned int	current_cycles;
 	unsigned int	nbr_process;
@@ -22,11 +21,12 @@ struct				s_general
 	unsigned int	live_per_period;
 	unsigned int	live_checks;
 	int				dump;
+	int 			aff;
 	int				v;
 	int				pause;
 	WINDOW			*map;
-	WINDOW			*board;
 	WINDOW			*text;
+	WINDOW			*board;
 	t_player		**players;
 	int				champ_num;
 	int				game_over; //processing
@@ -52,7 +52,7 @@ struct				s_process //processing
 {
 	size_t			pc;
 	char			carry;
-	int				reg[REG_NUMBER + 1];
+	uint32_t		reg[REG_NUMBER + 1];
 	unsigned int	live;
 	int				on_hold;
 	t_process		*next;
@@ -60,7 +60,7 @@ struct				s_process //processing
 
 struct				s_op
 {
-	void			(*f)(t_general *gen, t_process *current, int op_num, int *args);
+	void			(*f)(t_general *gen, t_process *current, int op_num, uint32_t *args);
 	int				nbr_arg;
 	int				arg[MAX_ARGS_NUMBER];
 	int				op_code;
@@ -89,38 +89,35 @@ void				dump_map(unsigned char *line);
 
 void				check_lives(t_general *gen);
 void				process(t_general *gen);
-void				new_process(t_process *parent, t_process **head);
+void				new_process(t_process *parent, t_process **head, uint32_t arg, int idx);
 size_t				kill_process(t_process **head);
 
+size_t				check_pc(size_t pc);
 void				fetch(t_general *gen, t_process *process, int op_num);
-void				fetch_args(unsigned char *field, t_process *proc, int op_num, int **args);
-int					check_cod_byte(int op_num, unsigned char codbyte, int *step, int *args);
-int					validate_cod_byte(int op_num, int *args);
+int					check_cod_byte(int op_num, unsigned char codbyte, int *step, uint32_t *args);
+int					validate_cod_byte(int op_num, uint32_t *args);
 
-void				live_op(t_general *gen, t_process *process, int op_num, int *args);
-void				ld_op(t_general *gen, t_process *process, int op_num, int *args);
-void				st_op(t_general *gen, t_process *process, int op_num, int *args);
-void				add_op(t_general *gen, t_process *process, int op_num, int *args);
-void				sub_op(t_general *gen, t_process *process, int op_num, int *args);
-void				and_op(t_general *gen, t_process *process, int op_num, int *args);
-void				or_op(t_general *gen, t_process *process, int op_num, int *args);
-void				xor_op(t_general *gen, t_process *process, int op_num, int *args);
-void				zjmp_op(t_general *gen, t_process *process, int op_num, int *args);
-void				ldi_op(t_general *gen, t_process *process, int op_num, int *args);
-void				sti_op(t_general *gen, t_process *process, int op_num, int *args);
-void				fork_op(t_general *gen, t_process *process, int op_num, int *args);
-void				lld_op(t_general *gen, t_process *process, int op_num, int *args);
-void				lldi_op(t_general *gen, t_process *process, int op_num, int *args);
-void				lfork_op(t_general *gen, t_process *process, int op_num, int *args);
-void				aff_op(t_general *gen, t_process *process, int op_num, int *args);
+void				uncode_args(unsigned char *field, t_process *proc, int op_num, uint32_t *args);
+uint32_t			convert_arg(unsigned char *field, size_t *curr, int size);
+void				args_copy(uint32_t *args, uint32_t *args_val, int nbr_arg);
 
-void				visualization(t_general *gen);
-void				map_display(t_general *gen, int i, int j);
-void				dashboard(t_general *gen);
-void				initial_info(t_general *gen);
-int					kbhit(void);
-void	color_init(void);
+void				live_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
+void				ld_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
+void				st_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
+void				add_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
+void				sub_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
+void				and_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
+void				or_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
+void				xor_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
+void				zjmp_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
+void				ldi_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
+void				sti_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
+void				fork_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
+void				lld_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
+void				lldi_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
+void				lfork_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
+void				aff_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
 
-void				players_info(t_general *gen);
+void				put_numb_on_field(t_general *gen, size_t copy_pc, int args);
 
 #endif
