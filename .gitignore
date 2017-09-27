@@ -5,6 +5,6 @@ cmake-build-debug/*
 vm/CMakeLists.txt
 vm/.idea
 vm/cmake-build-debug/*
-vm/*o
-*o
+vm/*.o
+*.o
 1
