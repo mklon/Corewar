@@ -2,5 +2,6 @@
 .comment "st"
 
 	live %1
-	st r2, 900
-	st r1, 800
+	ld %55, r2
+	st r23, 550
+	# st r1, 800
