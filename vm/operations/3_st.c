@@ -16,14 +16,14 @@ void	st(t_general *gen, t_process *process, int op_num, int *args)
 	{
 		copy_pc = check_pc(process->pc + args_val[1]);
 		gen->field[copy_pc];
-		put_numb_on_field(gen, copy_pc, args[]);
+		put_numb_on_field(gen, copy_pc, args_val[0]);
 	}
 }
 
 void	put_numb_on_field(t_general *gen, size_t copy_pc, int args)
 {
 	gen->field[copy_pc] = (unsigned char)(args >> 24);
-	gen->field[copy_pc + 1] = (unsigned char)(args >> 16);
-	gen->field[copy_pc + 2] = (unsigned char)(args >> 8);
-	gen->field[copy_pc + 3] = (unsigned char)(args);
+	gen->field[check_pc(copy_pc + 1)] = (unsigned char)(args >> 16);
+	gen->field[check_pc(copy_pc + 2)] = (unsigned char)(args >> 8);
+	gen->field[check_pc(copy_pc + 3)] = (unsigned char)(args);
 }
