@@ -17,7 +17,8 @@ SOURCE = corewar_main.c \
         process_struct.c \
         processing.c \
         fetch.c \
-        visual_1.c \
+        v_first.c \
+        v_second.c \
         operations/1_live.c \
         operations/2_ld.c \
         operations/3_st.c \

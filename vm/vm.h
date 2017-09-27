@@ -2,9 +2,11 @@
 # define VM_H
 
 # include "../op.h"
+# include <ncurses.h>
 # include <stdint.h>
 
 typedef struct s_general	t_general;
+typedef struct s_visual		t_visual;
 typedef struct s_player		t_player;
 typedef struct s_process	t_process;
 typedef struct s_op			t_op;
@@ -20,8 +22,11 @@ struct				s_general
 	unsigned int	live_per_period;
 	unsigned int	live_checks;
 	int				dump;
-	int				visual;
+	int				v;
 	int				pause;
+	WINDOW			*map;
+	WINDOW			*board;
+	WINDOW			*text;
 	t_player		**players;
 	int				champ_num;
 	int				game_over; //processing
@@ -108,5 +113,12 @@ void				lld_op(t_general *gen, t_process *process, int op_num, int *args);
 void				lldi_op(t_general *gen, t_process *process, int op_num, int *args);
 void				lfork_op(t_general *gen, t_process *process, int op_num, int *args);
 void				aff_op(t_general *gen, t_process *process, int op_num, int *args);
+
+void				visualization(t_general *gen);
+void				map_display(t_general *gen, int i, int j);
+void				dashboard(t_general *gen);
+void				initial_info(t_general *gen);
+int					kbhit(void);
+void				players_info(t_general *gen);
 
 #endif

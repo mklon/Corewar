@@ -52,7 +52,7 @@ int		is_flag(char **args, size_t *i, t_general *gen)
 		if (ft_strequ(args[*i], "-v"))
 		{
 			ft_printf("switch on vizualization\n");
-			gen->visual = 1;
+			gen->v = 1;
 		}
 		else if (ft_strequ(args[*i], "-d"))
 		{
@@ -109,4 +109,6 @@ void	read_args(int ar, char **av, t_general *gen)
 	check_n_flag(gen);
 	read_players(av, gen);
 	write_to_map(gen);
+	printf("\n\n\n%d\n", gen->champ_num);
+	
 }
