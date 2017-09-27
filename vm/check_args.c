@@ -6,9 +6,9 @@ int		is_valid_num(char *arg, char flag)
 
 	num = ft_atoi(arg);
 	if (num <= 0)
-		ft_error("Bad numb in input line\n");
+		ft_error("Wrong number after flag in input line\n");
 	if (!((flag == 'n' && num <= MAX_PLAYERS) || flag == 'd'))
-		ft_error("Bad numb of players in input line\n");
+		ft_error("Wrong number of players in input line\n");
 	return(num);
 }
 
@@ -52,7 +52,7 @@ int 	is_valid_champ(char *arg, t_general *gen, size_t j)
 //	ft_printf("FILE_MAX_LENGTH: %u\n", FILE_MAX_LENGTH); // test
 	gen->line = ft_memalloc(FILE_MAX_LENGTH);
 //	fd = open(arg, O_RDONLY);
-	fd = open("/nfs/2016/m/msymkany/Documents/corewar/repo/champs/bee_gees.cor", O_RDONLY);
+	fd = open("/nfs/2016/m/msymkany/Documents/corewar/repo/champs/test/aff_check.cor", O_RDONLY);
 	len = read(fd, gen->line, FILE_MAX_LENGTH);
 //	ft_printf("len: %u\n", len); // test
 	if (fd == -1 || len == -1)

@@ -10,11 +10,10 @@ void	ld_op(t_general *gen, t_process *process, int op_num, uint32_t *args)
 	{
 		if (args[0] == T_IND)
 		{
-			process->reg[args_val[1]] = args_val[args[0]];
+			process->reg[args_val[1]] = args_val[0];
 		}
 		else
 		{
-			args_val[0] = args_val[0] % IDX_MOD;
 			process->reg[args_val[1]] = args_val[0];
 		}
 		process->carry = (process->reg[args_val[1]] == 0) ? 1 : 0;

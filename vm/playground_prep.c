@@ -30,7 +30,6 @@ void 	write_to_map(t_general *gen)
 
 	i = 0;
 	j = 0;
-//	dump_map(gen->field); //test
 	step = (size_t)(MEM_SIZE) / gen->champ_num;
 	while (j < gen->champ_num)
 	{
@@ -43,5 +42,6 @@ void 	write_to_map(t_general *gen)
 		j++;
 		i += step;
 	}
+	gen->nbr_process = (uint32_t)gen->champ_num;
 	dump_map(gen->field); //test
 }

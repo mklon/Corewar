@@ -25,10 +25,7 @@ void	get_step(int op_num, int *step, uint32_t arg)
 		else if (arg == DIR_CODE)
 			(*step) += op[op_num].flag_direct_size;
 		else
-		{
-			arg = T_IND; // maybe adress
 			(*step) += IND_READ;
-		}
 	}
 }
 
@@ -49,6 +46,8 @@ int		check_cod_byte(int op_num, unsigned char codbyte, int *step, uint32_t *args
 	while (i < MAX_ARGS_NUMBER)
 	{
 		args[i] = (uint32_t)(codbyte >> shift) & 3;
+		if (args[i] == IND_CODE)
+			args[i] = T_IND;
 		get_step(op_num, step, args[i]); //wtf?
 		shift -= 2;
 		i++;

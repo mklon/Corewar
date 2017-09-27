@@ -42,20 +42,23 @@ void		process(t_general *gen)
 	{
 		curr_byte = gen->field[ptr->pc];
 		if (!ptr->on_hold)
-			(curr_byte && curr_byte < 17) ? (ptr->on_hold)++ : (ptr->pc)++; // what if pc > MEM_size
+		{
+			(curr_byte && curr_byte < 17) ? (ptr->on_hold)++ : (ptr->pc)++;
+			ptr->pc = check_pc(ptr->pc);
+		}
 		else
 		{
-//			ft_printf("%d\n", op[curr_byte - 1].cycle); //test
+			ft_printf("%d\n", op[curr_byte - 1].cycle); ///test
 			if (ptr->on_hold != op[curr_byte - 1].cycle)
 				ptr->on_hold++;
 			else
 			{
  				fetch(gen, ptr, curr_byte - 1);
+				ptr->pc = check_pc(ptr->pc);
 				ptr->on_hold = 0;
 			}
 		}
-//		dump_map(gen->field); // debug
-		ptr->pc = check_pc(ptr->pc);
+///		dump_map(gen->field); // debug
 		ptr = ptr->next;
 	}
 }
