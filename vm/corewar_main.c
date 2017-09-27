@@ -29,7 +29,7 @@ int		main(int ar, char **av)
     gen = gen_init();
 	read_args(ar, av, gen);
 	visualization(gen);
-	printf("\n\n\n%d\n", gen->champ_num);
+	//printf("\n\n\n%d\n", gen->champ_num);
 	pause();
 	while (!gen->game_over)
 	{

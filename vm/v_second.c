@@ -21,9 +21,9 @@ void	map_display(t_general *gen, int i, int j)
 		{
 			if (i < 4096)
 			{
-				wattron(gen->map, COLOR_PAIR(0));
+				wattron(gen->map, COLOR_PAIR(6));
 				wprintw(gen->map, "%02x", gen->field[i]);
-				wattroff(gen->map, COLOR_PAIR(0));
+				wattroff(gen->map, COLOR_PAIR(6));
 			}
 			if (i != j * 64 - 1)
 				wprintw(gen->map, " ");
@@ -42,9 +42,9 @@ void	players_info(t_general *gen)
 	while (++i <= gen->champ_num)
 	{
 		wprintw(gen->board, "Player %d : ", (i - 2 * i),  gen->players[i - 1]);
-		attron(COLOR_PAIR(i));
-		wprintw(gen->board, "%s\n", gen->players[i - 1]);
-		attroff(COLOR_PAIR(i));
+		attron(COLOR_PAIR(10));
+		wprintw(gen->board, "%s\n", gen->players[i - 1]->name);
+		attroff(COLOR_PAIR(10));
 		wprintw(gen->board, "	Last live : %d\n", 0);
 		wprintw(gen->board, "	Lives in current period : %d\n\n", 0);
 	}

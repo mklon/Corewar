@@ -119,6 +119,8 @@ void				map_display(t_general *gen, int i, int j);
 void				dashboard(t_general *gen);
 void				initial_info(t_general *gen);
 int					kbhit(void);
+void	color_init(void);
+
 void				players_info(t_general *gen);
 
 #endif

@@ -18,7 +18,7 @@ t_general		*gen_init(void)
 	gen->v = 0;
 	gen->pause = 0;
 	gen->players = NULL;
-	gen->champ_num = -5;
+	gen->champ_num = 0;
 	gen->game_over = 0;
 	gen->winner = 0;
 	gen->line = NULL;

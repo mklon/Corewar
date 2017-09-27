@@ -109,6 +109,4 @@ void	read_args(int ar, char **av, t_general *gen)
 	check_n_flag(gen);
 	read_players(av, gen);
 	write_to_map(gen);
-	printf("\n\n\n%d\n", gen->champ_num);
-	
 }
