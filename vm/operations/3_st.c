@@ -19,3 +19,11 @@ void	st(t_general *gen, t_process *process, int op_num, int *args)
 		put_numb_on_field(gen, copy_pc, args[]);
 	}
 }
+
+void	put_numb_on_field(t_general *gen, size_t copy_pc, int args)
+{
+	gen->field[copy_pc] = (unsigned char)(args >> 24);
+	gen->field[copy_pc + 1] = (unsigned char)(args >> 16);
+	gen->field[copy_pc + 2] = (unsigned char)(args >> 8);
+	gen->field[copy_pc + 3] = (unsigned char)(args);
+}
