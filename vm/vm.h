@@ -11,8 +11,8 @@ typedef struct s_op			t_op;
 
 struct				s_general
 {
-//	unsigned char	field[MEM_SIZE];
-	unsigned char	*field;
+	unsigned char	field[MEM_SIZE];
+//	unsigned char	*field;
 	unsigned int	total_cycles;
 	unsigned int	current_cycles;
 	unsigned int	nbr_process;

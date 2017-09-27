@@ -2,7 +2,7 @@
 
 size_t		check_pc(size_t pc)
 {
-	if (pc > MEM_SIZE)
+	if (pc >= MEM_SIZE)
 		pc = pc % MEM_SIZE;
 	return (pc);
 }

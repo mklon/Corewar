@@ -19,8 +19,8 @@ t_general		*gen_init(void)
 	gen = (t_general *)malloc(sizeof(t_general));
 	if (!gen)
 		ft_error("Error in allocation");
-	gen->field = ft_memalloc(MEM_SIZE);
-//	ft_bzero(gen->field, MEM_SIZE);
+//	gen->field = ft_memalloc(MEM_SIZE);
+	ft_bzero(gen->field, MEM_SIZE);
 	gen->total_cycles = 0;
 	gen->current_cycles = 0;
 	gen->nbr_process = 0;

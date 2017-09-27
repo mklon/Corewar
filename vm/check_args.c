@@ -116,7 +116,7 @@ void				read_players(char **av, t_general *gen)
 		i = gen->n_flag[j + 1];
 		if (is_valid_champ(av[i], gen, j))
 		{
-			gen->players[j]->num = (j + 1) * -1;
+			gen->players[j]->num = -1 * (j + 1);
 			j++;
 		}
 	}
