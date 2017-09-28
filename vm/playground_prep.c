@@ -48,6 +48,7 @@ void 	write_to_map(t_general *gen)
 	{
 		head = (t_process *)ft_memalloc(sizeof(t_process));
 		(head->reg)[1] = (gen->players)[j]->num;
+		head->pc = i;
 		head->next = gen->process;
 		gen->process = head;
 		introduce_contestants((gen->players)[j]);
