@@ -247,11 +247,23 @@ CMakeFiles/04_08_2017.dir/vm/check_args.c.o: ../op.h
 CMakeFiles/04_08_2017.dir/vm/check_args.c.o: ../vm/check_args.c
 CMakeFiles/04_08_2017.dir/vm/check_args.c.o: ../vm/vm.h
 
+CMakeFiles/04_08_2017.dir/vm/check_magic.c.o: ../libft/includes/libft.h
+CMakeFiles/04_08_2017.dir/vm/check_magic.c.o: ../libft/includes/libftprintf.h
+CMakeFiles/04_08_2017.dir/vm/check_magic.c.o: ../op.h
+CMakeFiles/04_08_2017.dir/vm/check_magic.c.o: ../vm/check_magic.c
+CMakeFiles/04_08_2017.dir/vm/check_magic.c.o: ../vm/vm.h
+
 CMakeFiles/04_08_2017.dir/vm/corewar_main.c.o: ../libft/includes/libft.h
 CMakeFiles/04_08_2017.dir/vm/corewar_main.c.o: ../libft/includes/libftprintf.h
 CMakeFiles/04_08_2017.dir/vm/corewar_main.c.o: ../op.h
 CMakeFiles/04_08_2017.dir/vm/corewar_main.c.o: ../vm/corewar_main.c
 CMakeFiles/04_08_2017.dir/vm/corewar_main.c.o: ../vm/vm.h
+
+CMakeFiles/04_08_2017.dir/vm/fetch.c.o: ../libft/includes/libft.h
+CMakeFiles/04_08_2017.dir/vm/fetch.c.o: ../libft/includes/libftprintf.h
+CMakeFiles/04_08_2017.dir/vm/fetch.c.o: ../op.h
+CMakeFiles/04_08_2017.dir/vm/fetch.c.o: ../vm/fetch.c
+CMakeFiles/04_08_2017.dir/vm/fetch.c.o: ../vm/vm.h
 
 CMakeFiles/04_08_2017.dir/vm/ft_error.c.o: ../libft/includes/libft.h
 CMakeFiles/04_08_2017.dir/vm/ft_error.c.o: ../libft/includes/libftprintf.h
@@ -263,13 +275,114 @@ CMakeFiles/04_08_2017.dir/vm/ft_usage.c.o: ../libft/includes/libft.h
 CMakeFiles/04_08_2017.dir/vm/ft_usage.c.o: ../libft/includes/libftprintf.h
 CMakeFiles/04_08_2017.dir/vm/ft_usage.c.o: ../op.h
 CMakeFiles/04_08_2017.dir/vm/ft_usage.c.o: ../vm/ft_usage.c
-CMakeFiles/04_08_2017.dir/vm/ft_usage.c.o: ../vm/vm.h
 
 CMakeFiles/04_08_2017.dir/vm/general_struct.c.o: ../libft/includes/libft.h
 CMakeFiles/04_08_2017.dir/vm/general_struct.c.o: ../libft/includes/libftprintf.h
 CMakeFiles/04_08_2017.dir/vm/general_struct.c.o: ../op.h
 CMakeFiles/04_08_2017.dir/vm/general_struct.c.o: ../vm/general_struct.c
 CMakeFiles/04_08_2017.dir/vm/general_struct.c.o: ../vm/vm.h
+
+CMakeFiles/04_08_2017.dir/vm/op.c.o: ../libft/includes/libft.h
+CMakeFiles/04_08_2017.dir/vm/op.c.o: ../libft/includes/libftprintf.h
+CMakeFiles/04_08_2017.dir/vm/op.c.o: ../op.h
+CMakeFiles/04_08_2017.dir/vm/op.c.o: ../vm/op.c
+CMakeFiles/04_08_2017.dir/vm/op.c.o: ../vm/vm.h
+
+CMakeFiles/04_08_2017.dir/vm/operations/10_ldi.c.o: ../libft/includes/libft.h
+CMakeFiles/04_08_2017.dir/vm/operations/10_ldi.c.o: ../libft/includes/libftprintf.h
+CMakeFiles/04_08_2017.dir/vm/operations/10_ldi.c.o: ../op.h
+CMakeFiles/04_08_2017.dir/vm/operations/10_ldi.c.o: ../vm/operations/10_ldi.c
+CMakeFiles/04_08_2017.dir/vm/operations/10_ldi.c.o: ../vm/vm.h
+
+CMakeFiles/04_08_2017.dir/vm/operations/11_sti.c.o: ../libft/includes/libft.h
+CMakeFiles/04_08_2017.dir/vm/operations/11_sti.c.o: ../libft/includes/libftprintf.h
+CMakeFiles/04_08_2017.dir/vm/operations/11_sti.c.o: ../op.h
+CMakeFiles/04_08_2017.dir/vm/operations/11_sti.c.o: ../vm/operations/11_sti.c
+CMakeFiles/04_08_2017.dir/vm/operations/11_sti.c.o: ../vm/vm.h
+
+CMakeFiles/04_08_2017.dir/vm/operations/12_fork.c.o: ../libft/includes/libft.h
+CMakeFiles/04_08_2017.dir/vm/operations/12_fork.c.o: ../libft/includes/libftprintf.h
+CMakeFiles/04_08_2017.dir/vm/operations/12_fork.c.o: ../op.h
+CMakeFiles/04_08_2017.dir/vm/operations/12_fork.c.o: ../vm/operations/12_fork.c
+CMakeFiles/04_08_2017.dir/vm/operations/12_fork.c.o: ../vm/vm.h
+
+CMakeFiles/04_08_2017.dir/vm/operations/13_lld.c.o: ../libft/includes/libft.h
+CMakeFiles/04_08_2017.dir/vm/operations/13_lld.c.o: ../libft/includes/libftprintf.h
+CMakeFiles/04_08_2017.dir/vm/operations/13_lld.c.o: ../op.h
+CMakeFiles/04_08_2017.dir/vm/operations/13_lld.c.o: ../vm/operations/13_lld.c
+CMakeFiles/04_08_2017.dir/vm/operations/13_lld.c.o: ../vm/vm.h
+
+CMakeFiles/04_08_2017.dir/vm/operations/14_lldi.c.o: ../libft/includes/libft.h
+CMakeFiles/04_08_2017.dir/vm/operations/14_lldi.c.o: ../libft/includes/libftprintf.h
+CMakeFiles/04_08_2017.dir/vm/operations/14_lldi.c.o: ../op.h
+CMakeFiles/04_08_2017.dir/vm/operations/14_lldi.c.o: ../vm/operations/14_lldi.c
+CMakeFiles/04_08_2017.dir/vm/operations/14_lldi.c.o: ../vm/vm.h
+
+CMakeFiles/04_08_2017.dir/vm/operations/15_lfork.c.o: ../libft/includes/libft.h
+CMakeFiles/04_08_2017.dir/vm/operations/15_lfork.c.o: ../libft/includes/libftprintf.h
+CMakeFiles/04_08_2017.dir/vm/operations/15_lfork.c.o: ../op.h
+CMakeFiles/04_08_2017.dir/vm/operations/15_lfork.c.o: ../vm/operations/15_lfork.c
+CMakeFiles/04_08_2017.dir/vm/operations/15_lfork.c.o: ../vm/vm.h
+
+CMakeFiles/04_08_2017.dir/vm/operations/16_aff.c.o: ../libft/includes/libft.h
+CMakeFiles/04_08_2017.dir/vm/operations/16_aff.c.o: ../libft/includes/libftprintf.h
+CMakeFiles/04_08_2017.dir/vm/operations/16_aff.c.o: ../op.h
+CMakeFiles/04_08_2017.dir/vm/operations/16_aff.c.o: ../vm/operations/16_aff.c
+CMakeFiles/04_08_2017.dir/vm/operations/16_aff.c.o: ../vm/vm.h
+
+CMakeFiles/04_08_2017.dir/vm/operations/1_live.c.o: ../libft/includes/libft.h
+CMakeFiles/04_08_2017.dir/vm/operations/1_live.c.o: ../libft/includes/libftprintf.h
+CMakeFiles/04_08_2017.dir/vm/operations/1_live.c.o: ../op.h
+CMakeFiles/04_08_2017.dir/vm/operations/1_live.c.o: ../vm/operations/1_live.c
+CMakeFiles/04_08_2017.dir/vm/operations/1_live.c.o: ../vm/vm.h
+
+CMakeFiles/04_08_2017.dir/vm/operations/2_ld.c.o: ../libft/includes/libft.h
+CMakeFiles/04_08_2017.dir/vm/operations/2_ld.c.o: ../libft/includes/libftprintf.h
+CMakeFiles/04_08_2017.dir/vm/operations/2_ld.c.o: ../op.h
+CMakeFiles/04_08_2017.dir/vm/operations/2_ld.c.o: ../vm/operations/2_ld.c
+CMakeFiles/04_08_2017.dir/vm/operations/2_ld.c.o: ../vm/vm.h
+
+CMakeFiles/04_08_2017.dir/vm/operations/3_st.c.o: ../libft/includes/libft.h
+CMakeFiles/04_08_2017.dir/vm/operations/3_st.c.o: ../libft/includes/libftprintf.h
+CMakeFiles/04_08_2017.dir/vm/operations/3_st.c.o: ../op.h
+CMakeFiles/04_08_2017.dir/vm/operations/3_st.c.o: ../vm/operations/3_st.c
+CMakeFiles/04_08_2017.dir/vm/operations/3_st.c.o: ../vm/vm.h
+
+CMakeFiles/04_08_2017.dir/vm/operations/4_add.c.o: ../libft/includes/libft.h
+CMakeFiles/04_08_2017.dir/vm/operations/4_add.c.o: ../libft/includes/libftprintf.h
+CMakeFiles/04_08_2017.dir/vm/operations/4_add.c.o: ../op.h
+CMakeFiles/04_08_2017.dir/vm/operations/4_add.c.o: ../vm/operations/4_add.c
+CMakeFiles/04_08_2017.dir/vm/operations/4_add.c.o: ../vm/vm.h
+
+CMakeFiles/04_08_2017.dir/vm/operations/5_sub.c.o: ../libft/includes/libft.h
+CMakeFiles/04_08_2017.dir/vm/operations/5_sub.c.o: ../libft/includes/libftprintf.h
+CMakeFiles/04_08_2017.dir/vm/operations/5_sub.c.o: ../op.h
+CMakeFiles/04_08_2017.dir/vm/operations/5_sub.c.o: ../vm/operations/5_sub.c
+CMakeFiles/04_08_2017.dir/vm/operations/5_sub.c.o: ../vm/vm.h
+
+CMakeFiles/04_08_2017.dir/vm/operations/6_and.c.o: ../libft/includes/libft.h
+CMakeFiles/04_08_2017.dir/vm/operations/6_and.c.o: ../libft/includes/libftprintf.h
+CMakeFiles/04_08_2017.dir/vm/operations/6_and.c.o: ../op.h
+CMakeFiles/04_08_2017.dir/vm/operations/6_and.c.o: ../vm/operations/6_and.c
+CMakeFiles/04_08_2017.dir/vm/operations/6_and.c.o: ../vm/vm.h
+
+CMakeFiles/04_08_2017.dir/vm/operations/7_or.c.o: ../libft/includes/libft.h
+CMakeFiles/04_08_2017.dir/vm/operations/7_or.c.o: ../libft/includes/libftprintf.h
+CMakeFiles/04_08_2017.dir/vm/operations/7_or.c.o: ../op.h
+CMakeFiles/04_08_2017.dir/vm/operations/7_or.c.o: ../vm/operations/7_or.c
+CMakeFiles/04_08_2017.dir/vm/operations/7_or.c.o: ../vm/vm.h
+
+CMakeFiles/04_08_2017.dir/vm/operations/8_xor.c.o: ../libft/includes/libft.h
+CMakeFiles/04_08_2017.dir/vm/operations/8_xor.c.o: ../libft/includes/libftprintf.h
+CMakeFiles/04_08_2017.dir/vm/operations/8_xor.c.o: ../op.h
+CMakeFiles/04_08_2017.dir/vm/operations/8_xor.c.o: ../vm/operations/8_xor.c
+CMakeFiles/04_08_2017.dir/vm/operations/8_xor.c.o: ../vm/vm.h
+
+CMakeFiles/04_08_2017.dir/vm/operations/9_zjmp.c.o: ../libft/includes/libft.h
+CMakeFiles/04_08_2017.dir/vm/operations/9_zjmp.c.o: ../libft/includes/libftprintf.h
+CMakeFiles/04_08_2017.dir/vm/operations/9_zjmp.c.o: ../op.h
+CMakeFiles/04_08_2017.dir/vm/operations/9_zjmp.c.o: ../vm/operations/9_zjmp.c
+CMakeFiles/04_08_2017.dir/vm/operations/9_zjmp.c.o: ../vm/vm.h
 
 CMakeFiles/04_08_2017.dir/vm/playground_prep.c.o: ../libft/includes/libft.h
 CMakeFiles/04_08_2017.dir/vm/playground_prep.c.o: ../libft/includes/libftprintf.h
@@ -294,4 +407,10 @@ CMakeFiles/04_08_2017.dir/vm/read_args.c.o: ../libft/includes/libftprintf.h
 CMakeFiles/04_08_2017.dir/vm/read_args.c.o: ../op.h
 CMakeFiles/04_08_2017.dir/vm/read_args.c.o: ../vm/read_args.c
 CMakeFiles/04_08_2017.dir/vm/read_args.c.o: ../vm/vm.h
+
+CMakeFiles/04_08_2017.dir/vm/uncode_args.c.o: ../libft/includes/libft.h
+CMakeFiles/04_08_2017.dir/vm/uncode_args.c.o: ../libft/includes/libftprintf.h
+CMakeFiles/04_08_2017.dir/vm/uncode_args.c.o: ../op.h
+CMakeFiles/04_08_2017.dir/vm/uncode_args.c.o: ../vm/uncode_args.c
+CMakeFiles/04_08_2017.dir/vm/uncode_args.c.o: ../vm/vm.h
 

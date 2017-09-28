@@ -1953,9 +1953,393 @@ CMakeFiles/04_08_2017.dir/libft/printf/skip_flags.c.o.provides: CMakeFiles/04_08
 CMakeFiles/04_08_2017.dir/libft/printf/skip_flags.c.o.provides.build: CMakeFiles/04_08_2017.dir/libft/printf/skip_flags.c.o
 
 
+CMakeFiles/04_08_2017.dir/vm/operations/10_ldi.c.o: CMakeFiles/04_08_2017.dir/flags.make
+CMakeFiles/04_08_2017.dir/vm/operations/10_ldi.c.o: ../vm/operations/10_ldi.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building C object CMakeFiles/04_08_2017.dir/vm/operations/10_ldi.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/04_08_2017.dir/vm/operations/10_ldi.c.o   -c /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/10_ldi.c
+
+CMakeFiles/04_08_2017.dir/vm/operations/10_ldi.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/04_08_2017.dir/vm/operations/10_ldi.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/10_ldi.c > CMakeFiles/04_08_2017.dir/vm/operations/10_ldi.c.i
+
+CMakeFiles/04_08_2017.dir/vm/operations/10_ldi.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/04_08_2017.dir/vm/operations/10_ldi.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/10_ldi.c -o CMakeFiles/04_08_2017.dir/vm/operations/10_ldi.c.s
+
+CMakeFiles/04_08_2017.dir/vm/operations/10_ldi.c.o.requires:
+
+.PHONY : CMakeFiles/04_08_2017.dir/vm/operations/10_ldi.c.o.requires
+
+CMakeFiles/04_08_2017.dir/vm/operations/10_ldi.c.o.provides: CMakeFiles/04_08_2017.dir/vm/operations/10_ldi.c.o.requires
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/10_ldi.c.o.provides.build
+.PHONY : CMakeFiles/04_08_2017.dir/vm/operations/10_ldi.c.o.provides
+
+CMakeFiles/04_08_2017.dir/vm/operations/10_ldi.c.o.provides.build: CMakeFiles/04_08_2017.dir/vm/operations/10_ldi.c.o
+
+
+CMakeFiles/04_08_2017.dir/vm/operations/11_sti.c.o: CMakeFiles/04_08_2017.dir/flags.make
+CMakeFiles/04_08_2017.dir/vm/operations/11_sti.c.o: ../vm/operations/11_sti.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building C object CMakeFiles/04_08_2017.dir/vm/operations/11_sti.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/04_08_2017.dir/vm/operations/11_sti.c.o   -c /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/11_sti.c
+
+CMakeFiles/04_08_2017.dir/vm/operations/11_sti.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/04_08_2017.dir/vm/operations/11_sti.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/11_sti.c > CMakeFiles/04_08_2017.dir/vm/operations/11_sti.c.i
+
+CMakeFiles/04_08_2017.dir/vm/operations/11_sti.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/04_08_2017.dir/vm/operations/11_sti.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/11_sti.c -o CMakeFiles/04_08_2017.dir/vm/operations/11_sti.c.s
+
+CMakeFiles/04_08_2017.dir/vm/operations/11_sti.c.o.requires:
+
+.PHONY : CMakeFiles/04_08_2017.dir/vm/operations/11_sti.c.o.requires
+
+CMakeFiles/04_08_2017.dir/vm/operations/11_sti.c.o.provides: CMakeFiles/04_08_2017.dir/vm/operations/11_sti.c.o.requires
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/11_sti.c.o.provides.build
+.PHONY : CMakeFiles/04_08_2017.dir/vm/operations/11_sti.c.o.provides
+
+CMakeFiles/04_08_2017.dir/vm/operations/11_sti.c.o.provides.build: CMakeFiles/04_08_2017.dir/vm/operations/11_sti.c.o
+
+
+CMakeFiles/04_08_2017.dir/vm/operations/12_fork.c.o: CMakeFiles/04_08_2017.dir/flags.make
+CMakeFiles/04_08_2017.dir/vm/operations/12_fork.c.o: ../vm/operations/12_fork.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building C object CMakeFiles/04_08_2017.dir/vm/operations/12_fork.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/04_08_2017.dir/vm/operations/12_fork.c.o   -c /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/12_fork.c
+
+CMakeFiles/04_08_2017.dir/vm/operations/12_fork.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/04_08_2017.dir/vm/operations/12_fork.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/12_fork.c > CMakeFiles/04_08_2017.dir/vm/operations/12_fork.c.i
+
+CMakeFiles/04_08_2017.dir/vm/operations/12_fork.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/04_08_2017.dir/vm/operations/12_fork.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/12_fork.c -o CMakeFiles/04_08_2017.dir/vm/operations/12_fork.c.s
+
+CMakeFiles/04_08_2017.dir/vm/operations/12_fork.c.o.requires:
+
+.PHONY : CMakeFiles/04_08_2017.dir/vm/operations/12_fork.c.o.requires
+
+CMakeFiles/04_08_2017.dir/vm/operations/12_fork.c.o.provides: CMakeFiles/04_08_2017.dir/vm/operations/12_fork.c.o.requires
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/12_fork.c.o.provides.build
+.PHONY : CMakeFiles/04_08_2017.dir/vm/operations/12_fork.c.o.provides
+
+CMakeFiles/04_08_2017.dir/vm/operations/12_fork.c.o.provides.build: CMakeFiles/04_08_2017.dir/vm/operations/12_fork.c.o
+
+
+CMakeFiles/04_08_2017.dir/vm/operations/13_lld.c.o: CMakeFiles/04_08_2017.dir/flags.make
+CMakeFiles/04_08_2017.dir/vm/operations/13_lld.c.o: ../vm/operations/13_lld.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building C object CMakeFiles/04_08_2017.dir/vm/operations/13_lld.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/04_08_2017.dir/vm/operations/13_lld.c.o   -c /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/13_lld.c
+
+CMakeFiles/04_08_2017.dir/vm/operations/13_lld.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/04_08_2017.dir/vm/operations/13_lld.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/13_lld.c > CMakeFiles/04_08_2017.dir/vm/operations/13_lld.c.i
+
+CMakeFiles/04_08_2017.dir/vm/operations/13_lld.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/04_08_2017.dir/vm/operations/13_lld.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/13_lld.c -o CMakeFiles/04_08_2017.dir/vm/operations/13_lld.c.s
+
+CMakeFiles/04_08_2017.dir/vm/operations/13_lld.c.o.requires:
+
+.PHONY : CMakeFiles/04_08_2017.dir/vm/operations/13_lld.c.o.requires
+
+CMakeFiles/04_08_2017.dir/vm/operations/13_lld.c.o.provides: CMakeFiles/04_08_2017.dir/vm/operations/13_lld.c.o.requires
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/13_lld.c.o.provides.build
+.PHONY : CMakeFiles/04_08_2017.dir/vm/operations/13_lld.c.o.provides
+
+CMakeFiles/04_08_2017.dir/vm/operations/13_lld.c.o.provides.build: CMakeFiles/04_08_2017.dir/vm/operations/13_lld.c.o
+
+
+CMakeFiles/04_08_2017.dir/vm/operations/14_lldi.c.o: CMakeFiles/04_08_2017.dir/flags.make
+CMakeFiles/04_08_2017.dir/vm/operations/14_lldi.c.o: ../vm/operations/14_lldi.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building C object CMakeFiles/04_08_2017.dir/vm/operations/14_lldi.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/04_08_2017.dir/vm/operations/14_lldi.c.o   -c /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/14_lldi.c
+
+CMakeFiles/04_08_2017.dir/vm/operations/14_lldi.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/04_08_2017.dir/vm/operations/14_lldi.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/14_lldi.c > CMakeFiles/04_08_2017.dir/vm/operations/14_lldi.c.i
+
+CMakeFiles/04_08_2017.dir/vm/operations/14_lldi.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/04_08_2017.dir/vm/operations/14_lldi.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/14_lldi.c -o CMakeFiles/04_08_2017.dir/vm/operations/14_lldi.c.s
+
+CMakeFiles/04_08_2017.dir/vm/operations/14_lldi.c.o.requires:
+
+.PHONY : CMakeFiles/04_08_2017.dir/vm/operations/14_lldi.c.o.requires
+
+CMakeFiles/04_08_2017.dir/vm/operations/14_lldi.c.o.provides: CMakeFiles/04_08_2017.dir/vm/operations/14_lldi.c.o.requires
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/14_lldi.c.o.provides.build
+.PHONY : CMakeFiles/04_08_2017.dir/vm/operations/14_lldi.c.o.provides
+
+CMakeFiles/04_08_2017.dir/vm/operations/14_lldi.c.o.provides.build: CMakeFiles/04_08_2017.dir/vm/operations/14_lldi.c.o
+
+
+CMakeFiles/04_08_2017.dir/vm/operations/15_lfork.c.o: CMakeFiles/04_08_2017.dir/flags.make
+CMakeFiles/04_08_2017.dir/vm/operations/15_lfork.c.o: ../vm/operations/15_lfork.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building C object CMakeFiles/04_08_2017.dir/vm/operations/15_lfork.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/04_08_2017.dir/vm/operations/15_lfork.c.o   -c /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/15_lfork.c
+
+CMakeFiles/04_08_2017.dir/vm/operations/15_lfork.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/04_08_2017.dir/vm/operations/15_lfork.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/15_lfork.c > CMakeFiles/04_08_2017.dir/vm/operations/15_lfork.c.i
+
+CMakeFiles/04_08_2017.dir/vm/operations/15_lfork.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/04_08_2017.dir/vm/operations/15_lfork.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/15_lfork.c -o CMakeFiles/04_08_2017.dir/vm/operations/15_lfork.c.s
+
+CMakeFiles/04_08_2017.dir/vm/operations/15_lfork.c.o.requires:
+
+.PHONY : CMakeFiles/04_08_2017.dir/vm/operations/15_lfork.c.o.requires
+
+CMakeFiles/04_08_2017.dir/vm/operations/15_lfork.c.o.provides: CMakeFiles/04_08_2017.dir/vm/operations/15_lfork.c.o.requires
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/15_lfork.c.o.provides.build
+.PHONY : CMakeFiles/04_08_2017.dir/vm/operations/15_lfork.c.o.provides
+
+CMakeFiles/04_08_2017.dir/vm/operations/15_lfork.c.o.provides.build: CMakeFiles/04_08_2017.dir/vm/operations/15_lfork.c.o
+
+
+CMakeFiles/04_08_2017.dir/vm/operations/16_aff.c.o: CMakeFiles/04_08_2017.dir/flags.make
+CMakeFiles/04_08_2017.dir/vm/operations/16_aff.c.o: ../vm/operations/16_aff.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building C object CMakeFiles/04_08_2017.dir/vm/operations/16_aff.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/04_08_2017.dir/vm/operations/16_aff.c.o   -c /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/16_aff.c
+
+CMakeFiles/04_08_2017.dir/vm/operations/16_aff.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/04_08_2017.dir/vm/operations/16_aff.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/16_aff.c > CMakeFiles/04_08_2017.dir/vm/operations/16_aff.c.i
+
+CMakeFiles/04_08_2017.dir/vm/operations/16_aff.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/04_08_2017.dir/vm/operations/16_aff.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/16_aff.c -o CMakeFiles/04_08_2017.dir/vm/operations/16_aff.c.s
+
+CMakeFiles/04_08_2017.dir/vm/operations/16_aff.c.o.requires:
+
+.PHONY : CMakeFiles/04_08_2017.dir/vm/operations/16_aff.c.o.requires
+
+CMakeFiles/04_08_2017.dir/vm/operations/16_aff.c.o.provides: CMakeFiles/04_08_2017.dir/vm/operations/16_aff.c.o.requires
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/16_aff.c.o.provides.build
+.PHONY : CMakeFiles/04_08_2017.dir/vm/operations/16_aff.c.o.provides
+
+CMakeFiles/04_08_2017.dir/vm/operations/16_aff.c.o.provides.build: CMakeFiles/04_08_2017.dir/vm/operations/16_aff.c.o
+
+
+CMakeFiles/04_08_2017.dir/vm/operations/1_live.c.o: CMakeFiles/04_08_2017.dir/flags.make
+CMakeFiles/04_08_2017.dir/vm/operations/1_live.c.o: ../vm/operations/1_live.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building C object CMakeFiles/04_08_2017.dir/vm/operations/1_live.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/04_08_2017.dir/vm/operations/1_live.c.o   -c /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/1_live.c
+
+CMakeFiles/04_08_2017.dir/vm/operations/1_live.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/04_08_2017.dir/vm/operations/1_live.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/1_live.c > CMakeFiles/04_08_2017.dir/vm/operations/1_live.c.i
+
+CMakeFiles/04_08_2017.dir/vm/operations/1_live.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/04_08_2017.dir/vm/operations/1_live.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/1_live.c -o CMakeFiles/04_08_2017.dir/vm/operations/1_live.c.s
+
+CMakeFiles/04_08_2017.dir/vm/operations/1_live.c.o.requires:
+
+.PHONY : CMakeFiles/04_08_2017.dir/vm/operations/1_live.c.o.requires
+
+CMakeFiles/04_08_2017.dir/vm/operations/1_live.c.o.provides: CMakeFiles/04_08_2017.dir/vm/operations/1_live.c.o.requires
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/1_live.c.o.provides.build
+.PHONY : CMakeFiles/04_08_2017.dir/vm/operations/1_live.c.o.provides
+
+CMakeFiles/04_08_2017.dir/vm/operations/1_live.c.o.provides.build: CMakeFiles/04_08_2017.dir/vm/operations/1_live.c.o
+
+
+CMakeFiles/04_08_2017.dir/vm/operations/2_ld.c.o: CMakeFiles/04_08_2017.dir/flags.make
+CMakeFiles/04_08_2017.dir/vm/operations/2_ld.c.o: ../vm/operations/2_ld.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building C object CMakeFiles/04_08_2017.dir/vm/operations/2_ld.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/04_08_2017.dir/vm/operations/2_ld.c.o   -c /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/2_ld.c
+
+CMakeFiles/04_08_2017.dir/vm/operations/2_ld.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/04_08_2017.dir/vm/operations/2_ld.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/2_ld.c > CMakeFiles/04_08_2017.dir/vm/operations/2_ld.c.i
+
+CMakeFiles/04_08_2017.dir/vm/operations/2_ld.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/04_08_2017.dir/vm/operations/2_ld.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/2_ld.c -o CMakeFiles/04_08_2017.dir/vm/operations/2_ld.c.s
+
+CMakeFiles/04_08_2017.dir/vm/operations/2_ld.c.o.requires:
+
+.PHONY : CMakeFiles/04_08_2017.dir/vm/operations/2_ld.c.o.requires
+
+CMakeFiles/04_08_2017.dir/vm/operations/2_ld.c.o.provides: CMakeFiles/04_08_2017.dir/vm/operations/2_ld.c.o.requires
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/2_ld.c.o.provides.build
+.PHONY : CMakeFiles/04_08_2017.dir/vm/operations/2_ld.c.o.provides
+
+CMakeFiles/04_08_2017.dir/vm/operations/2_ld.c.o.provides.build: CMakeFiles/04_08_2017.dir/vm/operations/2_ld.c.o
+
+
+CMakeFiles/04_08_2017.dir/vm/operations/3_st.c.o: CMakeFiles/04_08_2017.dir/flags.make
+CMakeFiles/04_08_2017.dir/vm/operations/3_st.c.o: ../vm/operations/3_st.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building C object CMakeFiles/04_08_2017.dir/vm/operations/3_st.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/04_08_2017.dir/vm/operations/3_st.c.o   -c /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/3_st.c
+
+CMakeFiles/04_08_2017.dir/vm/operations/3_st.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/04_08_2017.dir/vm/operations/3_st.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/3_st.c > CMakeFiles/04_08_2017.dir/vm/operations/3_st.c.i
+
+CMakeFiles/04_08_2017.dir/vm/operations/3_st.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/04_08_2017.dir/vm/operations/3_st.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/3_st.c -o CMakeFiles/04_08_2017.dir/vm/operations/3_st.c.s
+
+CMakeFiles/04_08_2017.dir/vm/operations/3_st.c.o.requires:
+
+.PHONY : CMakeFiles/04_08_2017.dir/vm/operations/3_st.c.o.requires
+
+CMakeFiles/04_08_2017.dir/vm/operations/3_st.c.o.provides: CMakeFiles/04_08_2017.dir/vm/operations/3_st.c.o.requires
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/3_st.c.o.provides.build
+.PHONY : CMakeFiles/04_08_2017.dir/vm/operations/3_st.c.o.provides
+
+CMakeFiles/04_08_2017.dir/vm/operations/3_st.c.o.provides.build: CMakeFiles/04_08_2017.dir/vm/operations/3_st.c.o
+
+
+CMakeFiles/04_08_2017.dir/vm/operations/4_add.c.o: CMakeFiles/04_08_2017.dir/flags.make
+CMakeFiles/04_08_2017.dir/vm/operations/4_add.c.o: ../vm/operations/4_add.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building C object CMakeFiles/04_08_2017.dir/vm/operations/4_add.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/04_08_2017.dir/vm/operations/4_add.c.o   -c /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/4_add.c
+
+CMakeFiles/04_08_2017.dir/vm/operations/4_add.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/04_08_2017.dir/vm/operations/4_add.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/4_add.c > CMakeFiles/04_08_2017.dir/vm/operations/4_add.c.i
+
+CMakeFiles/04_08_2017.dir/vm/operations/4_add.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/04_08_2017.dir/vm/operations/4_add.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/4_add.c -o CMakeFiles/04_08_2017.dir/vm/operations/4_add.c.s
+
+CMakeFiles/04_08_2017.dir/vm/operations/4_add.c.o.requires:
+
+.PHONY : CMakeFiles/04_08_2017.dir/vm/operations/4_add.c.o.requires
+
+CMakeFiles/04_08_2017.dir/vm/operations/4_add.c.o.provides: CMakeFiles/04_08_2017.dir/vm/operations/4_add.c.o.requires
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/4_add.c.o.provides.build
+.PHONY : CMakeFiles/04_08_2017.dir/vm/operations/4_add.c.o.provides
+
+CMakeFiles/04_08_2017.dir/vm/operations/4_add.c.o.provides.build: CMakeFiles/04_08_2017.dir/vm/operations/4_add.c.o
+
+
+CMakeFiles/04_08_2017.dir/vm/operations/5_sub.c.o: CMakeFiles/04_08_2017.dir/flags.make
+CMakeFiles/04_08_2017.dir/vm/operations/5_sub.c.o: ../vm/operations/5_sub.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Building C object CMakeFiles/04_08_2017.dir/vm/operations/5_sub.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/04_08_2017.dir/vm/operations/5_sub.c.o   -c /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/5_sub.c
+
+CMakeFiles/04_08_2017.dir/vm/operations/5_sub.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/04_08_2017.dir/vm/operations/5_sub.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/5_sub.c > CMakeFiles/04_08_2017.dir/vm/operations/5_sub.c.i
+
+CMakeFiles/04_08_2017.dir/vm/operations/5_sub.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/04_08_2017.dir/vm/operations/5_sub.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/5_sub.c -o CMakeFiles/04_08_2017.dir/vm/operations/5_sub.c.s
+
+CMakeFiles/04_08_2017.dir/vm/operations/5_sub.c.o.requires:
+
+.PHONY : CMakeFiles/04_08_2017.dir/vm/operations/5_sub.c.o.requires
+
+CMakeFiles/04_08_2017.dir/vm/operations/5_sub.c.o.provides: CMakeFiles/04_08_2017.dir/vm/operations/5_sub.c.o.requires
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/5_sub.c.o.provides.build
+.PHONY : CMakeFiles/04_08_2017.dir/vm/operations/5_sub.c.o.provides
+
+CMakeFiles/04_08_2017.dir/vm/operations/5_sub.c.o.provides.build: CMakeFiles/04_08_2017.dir/vm/operations/5_sub.c.o
+
+
+CMakeFiles/04_08_2017.dir/vm/operations/6_and.c.o: CMakeFiles/04_08_2017.dir/flags.make
+CMakeFiles/04_08_2017.dir/vm/operations/6_and.c.o: ../vm/operations/6_and.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building C object CMakeFiles/04_08_2017.dir/vm/operations/6_and.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/04_08_2017.dir/vm/operations/6_and.c.o   -c /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/6_and.c
+
+CMakeFiles/04_08_2017.dir/vm/operations/6_and.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/04_08_2017.dir/vm/operations/6_and.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/6_and.c > CMakeFiles/04_08_2017.dir/vm/operations/6_and.c.i
+
+CMakeFiles/04_08_2017.dir/vm/operations/6_and.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/04_08_2017.dir/vm/operations/6_and.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/6_and.c -o CMakeFiles/04_08_2017.dir/vm/operations/6_and.c.s
+
+CMakeFiles/04_08_2017.dir/vm/operations/6_and.c.o.requires:
+
+.PHONY : CMakeFiles/04_08_2017.dir/vm/operations/6_and.c.o.requires
+
+CMakeFiles/04_08_2017.dir/vm/operations/6_and.c.o.provides: CMakeFiles/04_08_2017.dir/vm/operations/6_and.c.o.requires
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/6_and.c.o.provides.build
+.PHONY : CMakeFiles/04_08_2017.dir/vm/operations/6_and.c.o.provides
+
+CMakeFiles/04_08_2017.dir/vm/operations/6_and.c.o.provides.build: CMakeFiles/04_08_2017.dir/vm/operations/6_and.c.o
+
+
+CMakeFiles/04_08_2017.dir/vm/operations/7_or.c.o: CMakeFiles/04_08_2017.dir/flags.make
+CMakeFiles/04_08_2017.dir/vm/operations/7_or.c.o: ../vm/operations/7_or.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_93) "Building C object CMakeFiles/04_08_2017.dir/vm/operations/7_or.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/04_08_2017.dir/vm/operations/7_or.c.o   -c /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/7_or.c
+
+CMakeFiles/04_08_2017.dir/vm/operations/7_or.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/04_08_2017.dir/vm/operations/7_or.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/7_or.c > CMakeFiles/04_08_2017.dir/vm/operations/7_or.c.i
+
+CMakeFiles/04_08_2017.dir/vm/operations/7_or.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/04_08_2017.dir/vm/operations/7_or.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/7_or.c -o CMakeFiles/04_08_2017.dir/vm/operations/7_or.c.s
+
+CMakeFiles/04_08_2017.dir/vm/operations/7_or.c.o.requires:
+
+.PHONY : CMakeFiles/04_08_2017.dir/vm/operations/7_or.c.o.requires
+
+CMakeFiles/04_08_2017.dir/vm/operations/7_or.c.o.provides: CMakeFiles/04_08_2017.dir/vm/operations/7_or.c.o.requires
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/7_or.c.o.provides.build
+.PHONY : CMakeFiles/04_08_2017.dir/vm/operations/7_or.c.o.provides
+
+CMakeFiles/04_08_2017.dir/vm/operations/7_or.c.o.provides.build: CMakeFiles/04_08_2017.dir/vm/operations/7_or.c.o
+
+
+CMakeFiles/04_08_2017.dir/vm/operations/8_xor.c.o: CMakeFiles/04_08_2017.dir/flags.make
+CMakeFiles/04_08_2017.dir/vm/operations/8_xor.c.o: ../vm/operations/8_xor.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_94) "Building C object CMakeFiles/04_08_2017.dir/vm/operations/8_xor.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/04_08_2017.dir/vm/operations/8_xor.c.o   -c /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/8_xor.c
+
+CMakeFiles/04_08_2017.dir/vm/operations/8_xor.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/04_08_2017.dir/vm/operations/8_xor.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/8_xor.c > CMakeFiles/04_08_2017.dir/vm/operations/8_xor.c.i
+
+CMakeFiles/04_08_2017.dir/vm/operations/8_xor.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/04_08_2017.dir/vm/operations/8_xor.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/8_xor.c -o CMakeFiles/04_08_2017.dir/vm/operations/8_xor.c.s
+
+CMakeFiles/04_08_2017.dir/vm/operations/8_xor.c.o.requires:
+
+.PHONY : CMakeFiles/04_08_2017.dir/vm/operations/8_xor.c.o.requires
+
+CMakeFiles/04_08_2017.dir/vm/operations/8_xor.c.o.provides: CMakeFiles/04_08_2017.dir/vm/operations/8_xor.c.o.requires
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/8_xor.c.o.provides.build
+.PHONY : CMakeFiles/04_08_2017.dir/vm/operations/8_xor.c.o.provides
+
+CMakeFiles/04_08_2017.dir/vm/operations/8_xor.c.o.provides.build: CMakeFiles/04_08_2017.dir/vm/operations/8_xor.c.o
+
+
+CMakeFiles/04_08_2017.dir/vm/operations/9_zjmp.c.o: CMakeFiles/04_08_2017.dir/flags.make
+CMakeFiles/04_08_2017.dir/vm/operations/9_zjmp.c.o: ../vm/operations/9_zjmp.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_95) "Building C object CMakeFiles/04_08_2017.dir/vm/operations/9_zjmp.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/04_08_2017.dir/vm/operations/9_zjmp.c.o   -c /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/9_zjmp.c
+
+CMakeFiles/04_08_2017.dir/vm/operations/9_zjmp.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/04_08_2017.dir/vm/operations/9_zjmp.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/9_zjmp.c > CMakeFiles/04_08_2017.dir/vm/operations/9_zjmp.c.i
+
+CMakeFiles/04_08_2017.dir/vm/operations/9_zjmp.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/04_08_2017.dir/vm/operations/9_zjmp.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/9_zjmp.c -o CMakeFiles/04_08_2017.dir/vm/operations/9_zjmp.c.s
+
+CMakeFiles/04_08_2017.dir/vm/operations/9_zjmp.c.o.requires:
+
+.PHONY : CMakeFiles/04_08_2017.dir/vm/operations/9_zjmp.c.o.requires
+
+CMakeFiles/04_08_2017.dir/vm/operations/9_zjmp.c.o.provides: CMakeFiles/04_08_2017.dir/vm/operations/9_zjmp.c.o.requires
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/9_zjmp.c.o.provides.build
+.PHONY : CMakeFiles/04_08_2017.dir/vm/operations/9_zjmp.c.o.provides
+
+CMakeFiles/04_08_2017.dir/vm/operations/9_zjmp.c.o.provides.build: CMakeFiles/04_08_2017.dir/vm/operations/9_zjmp.c.o
+
+
 CMakeFiles/04_08_2017.dir/vm/check_args.c.o: CMakeFiles/04_08_2017.dir/flags.make
 CMakeFiles/04_08_2017.dir/vm/check_args.c.o: ../vm/check_args.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building C object CMakeFiles/04_08_2017.dir/vm/check_args.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_96) "Building C object CMakeFiles/04_08_2017.dir/vm/check_args.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/04_08_2017.dir/vm/check_args.c.o   -c /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/check_args.c
 
 CMakeFiles/04_08_2017.dir/vm/check_args.c.i: cmake_force
@@ -1977,9 +2361,33 @@ CMakeFiles/04_08_2017.dir/vm/check_args.c.o.provides: CMakeFiles/04_08_2017.dir/
 CMakeFiles/04_08_2017.dir/vm/check_args.c.o.provides.build: CMakeFiles/04_08_2017.dir/vm/check_args.c.o
 
 
+CMakeFiles/04_08_2017.dir/vm/check_magic.c.o: CMakeFiles/04_08_2017.dir/flags.make
+CMakeFiles/04_08_2017.dir/vm/check_magic.c.o: ../vm/check_magic.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_97) "Building C object CMakeFiles/04_08_2017.dir/vm/check_magic.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/04_08_2017.dir/vm/check_magic.c.o   -c /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/check_magic.c
+
+CMakeFiles/04_08_2017.dir/vm/check_magic.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/04_08_2017.dir/vm/check_magic.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/check_magic.c > CMakeFiles/04_08_2017.dir/vm/check_magic.c.i
+
+CMakeFiles/04_08_2017.dir/vm/check_magic.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/04_08_2017.dir/vm/check_magic.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/check_magic.c -o CMakeFiles/04_08_2017.dir/vm/check_magic.c.s
+
+CMakeFiles/04_08_2017.dir/vm/check_magic.c.o.requires:
+
+.PHONY : CMakeFiles/04_08_2017.dir/vm/check_magic.c.o.requires
+
+CMakeFiles/04_08_2017.dir/vm/check_magic.c.o.provides: CMakeFiles/04_08_2017.dir/vm/check_magic.c.o.requires
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/check_magic.c.o.provides.build
+.PHONY : CMakeFiles/04_08_2017.dir/vm/check_magic.c.o.provides
+
+CMakeFiles/04_08_2017.dir/vm/check_magic.c.o.provides.build: CMakeFiles/04_08_2017.dir/vm/check_magic.c.o
+
+
 CMakeFiles/04_08_2017.dir/vm/corewar_main.c.o: CMakeFiles/04_08_2017.dir/flags.make
 CMakeFiles/04_08_2017.dir/vm/corewar_main.c.o: ../vm/corewar_main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building C object CMakeFiles/04_08_2017.dir/vm/corewar_main.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_98) "Building C object CMakeFiles/04_08_2017.dir/vm/corewar_main.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/04_08_2017.dir/vm/corewar_main.c.o   -c /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/corewar_main.c
 
 CMakeFiles/04_08_2017.dir/vm/corewar_main.c.i: cmake_force
@@ -2001,9 +2409,57 @@ CMakeFiles/04_08_2017.dir/vm/corewar_main.c.o.provides: CMakeFiles/04_08_2017.di
 CMakeFiles/04_08_2017.dir/vm/corewar_main.c.o.provides.build: CMakeFiles/04_08_2017.dir/vm/corewar_main.c.o
 
 
+CMakeFiles/04_08_2017.dir/vm/fetch.c.o: CMakeFiles/04_08_2017.dir/flags.make
+CMakeFiles/04_08_2017.dir/vm/fetch.c.o: ../vm/fetch.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_99) "Building C object CMakeFiles/04_08_2017.dir/vm/fetch.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/04_08_2017.dir/vm/fetch.c.o   -c /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/fetch.c
+
+CMakeFiles/04_08_2017.dir/vm/fetch.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/04_08_2017.dir/vm/fetch.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/fetch.c > CMakeFiles/04_08_2017.dir/vm/fetch.c.i
+
+CMakeFiles/04_08_2017.dir/vm/fetch.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/04_08_2017.dir/vm/fetch.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/fetch.c -o CMakeFiles/04_08_2017.dir/vm/fetch.c.s
+
+CMakeFiles/04_08_2017.dir/vm/fetch.c.o.requires:
+
+.PHONY : CMakeFiles/04_08_2017.dir/vm/fetch.c.o.requires
+
+CMakeFiles/04_08_2017.dir/vm/fetch.c.o.provides: CMakeFiles/04_08_2017.dir/vm/fetch.c.o.requires
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/fetch.c.o.provides.build
+.PHONY : CMakeFiles/04_08_2017.dir/vm/fetch.c.o.provides
+
+CMakeFiles/04_08_2017.dir/vm/fetch.c.o.provides.build: CMakeFiles/04_08_2017.dir/vm/fetch.c.o
+
+
+CMakeFiles/04_08_2017.dir/vm/ft_error.c.o: CMakeFiles/04_08_2017.dir/flags.make
+CMakeFiles/04_08_2017.dir/vm/ft_error.c.o: ../vm/ft_error.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_100) "Building C object CMakeFiles/04_08_2017.dir/vm/ft_error.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/04_08_2017.dir/vm/ft_error.c.o   -c /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/ft_error.c
+
+CMakeFiles/04_08_2017.dir/vm/ft_error.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/04_08_2017.dir/vm/ft_error.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/ft_error.c > CMakeFiles/04_08_2017.dir/vm/ft_error.c.i
+
+CMakeFiles/04_08_2017.dir/vm/ft_error.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/04_08_2017.dir/vm/ft_error.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/ft_error.c -o CMakeFiles/04_08_2017.dir/vm/ft_error.c.s
+
+CMakeFiles/04_08_2017.dir/vm/ft_error.c.o.requires:
+
+.PHONY : CMakeFiles/04_08_2017.dir/vm/ft_error.c.o.requires
+
+CMakeFiles/04_08_2017.dir/vm/ft_error.c.o.provides: CMakeFiles/04_08_2017.dir/vm/ft_error.c.o.requires
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/ft_error.c.o.provides.build
+.PHONY : CMakeFiles/04_08_2017.dir/vm/ft_error.c.o.provides
+
+CMakeFiles/04_08_2017.dir/vm/ft_error.c.o.provides.build: CMakeFiles/04_08_2017.dir/vm/ft_error.c.o
+
+
 CMakeFiles/04_08_2017.dir/vm/ft_usage.c.o: CMakeFiles/04_08_2017.dir/flags.make
 CMakeFiles/04_08_2017.dir/vm/ft_usage.c.o: ../vm/ft_usage.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building C object CMakeFiles/04_08_2017.dir/vm/ft_usage.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_101) "Building C object CMakeFiles/04_08_2017.dir/vm/ft_usage.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/04_08_2017.dir/vm/ft_usage.c.o   -c /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/ft_usage.c
 
 CMakeFiles/04_08_2017.dir/vm/ft_usage.c.i: cmake_force
@@ -2027,7 +2483,7 @@ CMakeFiles/04_08_2017.dir/vm/ft_usage.c.o.provides.build: CMakeFiles/04_08_2017.
 
 CMakeFiles/04_08_2017.dir/vm/general_struct.c.o: CMakeFiles/04_08_2017.dir/flags.make
 CMakeFiles/04_08_2017.dir/vm/general_struct.c.o: ../vm/general_struct.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building C object CMakeFiles/04_08_2017.dir/vm/general_struct.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_102) "Building C object CMakeFiles/04_08_2017.dir/vm/general_struct.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/04_08_2017.dir/vm/general_struct.c.o   -c /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/general_struct.c
 
 CMakeFiles/04_08_2017.dir/vm/general_struct.c.i: cmake_force
@@ -2049,33 +2505,33 @@ CMakeFiles/04_08_2017.dir/vm/general_struct.c.o.provides: CMakeFiles/04_08_2017.
 CMakeFiles/04_08_2017.dir/vm/general_struct.c.o.provides.build: CMakeFiles/04_08_2017.dir/vm/general_struct.c.o
 
 
-CMakeFiles/04_08_2017.dir/vm/read_args.c.o: CMakeFiles/04_08_2017.dir/flags.make
-CMakeFiles/04_08_2017.dir/vm/read_args.c.o: ../vm/read_args.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building C object CMakeFiles/04_08_2017.dir/vm/read_args.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/04_08_2017.dir/vm/read_args.c.o   -c /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/read_args.c
+CMakeFiles/04_08_2017.dir/vm/op.c.o: CMakeFiles/04_08_2017.dir/flags.make
+CMakeFiles/04_08_2017.dir/vm/op.c.o: ../vm/op.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_103) "Building C object CMakeFiles/04_08_2017.dir/vm/op.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/04_08_2017.dir/vm/op.c.o   -c /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/op.c
 
-CMakeFiles/04_08_2017.dir/vm/read_args.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/04_08_2017.dir/vm/read_args.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/read_args.c > CMakeFiles/04_08_2017.dir/vm/read_args.c.i
+CMakeFiles/04_08_2017.dir/vm/op.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/04_08_2017.dir/vm/op.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/op.c > CMakeFiles/04_08_2017.dir/vm/op.c.i
 
-CMakeFiles/04_08_2017.dir/vm/read_args.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/04_08_2017.dir/vm/read_args.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/read_args.c -o CMakeFiles/04_08_2017.dir/vm/read_args.c.s
+CMakeFiles/04_08_2017.dir/vm/op.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/04_08_2017.dir/vm/op.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/op.c -o CMakeFiles/04_08_2017.dir/vm/op.c.s
 
-CMakeFiles/04_08_2017.dir/vm/read_args.c.o.requires:
+CMakeFiles/04_08_2017.dir/vm/op.c.o.requires:
 
-.PHONY : CMakeFiles/04_08_2017.dir/vm/read_args.c.o.requires
+.PHONY : CMakeFiles/04_08_2017.dir/vm/op.c.o.requires
 
-CMakeFiles/04_08_2017.dir/vm/read_args.c.o.provides: CMakeFiles/04_08_2017.dir/vm/read_args.c.o.requires
-	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/read_args.c.o.provides.build
-.PHONY : CMakeFiles/04_08_2017.dir/vm/read_args.c.o.provides
+CMakeFiles/04_08_2017.dir/vm/op.c.o.provides: CMakeFiles/04_08_2017.dir/vm/op.c.o.requires
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/op.c.o.provides.build
+.PHONY : CMakeFiles/04_08_2017.dir/vm/op.c.o.provides
 
-CMakeFiles/04_08_2017.dir/vm/read_args.c.o.provides.build: CMakeFiles/04_08_2017.dir/vm/read_args.c.o
+CMakeFiles/04_08_2017.dir/vm/op.c.o.provides.build: CMakeFiles/04_08_2017.dir/vm/op.c.o
 
 
 CMakeFiles/04_08_2017.dir/vm/playground_prep.c.o: CMakeFiles/04_08_2017.dir/flags.make
 CMakeFiles/04_08_2017.dir/vm/playground_prep.c.o: ../vm/playground_prep.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building C object CMakeFiles/04_08_2017.dir/vm/playground_prep.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_104) "Building C object CMakeFiles/04_08_2017.dir/vm/playground_prep.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/04_08_2017.dir/vm/playground_prep.c.o   -c /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/playground_prep.c
 
 CMakeFiles/04_08_2017.dir/vm/playground_prep.c.i: cmake_force
@@ -2099,7 +2555,7 @@ CMakeFiles/04_08_2017.dir/vm/playground_prep.c.o.provides.build: CMakeFiles/04_0
 
 CMakeFiles/04_08_2017.dir/vm/process_struct.c.o: CMakeFiles/04_08_2017.dir/flags.make
 CMakeFiles/04_08_2017.dir/vm/process_struct.c.o: ../vm/process_struct.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building C object CMakeFiles/04_08_2017.dir/vm/process_struct.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_105) "Building C object CMakeFiles/04_08_2017.dir/vm/process_struct.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/04_08_2017.dir/vm/process_struct.c.o   -c /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/process_struct.c
 
 CMakeFiles/04_08_2017.dir/vm/process_struct.c.i: cmake_force
@@ -2123,7 +2579,7 @@ CMakeFiles/04_08_2017.dir/vm/process_struct.c.o.provides.build: CMakeFiles/04_08
 
 CMakeFiles/04_08_2017.dir/vm/processing.c.o: CMakeFiles/04_08_2017.dir/flags.make
 CMakeFiles/04_08_2017.dir/vm/processing.c.o: ../vm/processing.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building C object CMakeFiles/04_08_2017.dir/vm/processing.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_106) "Building C object CMakeFiles/04_08_2017.dir/vm/processing.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/04_08_2017.dir/vm/processing.c.o   -c /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/processing.c
 
 CMakeFiles/04_08_2017.dir/vm/processing.c.i: cmake_force
@@ -2145,28 +2601,52 @@ CMakeFiles/04_08_2017.dir/vm/processing.c.o.provides: CMakeFiles/04_08_2017.dir/
 CMakeFiles/04_08_2017.dir/vm/processing.c.o.provides.build: CMakeFiles/04_08_2017.dir/vm/processing.c.o
 
 
-CMakeFiles/04_08_2017.dir/vm/ft_error.c.o: CMakeFiles/04_08_2017.dir/flags.make
-CMakeFiles/04_08_2017.dir/vm/ft_error.c.o: ../vm/ft_error.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building C object CMakeFiles/04_08_2017.dir/vm/ft_error.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/04_08_2017.dir/vm/ft_error.c.o   -c /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/ft_error.c
+CMakeFiles/04_08_2017.dir/vm/read_args.c.o: CMakeFiles/04_08_2017.dir/flags.make
+CMakeFiles/04_08_2017.dir/vm/read_args.c.o: ../vm/read_args.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_107) "Building C object CMakeFiles/04_08_2017.dir/vm/read_args.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/04_08_2017.dir/vm/read_args.c.o   -c /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/read_args.c
 
-CMakeFiles/04_08_2017.dir/vm/ft_error.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/04_08_2017.dir/vm/ft_error.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/ft_error.c > CMakeFiles/04_08_2017.dir/vm/ft_error.c.i
+CMakeFiles/04_08_2017.dir/vm/read_args.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/04_08_2017.dir/vm/read_args.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/read_args.c > CMakeFiles/04_08_2017.dir/vm/read_args.c.i
 
-CMakeFiles/04_08_2017.dir/vm/ft_error.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/04_08_2017.dir/vm/ft_error.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/ft_error.c -o CMakeFiles/04_08_2017.dir/vm/ft_error.c.s
+CMakeFiles/04_08_2017.dir/vm/read_args.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/04_08_2017.dir/vm/read_args.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/read_args.c -o CMakeFiles/04_08_2017.dir/vm/read_args.c.s
 
-CMakeFiles/04_08_2017.dir/vm/ft_error.c.o.requires:
+CMakeFiles/04_08_2017.dir/vm/read_args.c.o.requires:
 
-.PHONY : CMakeFiles/04_08_2017.dir/vm/ft_error.c.o.requires
+.PHONY : CMakeFiles/04_08_2017.dir/vm/read_args.c.o.requires
 
-CMakeFiles/04_08_2017.dir/vm/ft_error.c.o.provides: CMakeFiles/04_08_2017.dir/vm/ft_error.c.o.requires
-	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/ft_error.c.o.provides.build
-.PHONY : CMakeFiles/04_08_2017.dir/vm/ft_error.c.o.provides
+CMakeFiles/04_08_2017.dir/vm/read_args.c.o.provides: CMakeFiles/04_08_2017.dir/vm/read_args.c.o.requires
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/read_args.c.o.provides.build
+.PHONY : CMakeFiles/04_08_2017.dir/vm/read_args.c.o.provides
 
-CMakeFiles/04_08_2017.dir/vm/ft_error.c.o.provides.build: CMakeFiles/04_08_2017.dir/vm/ft_error.c.o
+CMakeFiles/04_08_2017.dir/vm/read_args.c.o.provides.build: CMakeFiles/04_08_2017.dir/vm/read_args.c.o
+
+
+CMakeFiles/04_08_2017.dir/vm/uncode_args.c.o: CMakeFiles/04_08_2017.dir/flags.make
+CMakeFiles/04_08_2017.dir/vm/uncode_args.c.o: ../vm/uncode_args.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_108) "Building C object CMakeFiles/04_08_2017.dir/vm/uncode_args.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/04_08_2017.dir/vm/uncode_args.c.o   -c /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/uncode_args.c
+
+CMakeFiles/04_08_2017.dir/vm/uncode_args.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/04_08_2017.dir/vm/uncode_args.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/uncode_args.c > CMakeFiles/04_08_2017.dir/vm/uncode_args.c.i
+
+CMakeFiles/04_08_2017.dir/vm/uncode_args.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/04_08_2017.dir/vm/uncode_args.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/uncode_args.c -o CMakeFiles/04_08_2017.dir/vm/uncode_args.c.s
+
+CMakeFiles/04_08_2017.dir/vm/uncode_args.c.o.requires:
+
+.PHONY : CMakeFiles/04_08_2017.dir/vm/uncode_args.c.o.requires
+
+CMakeFiles/04_08_2017.dir/vm/uncode_args.c.o.provides: CMakeFiles/04_08_2017.dir/vm/uncode_args.c.o.requires
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/uncode_args.c.o.provides.build
+.PHONY : CMakeFiles/04_08_2017.dir/vm/uncode_args.c.o.provides
+
+CMakeFiles/04_08_2017.dir/vm/uncode_args.c.o.provides.build: CMakeFiles/04_08_2017.dir/vm/uncode_args.c.o
 
 
 # Object files for target 04_08_2017
@@ -2250,15 +2730,35 @@ CMakeFiles/04_08_2017.dir/vm/ft_error.c.o.provides.build: CMakeFiles/04_08_2017.
 "CMakeFiles/04_08_2017.dir/libft/printf/print_str.c.o" \
 "CMakeFiles/04_08_2017.dir/libft/printf/put_txt.c.o" \
 "CMakeFiles/04_08_2017.dir/libft/printf/skip_flags.c.o" \
+"CMakeFiles/04_08_2017.dir/vm/operations/10_ldi.c.o" \
+"CMakeFiles/04_08_2017.dir/vm/operations/11_sti.c.o" \
+"CMakeFiles/04_08_2017.dir/vm/operations/12_fork.c.o" \
+"CMakeFiles/04_08_2017.dir/vm/operations/13_lld.c.o" \
+"CMakeFiles/04_08_2017.dir/vm/operations/14_lldi.c.o" \
+"CMakeFiles/04_08_2017.dir/vm/operations/15_lfork.c.o" \
+"CMakeFiles/04_08_2017.dir/vm/operations/16_aff.c.o" \
+"CMakeFiles/04_08_2017.dir/vm/operations/1_live.c.o" \
+"CMakeFiles/04_08_2017.dir/vm/operations/2_ld.c.o" \
+"CMakeFiles/04_08_2017.dir/vm/operations/3_st.c.o" \
+"CMakeFiles/04_08_2017.dir/vm/operations/4_add.c.o" \
+"CMakeFiles/04_08_2017.dir/vm/operations/5_sub.c.o" \
+"CMakeFiles/04_08_2017.dir/vm/operations/6_and.c.o" \
+"CMakeFiles/04_08_2017.dir/vm/operations/7_or.c.o" \
+"CMakeFiles/04_08_2017.dir/vm/operations/8_xor.c.o" \
+"CMakeFiles/04_08_2017.dir/vm/operations/9_zjmp.c.o" \
 "CMakeFiles/04_08_2017.dir/vm/check_args.c.o" \
+"CMakeFiles/04_08_2017.dir/vm/check_magic.c.o" \
 "CMakeFiles/04_08_2017.dir/vm/corewar_main.c.o" \
+"CMakeFiles/04_08_2017.dir/vm/fetch.c.o" \
+"CMakeFiles/04_08_2017.dir/vm/ft_error.c.o" \
 "CMakeFiles/04_08_2017.dir/vm/ft_usage.c.o" \
 "CMakeFiles/04_08_2017.dir/vm/general_struct.c.o" \
-"CMakeFiles/04_08_2017.dir/vm/read_args.c.o" \
+"CMakeFiles/04_08_2017.dir/vm/op.c.o" \
 "CMakeFiles/04_08_2017.dir/vm/playground_prep.c.o" \
 "CMakeFiles/04_08_2017.dir/vm/process_struct.c.o" \
 "CMakeFiles/04_08_2017.dir/vm/processing.c.o" \
-"CMakeFiles/04_08_2017.dir/vm/ft_error.c.o"
+"CMakeFiles/04_08_2017.dir/vm/read_args.c.o" \
+"CMakeFiles/04_08_2017.dir/vm/uncode_args.c.o"
 
 # External object files for target 04_08_2017
 04_08_2017_EXTERNAL_OBJECTS =
@@ -2342,18 +2842,38 @@ CMakeFiles/04_08_2017.dir/vm/ft_error.c.o.provides.build: CMakeFiles/04_08_2017.
 04_08_2017: CMakeFiles/04_08_2017.dir/libft/printf/print_str.c.o
 04_08_2017: CMakeFiles/04_08_2017.dir/libft/printf/put_txt.c.o
 04_08_2017: CMakeFiles/04_08_2017.dir/libft/printf/skip_flags.c.o
+04_08_2017: CMakeFiles/04_08_2017.dir/vm/operations/10_ldi.c.o
+04_08_2017: CMakeFiles/04_08_2017.dir/vm/operations/11_sti.c.o
+04_08_2017: CMakeFiles/04_08_2017.dir/vm/operations/12_fork.c.o
+04_08_2017: CMakeFiles/04_08_2017.dir/vm/operations/13_lld.c.o
+04_08_2017: CMakeFiles/04_08_2017.dir/vm/operations/14_lldi.c.o
+04_08_2017: CMakeFiles/04_08_2017.dir/vm/operations/15_lfork.c.o
+04_08_2017: CMakeFiles/04_08_2017.dir/vm/operations/16_aff.c.o
+04_08_2017: CMakeFiles/04_08_2017.dir/vm/operations/1_live.c.o
+04_08_2017: CMakeFiles/04_08_2017.dir/vm/operations/2_ld.c.o
+04_08_2017: CMakeFiles/04_08_2017.dir/vm/operations/3_st.c.o
+04_08_2017: CMakeFiles/04_08_2017.dir/vm/operations/4_add.c.o
+04_08_2017: CMakeFiles/04_08_2017.dir/vm/operations/5_sub.c.o
+04_08_2017: CMakeFiles/04_08_2017.dir/vm/operations/6_and.c.o
+04_08_2017: CMakeFiles/04_08_2017.dir/vm/operations/7_or.c.o
+04_08_2017: CMakeFiles/04_08_2017.dir/vm/operations/8_xor.c.o
+04_08_2017: CMakeFiles/04_08_2017.dir/vm/operations/9_zjmp.c.o
 04_08_2017: CMakeFiles/04_08_2017.dir/vm/check_args.c.o
+04_08_2017: CMakeFiles/04_08_2017.dir/vm/check_magic.c.o
 04_08_2017: CMakeFiles/04_08_2017.dir/vm/corewar_main.c.o
+04_08_2017: CMakeFiles/04_08_2017.dir/vm/fetch.c.o
+04_08_2017: CMakeFiles/04_08_2017.dir/vm/ft_error.c.o
 04_08_2017: CMakeFiles/04_08_2017.dir/vm/ft_usage.c.o
 04_08_2017: CMakeFiles/04_08_2017.dir/vm/general_struct.c.o
-04_08_2017: CMakeFiles/04_08_2017.dir/vm/read_args.c.o
+04_08_2017: CMakeFiles/04_08_2017.dir/vm/op.c.o
 04_08_2017: CMakeFiles/04_08_2017.dir/vm/playground_prep.c.o
 04_08_2017: CMakeFiles/04_08_2017.dir/vm/process_struct.c.o
 04_08_2017: CMakeFiles/04_08_2017.dir/vm/processing.c.o
-04_08_2017: CMakeFiles/04_08_2017.dir/vm/ft_error.c.o
+04_08_2017: CMakeFiles/04_08_2017.dir/vm/read_args.c.o
+04_08_2017: CMakeFiles/04_08_2017.dir/vm/uncode_args.c.o
 04_08_2017: CMakeFiles/04_08_2017.dir/build.make
 04_08_2017: CMakeFiles/04_08_2017.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Linking C executable 04_08_2017"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_109) "Linking C executable 04_08_2017"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/04_08_2017.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -2440,15 +2960,35 @@ CMakeFiles/04_08_2017.dir/requires: CMakeFiles/04_08_2017.dir/libft/printf/print
 CMakeFiles/04_08_2017.dir/requires: CMakeFiles/04_08_2017.dir/libft/printf/print_str.c.o.requires
 CMakeFiles/04_08_2017.dir/requires: CMakeFiles/04_08_2017.dir/libft/printf/put_txt.c.o.requires
 CMakeFiles/04_08_2017.dir/requires: CMakeFiles/04_08_2017.dir/libft/printf/skip_flags.c.o.requires
+CMakeFiles/04_08_2017.dir/requires: CMakeFiles/04_08_2017.dir/vm/operations/10_ldi.c.o.requires
+CMakeFiles/04_08_2017.dir/requires: CMakeFiles/04_08_2017.dir/vm/operations/11_sti.c.o.requires
+CMakeFiles/04_08_2017.dir/requires: CMakeFiles/04_08_2017.dir/vm/operations/12_fork.c.o.requires
+CMakeFiles/04_08_2017.dir/requires: CMakeFiles/04_08_2017.dir/vm/operations/13_lld.c.o.requires
+CMakeFiles/04_08_2017.dir/requires: CMakeFiles/04_08_2017.dir/vm/operations/14_lldi.c.o.requires
+CMakeFiles/04_08_2017.dir/requires: CMakeFiles/04_08_2017.dir/vm/operations/15_lfork.c.o.requires
+CMakeFiles/04_08_2017.dir/requires: CMakeFiles/04_08_2017.dir/vm/operations/16_aff.c.o.requires
+CMakeFiles/04_08_2017.dir/requires: CMakeFiles/04_08_2017.dir/vm/operations/1_live.c.o.requires
+CMakeFiles/04_08_2017.dir/requires: CMakeFiles/04_08_2017.dir/vm/operations/2_ld.c.o.requires
+CMakeFiles/04_08_2017.dir/requires: CMakeFiles/04_08_2017.dir/vm/operations/3_st.c.o.requires
+CMakeFiles/04_08_2017.dir/requires: CMakeFiles/04_08_2017.dir/vm/operations/4_add.c.o.requires
+CMakeFiles/04_08_2017.dir/requires: CMakeFiles/04_08_2017.dir/vm/operations/5_sub.c.o.requires
+CMakeFiles/04_08_2017.dir/requires: CMakeFiles/04_08_2017.dir/vm/operations/6_and.c.o.requires
+CMakeFiles/04_08_2017.dir/requires: CMakeFiles/04_08_2017.dir/vm/operations/7_or.c.o.requires
+CMakeFiles/04_08_2017.dir/requires: CMakeFiles/04_08_2017.dir/vm/operations/8_xor.c.o.requires
+CMakeFiles/04_08_2017.dir/requires: CMakeFiles/04_08_2017.dir/vm/operations/9_zjmp.c.o.requires
 CMakeFiles/04_08_2017.dir/requires: CMakeFiles/04_08_2017.dir/vm/check_args.c.o.requires
+CMakeFiles/04_08_2017.dir/requires: CMakeFiles/04_08_2017.dir/vm/check_magic.c.o.requires
 CMakeFiles/04_08_2017.dir/requires: CMakeFiles/04_08_2017.dir/vm/corewar_main.c.o.requires
+CMakeFiles/04_08_2017.dir/requires: CMakeFiles/04_08_2017.dir/vm/fetch.c.o.requires
+CMakeFiles/04_08_2017.dir/requires: CMakeFiles/04_08_2017.dir/vm/ft_error.c.o.requires
 CMakeFiles/04_08_2017.dir/requires: CMakeFiles/04_08_2017.dir/vm/ft_usage.c.o.requires
 CMakeFiles/04_08_2017.dir/requires: CMakeFiles/04_08_2017.dir/vm/general_struct.c.o.requires
-CMakeFiles/04_08_2017.dir/requires: CMakeFiles/04_08_2017.dir/vm/read_args.c.o.requires
+CMakeFiles/04_08_2017.dir/requires: CMakeFiles/04_08_2017.dir/vm/op.c.o.requires
 CMakeFiles/04_08_2017.dir/requires: CMakeFiles/04_08_2017.dir/vm/playground_prep.c.o.requires
 CMakeFiles/04_08_2017.dir/requires: CMakeFiles/04_08_2017.dir/vm/process_struct.c.o.requires
 CMakeFiles/04_08_2017.dir/requires: CMakeFiles/04_08_2017.dir/vm/processing.c.o.requires
-CMakeFiles/04_08_2017.dir/requires: CMakeFiles/04_08_2017.dir/vm/ft_error.c.o.requires
+CMakeFiles/04_08_2017.dir/requires: CMakeFiles/04_08_2017.dir/vm/read_args.c.o.requires
+CMakeFiles/04_08_2017.dir/requires: CMakeFiles/04_08_2017.dir/vm/uncode_args.c.o.requires
 
 .PHONY : CMakeFiles/04_08_2017.dir/requires
 

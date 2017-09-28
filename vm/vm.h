@@ -11,8 +11,8 @@ typedef struct s_op			t_op;
 
 struct				s_general
 {
-//	unsigned char	field[MEM_SIZE];
-	unsigned char	*field;
+	unsigned char	field[MEM_SIZE];
+//	unsigned char	*field;
 	unsigned int	total_cycles;
 	unsigned int	current_cycles;
 	unsigned int	nbr_process;
@@ -20,6 +20,7 @@ struct				s_general
 	unsigned int	live_per_period;
 	unsigned int	live_checks;
 	int				dump;
+	int 			aff;
 	t_player		**players;
 	int				champ_num;
 	int				game_over; //processing
@@ -82,7 +83,7 @@ void				dump_map(unsigned char *line);
 
 void				check_lives(t_general *gen);
 void				process(t_general *gen);
-void				new_process(t_process *parent, t_process **head);
+void				new_process(t_process *parent, t_process **head, uint32_t arg, int idx);
 size_t				kill_process(t_process **head);
 
 size_t				check_pc(size_t pc);
@@ -110,5 +111,7 @@ void				lld_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
 void				lldi_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
 void				lfork_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
 void				aff_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
+
+void				put_numb_on_field(t_general *gen, size_t copy_pc, int args);
 
 #endif

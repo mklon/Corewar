@@ -44,9 +44,9 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
 					<Add directory="/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
@@ -66,9 +66,9 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../lib/clang/8.1.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
 					<Add directory="/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
@@ -331,7 +331,13 @@
 		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/check_args.c">
 			<Option target="04_08_2017"/>
 		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/check_magic.c">
+			<Option target="04_08_2017"/>
+		</Unit>
 		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/corewar_main.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/fetch.c">
 			<Option target="04_08_2017"/>
 		</Unit>
 		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/ft_error.c">
@@ -341,6 +347,57 @@
 			<Option target="04_08_2017"/>
 		</Unit>
 		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/general_struct.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/op.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/10_ldi.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/11_sti.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/12_fork.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/13_lld.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/14_lldi.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/15_lfork.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/16_aff.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/1_live.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/2_ld.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/3_st.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/4_add.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/5_sub.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/6_and.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/7_or.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/8_xor.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/9_zjmp.c">
 			<Option target="04_08_2017"/>
 		</Unit>
 		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/playground_prep.c">
@@ -353,6 +410,9 @@
 			<Option target="04_08_2017"/>
 		</Unit>
 		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/read_args.c">
+			<Option target="04_08_2017"/>
+		</Unit>
+		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/uncode_args.c">
 			<Option target="04_08_2017"/>
 		</Unit>
 		<Unit filename="/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/vm.h">

@@ -31,9 +31,9 @@ int		main(int ar, char **av)
 	while (!gen->game_over)
 	{
 		process(gen);
-		gen->total_cycles++;
+		(gen->total_cycles)++;
 //		ft_printf("%u\n", gen->total_cycles);
-		gen->current_cycles++;
+		(gen->current_cycles)++;
 		if (gen->dump >= 0 && gen->total_cycles == gen->dump)
 		{
 			dump_map(gen->field);

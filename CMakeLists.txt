@@ -85,16 +85,36 @@ set(SOURCE_FILES
         libft/printf/print_str.c
         libft/printf/put_txt.c
         libft/printf/skip_flags.c
+        vm/operations/10_ldi.c
+        vm/operations/11_sti.c
+        vm/operations/12_fork.c
+        vm/operations/13_lld.c
+        vm/operations/14_lldi.c
+        vm/operations/15_lfork.c
+        vm/operations/16_aff.c
+        vm/operations/1_live.c
+        vm/operations/2_ld.c
+        vm/operations/3_st.c
+        vm/operations/4_add.c
+        vm/operations/5_sub.c
+        vm/operations/6_and.c
+        vm/operations/7_or.c
+        vm/operations/8_xor.c
+        vm/operations/9_zjmp.c
         vm/check_args.c
+        vm/check_magic.c
         vm/corewar_main.c
+        vm/fetch.c
+        vm/ft_error.c
         vm/ft_usage.c
         vm/general_struct.c
-        vm/read_args.c
+        vm/op.c
         vm/playground_prep.c
         vm/process_struct.c
         vm/processing.c
+        vm/read_args.c
+        vm/uncode_args.c
         vm/vm.h
-        vm/ft_error.c
         op.h)
 
 add_executable(04_08_2017 ${SOURCE_FILES})

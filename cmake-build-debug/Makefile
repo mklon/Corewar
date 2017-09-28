@@ -2283,6 +2283,33 @@ vm/check_args.c.s:
 	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/check_args.c.s
 .PHONY : vm/check_args.c.s
 
+vm/check_magic.o: vm/check_magic.c.o
+
+.PHONY : vm/check_magic.o
+
+# target to build an object file
+vm/check_magic.c.o:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/check_magic.c.o
+.PHONY : vm/check_magic.c.o
+
+vm/check_magic.i: vm/check_magic.c.i
+
+.PHONY : vm/check_magic.i
+
+# target to preprocess a source file
+vm/check_magic.c.i:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/check_magic.c.i
+.PHONY : vm/check_magic.c.i
+
+vm/check_magic.s: vm/check_magic.c.s
+
+.PHONY : vm/check_magic.s
+
+# target to generate assembly for a file
+vm/check_magic.c.s:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/check_magic.c.s
+.PHONY : vm/check_magic.c.s
+
 vm/corewar_main.o: vm/corewar_main.c.o
 
 .PHONY : vm/corewar_main.o
@@ -2309,6 +2336,33 @@ vm/corewar_main.s: vm/corewar_main.c.s
 vm/corewar_main.c.s:
 	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/corewar_main.c.s
 .PHONY : vm/corewar_main.c.s
+
+vm/fetch.o: vm/fetch.c.o
+
+.PHONY : vm/fetch.o
+
+# target to build an object file
+vm/fetch.c.o:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/fetch.c.o
+.PHONY : vm/fetch.c.o
+
+vm/fetch.i: vm/fetch.c.i
+
+.PHONY : vm/fetch.i
+
+# target to preprocess a source file
+vm/fetch.c.i:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/fetch.c.i
+.PHONY : vm/fetch.c.i
+
+vm/fetch.s: vm/fetch.c.s
+
+.PHONY : vm/fetch.s
+
+# target to generate assembly for a file
+vm/fetch.c.s:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/fetch.c.s
+.PHONY : vm/fetch.c.s
 
 vm/ft_error.o: vm/ft_error.c.o
 
@@ -2390,6 +2444,465 @@ vm/general_struct.s: vm/general_struct.c.s
 vm/general_struct.c.s:
 	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/general_struct.c.s
 .PHONY : vm/general_struct.c.s
+
+vm/op.o: vm/op.c.o
+
+.PHONY : vm/op.o
+
+# target to build an object file
+vm/op.c.o:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/op.c.o
+.PHONY : vm/op.c.o
+
+vm/op.i: vm/op.c.i
+
+.PHONY : vm/op.i
+
+# target to preprocess a source file
+vm/op.c.i:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/op.c.i
+.PHONY : vm/op.c.i
+
+vm/op.s: vm/op.c.s
+
+.PHONY : vm/op.s
+
+# target to generate assembly for a file
+vm/op.c.s:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/op.c.s
+.PHONY : vm/op.c.s
+
+vm/operations/10_ldi.o: vm/operations/10_ldi.c.o
+
+.PHONY : vm/operations/10_ldi.o
+
+# target to build an object file
+vm/operations/10_ldi.c.o:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/10_ldi.c.o
+.PHONY : vm/operations/10_ldi.c.o
+
+vm/operations/10_ldi.i: vm/operations/10_ldi.c.i
+
+.PHONY : vm/operations/10_ldi.i
+
+# target to preprocess a source file
+vm/operations/10_ldi.c.i:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/10_ldi.c.i
+.PHONY : vm/operations/10_ldi.c.i
+
+vm/operations/10_ldi.s: vm/operations/10_ldi.c.s
+
+.PHONY : vm/operations/10_ldi.s
+
+# target to generate assembly for a file
+vm/operations/10_ldi.c.s:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/10_ldi.c.s
+.PHONY : vm/operations/10_ldi.c.s
+
+vm/operations/11_sti.o: vm/operations/11_sti.c.o
+
+.PHONY : vm/operations/11_sti.o
+
+# target to build an object file
+vm/operations/11_sti.c.o:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/11_sti.c.o
+.PHONY : vm/operations/11_sti.c.o
+
+vm/operations/11_sti.i: vm/operations/11_sti.c.i
+
+.PHONY : vm/operations/11_sti.i
+
+# target to preprocess a source file
+vm/operations/11_sti.c.i:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/11_sti.c.i
+.PHONY : vm/operations/11_sti.c.i
+
+vm/operations/11_sti.s: vm/operations/11_sti.c.s
+
+.PHONY : vm/operations/11_sti.s
+
+# target to generate assembly for a file
+vm/operations/11_sti.c.s:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/11_sti.c.s
+.PHONY : vm/operations/11_sti.c.s
+
+vm/operations/12_fork.o: vm/operations/12_fork.c.o
+
+.PHONY : vm/operations/12_fork.o
+
+# target to build an object file
+vm/operations/12_fork.c.o:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/12_fork.c.o
+.PHONY : vm/operations/12_fork.c.o
+
+vm/operations/12_fork.i: vm/operations/12_fork.c.i
+
+.PHONY : vm/operations/12_fork.i
+
+# target to preprocess a source file
+vm/operations/12_fork.c.i:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/12_fork.c.i
+.PHONY : vm/operations/12_fork.c.i
+
+vm/operations/12_fork.s: vm/operations/12_fork.c.s
+
+.PHONY : vm/operations/12_fork.s
+
+# target to generate assembly for a file
+vm/operations/12_fork.c.s:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/12_fork.c.s
+.PHONY : vm/operations/12_fork.c.s
+
+vm/operations/13_lld.o: vm/operations/13_lld.c.o
+
+.PHONY : vm/operations/13_lld.o
+
+# target to build an object file
+vm/operations/13_lld.c.o:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/13_lld.c.o
+.PHONY : vm/operations/13_lld.c.o
+
+vm/operations/13_lld.i: vm/operations/13_lld.c.i
+
+.PHONY : vm/operations/13_lld.i
+
+# target to preprocess a source file
+vm/operations/13_lld.c.i:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/13_lld.c.i
+.PHONY : vm/operations/13_lld.c.i
+
+vm/operations/13_lld.s: vm/operations/13_lld.c.s
+
+.PHONY : vm/operations/13_lld.s
+
+# target to generate assembly for a file
+vm/operations/13_lld.c.s:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/13_lld.c.s
+.PHONY : vm/operations/13_lld.c.s
+
+vm/operations/14_lldi.o: vm/operations/14_lldi.c.o
+
+.PHONY : vm/operations/14_lldi.o
+
+# target to build an object file
+vm/operations/14_lldi.c.o:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/14_lldi.c.o
+.PHONY : vm/operations/14_lldi.c.o
+
+vm/operations/14_lldi.i: vm/operations/14_lldi.c.i
+
+.PHONY : vm/operations/14_lldi.i
+
+# target to preprocess a source file
+vm/operations/14_lldi.c.i:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/14_lldi.c.i
+.PHONY : vm/operations/14_lldi.c.i
+
+vm/operations/14_lldi.s: vm/operations/14_lldi.c.s
+
+.PHONY : vm/operations/14_lldi.s
+
+# target to generate assembly for a file
+vm/operations/14_lldi.c.s:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/14_lldi.c.s
+.PHONY : vm/operations/14_lldi.c.s
+
+vm/operations/15_lfork.o: vm/operations/15_lfork.c.o
+
+.PHONY : vm/operations/15_lfork.o
+
+# target to build an object file
+vm/operations/15_lfork.c.o:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/15_lfork.c.o
+.PHONY : vm/operations/15_lfork.c.o
+
+vm/operations/15_lfork.i: vm/operations/15_lfork.c.i
+
+.PHONY : vm/operations/15_lfork.i
+
+# target to preprocess a source file
+vm/operations/15_lfork.c.i:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/15_lfork.c.i
+.PHONY : vm/operations/15_lfork.c.i
+
+vm/operations/15_lfork.s: vm/operations/15_lfork.c.s
+
+.PHONY : vm/operations/15_lfork.s
+
+# target to generate assembly for a file
+vm/operations/15_lfork.c.s:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/15_lfork.c.s
+.PHONY : vm/operations/15_lfork.c.s
+
+vm/operations/16_aff.o: vm/operations/16_aff.c.o
+
+.PHONY : vm/operations/16_aff.o
+
+# target to build an object file
+vm/operations/16_aff.c.o:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/16_aff.c.o
+.PHONY : vm/operations/16_aff.c.o
+
+vm/operations/16_aff.i: vm/operations/16_aff.c.i
+
+.PHONY : vm/operations/16_aff.i
+
+# target to preprocess a source file
+vm/operations/16_aff.c.i:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/16_aff.c.i
+.PHONY : vm/operations/16_aff.c.i
+
+vm/operations/16_aff.s: vm/operations/16_aff.c.s
+
+.PHONY : vm/operations/16_aff.s
+
+# target to generate assembly for a file
+vm/operations/16_aff.c.s:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/16_aff.c.s
+.PHONY : vm/operations/16_aff.c.s
+
+vm/operations/1_live.o: vm/operations/1_live.c.o
+
+.PHONY : vm/operations/1_live.o
+
+# target to build an object file
+vm/operations/1_live.c.o:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/1_live.c.o
+.PHONY : vm/operations/1_live.c.o
+
+vm/operations/1_live.i: vm/operations/1_live.c.i
+
+.PHONY : vm/operations/1_live.i
+
+# target to preprocess a source file
+vm/operations/1_live.c.i:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/1_live.c.i
+.PHONY : vm/operations/1_live.c.i
+
+vm/operations/1_live.s: vm/operations/1_live.c.s
+
+.PHONY : vm/operations/1_live.s
+
+# target to generate assembly for a file
+vm/operations/1_live.c.s:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/1_live.c.s
+.PHONY : vm/operations/1_live.c.s
+
+vm/operations/2_ld.o: vm/operations/2_ld.c.o
+
+.PHONY : vm/operations/2_ld.o
+
+# target to build an object file
+vm/operations/2_ld.c.o:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/2_ld.c.o
+.PHONY : vm/operations/2_ld.c.o
+
+vm/operations/2_ld.i: vm/operations/2_ld.c.i
+
+.PHONY : vm/operations/2_ld.i
+
+# target to preprocess a source file
+vm/operations/2_ld.c.i:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/2_ld.c.i
+.PHONY : vm/operations/2_ld.c.i
+
+vm/operations/2_ld.s: vm/operations/2_ld.c.s
+
+.PHONY : vm/operations/2_ld.s
+
+# target to generate assembly for a file
+vm/operations/2_ld.c.s:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/2_ld.c.s
+.PHONY : vm/operations/2_ld.c.s
+
+vm/operations/3_st.o: vm/operations/3_st.c.o
+
+.PHONY : vm/operations/3_st.o
+
+# target to build an object file
+vm/operations/3_st.c.o:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/3_st.c.o
+.PHONY : vm/operations/3_st.c.o
+
+vm/operations/3_st.i: vm/operations/3_st.c.i
+
+.PHONY : vm/operations/3_st.i
+
+# target to preprocess a source file
+vm/operations/3_st.c.i:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/3_st.c.i
+.PHONY : vm/operations/3_st.c.i
+
+vm/operations/3_st.s: vm/operations/3_st.c.s
+
+.PHONY : vm/operations/3_st.s
+
+# target to generate assembly for a file
+vm/operations/3_st.c.s:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/3_st.c.s
+.PHONY : vm/operations/3_st.c.s
+
+vm/operations/4_add.o: vm/operations/4_add.c.o
+
+.PHONY : vm/operations/4_add.o
+
+# target to build an object file
+vm/operations/4_add.c.o:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/4_add.c.o
+.PHONY : vm/operations/4_add.c.o
+
+vm/operations/4_add.i: vm/operations/4_add.c.i
+
+.PHONY : vm/operations/4_add.i
+
+# target to preprocess a source file
+vm/operations/4_add.c.i:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/4_add.c.i
+.PHONY : vm/operations/4_add.c.i
+
+vm/operations/4_add.s: vm/operations/4_add.c.s
+
+.PHONY : vm/operations/4_add.s
+
+# target to generate assembly for a file
+vm/operations/4_add.c.s:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/4_add.c.s
+.PHONY : vm/operations/4_add.c.s
+
+vm/operations/5_sub.o: vm/operations/5_sub.c.o
+
+.PHONY : vm/operations/5_sub.o
+
+# target to build an object file
+vm/operations/5_sub.c.o:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/5_sub.c.o
+.PHONY : vm/operations/5_sub.c.o
+
+vm/operations/5_sub.i: vm/operations/5_sub.c.i
+
+.PHONY : vm/operations/5_sub.i
+
+# target to preprocess a source file
+vm/operations/5_sub.c.i:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/5_sub.c.i
+.PHONY : vm/operations/5_sub.c.i
+
+vm/operations/5_sub.s: vm/operations/5_sub.c.s
+
+.PHONY : vm/operations/5_sub.s
+
+# target to generate assembly for a file
+vm/operations/5_sub.c.s:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/5_sub.c.s
+.PHONY : vm/operations/5_sub.c.s
+
+vm/operations/6_and.o: vm/operations/6_and.c.o
+
+.PHONY : vm/operations/6_and.o
+
+# target to build an object file
+vm/operations/6_and.c.o:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/6_and.c.o
+.PHONY : vm/operations/6_and.c.o
+
+vm/operations/6_and.i: vm/operations/6_and.c.i
+
+.PHONY : vm/operations/6_and.i
+
+# target to preprocess a source file
+vm/operations/6_and.c.i:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/6_and.c.i
+.PHONY : vm/operations/6_and.c.i
+
+vm/operations/6_and.s: vm/operations/6_and.c.s
+
+.PHONY : vm/operations/6_and.s
+
+# target to generate assembly for a file
+vm/operations/6_and.c.s:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/6_and.c.s
+.PHONY : vm/operations/6_and.c.s
+
+vm/operations/7_or.o: vm/operations/7_or.c.o
+
+.PHONY : vm/operations/7_or.o
+
+# target to build an object file
+vm/operations/7_or.c.o:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/7_or.c.o
+.PHONY : vm/operations/7_or.c.o
+
+vm/operations/7_or.i: vm/operations/7_or.c.i
+
+.PHONY : vm/operations/7_or.i
+
+# target to preprocess a source file
+vm/operations/7_or.c.i:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/7_or.c.i
+.PHONY : vm/operations/7_or.c.i
+
+vm/operations/7_or.s: vm/operations/7_or.c.s
+
+.PHONY : vm/operations/7_or.s
+
+# target to generate assembly for a file
+vm/operations/7_or.c.s:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/7_or.c.s
+.PHONY : vm/operations/7_or.c.s
+
+vm/operations/8_xor.o: vm/operations/8_xor.c.o
+
+.PHONY : vm/operations/8_xor.o
+
+# target to build an object file
+vm/operations/8_xor.c.o:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/8_xor.c.o
+.PHONY : vm/operations/8_xor.c.o
+
+vm/operations/8_xor.i: vm/operations/8_xor.c.i
+
+.PHONY : vm/operations/8_xor.i
+
+# target to preprocess a source file
+vm/operations/8_xor.c.i:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/8_xor.c.i
+.PHONY : vm/operations/8_xor.c.i
+
+vm/operations/8_xor.s: vm/operations/8_xor.c.s
+
+.PHONY : vm/operations/8_xor.s
+
+# target to generate assembly for a file
+vm/operations/8_xor.c.s:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/8_xor.c.s
+.PHONY : vm/operations/8_xor.c.s
+
+vm/operations/9_zjmp.o: vm/operations/9_zjmp.c.o
+
+.PHONY : vm/operations/9_zjmp.o
+
+# target to build an object file
+vm/operations/9_zjmp.c.o:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/9_zjmp.c.o
+.PHONY : vm/operations/9_zjmp.c.o
+
+vm/operations/9_zjmp.i: vm/operations/9_zjmp.c.i
+
+.PHONY : vm/operations/9_zjmp.i
+
+# target to preprocess a source file
+vm/operations/9_zjmp.c.i:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/9_zjmp.c.i
+.PHONY : vm/operations/9_zjmp.c.i
+
+vm/operations/9_zjmp.s: vm/operations/9_zjmp.c.s
+
+.PHONY : vm/operations/9_zjmp.s
+
+# target to generate assembly for a file
+vm/operations/9_zjmp.c.s:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/operations/9_zjmp.c.s
+.PHONY : vm/operations/9_zjmp.c.s
 
 vm/playground_prep.o: vm/playground_prep.c.o
 
@@ -2498,6 +3011,33 @@ vm/read_args.s: vm/read_args.c.s
 vm/read_args.c.s:
 	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/read_args.c.s
 .PHONY : vm/read_args.c.s
+
+vm/uncode_args.o: vm/uncode_args.c.o
+
+.PHONY : vm/uncode_args.o
+
+# target to build an object file
+vm/uncode_args.c.o:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/uncode_args.c.o
+.PHONY : vm/uncode_args.c.o
+
+vm/uncode_args.i: vm/uncode_args.c.i
+
+.PHONY : vm/uncode_args.i
+
+# target to preprocess a source file
+vm/uncode_args.c.i:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/uncode_args.c.i
+.PHONY : vm/uncode_args.c.i
+
+vm/uncode_args.s: vm/uncode_args.c.s
+
+.PHONY : vm/uncode_args.s
+
+# target to generate assembly for a file
+vm/uncode_args.c.s:
+	$(MAKE) -f CMakeFiles/04_08_2017.dir/build.make CMakeFiles/04_08_2017.dir/vm/uncode_args.c.s
+.PHONY : vm/uncode_args.c.s
 
 # Help Target
 help:
@@ -2748,9 +3288,15 @@ help:
 	@echo "... vm/check_args.o"
 	@echo "... vm/check_args.i"
 	@echo "... vm/check_args.s"
+	@echo "... vm/check_magic.o"
+	@echo "... vm/check_magic.i"
+	@echo "... vm/check_magic.s"
 	@echo "... vm/corewar_main.o"
 	@echo "... vm/corewar_main.i"
 	@echo "... vm/corewar_main.s"
+	@echo "... vm/fetch.o"
+	@echo "... vm/fetch.i"
+	@echo "... vm/fetch.s"
 	@echo "... vm/ft_error.o"
 	@echo "... vm/ft_error.i"
 	@echo "... vm/ft_error.s"
@@ -2760,6 +3306,57 @@ help:
 	@echo "... vm/general_struct.o"
 	@echo "... vm/general_struct.i"
 	@echo "... vm/general_struct.s"
+	@echo "... vm/op.o"
+	@echo "... vm/op.i"
+	@echo "... vm/op.s"
+	@echo "... vm/operations/10_ldi.o"
+	@echo "... vm/operations/10_ldi.i"
+	@echo "... vm/operations/10_ldi.s"
+	@echo "... vm/operations/11_sti.o"
+	@echo "... vm/operations/11_sti.i"
+	@echo "... vm/operations/11_sti.s"
+	@echo "... vm/operations/12_fork.o"
+	@echo "... vm/operations/12_fork.i"
+	@echo "... vm/operations/12_fork.s"
+	@echo "... vm/operations/13_lld.o"
+	@echo "... vm/operations/13_lld.i"
+	@echo "... vm/operations/13_lld.s"
+	@echo "... vm/operations/14_lldi.o"
+	@echo "... vm/operations/14_lldi.i"
+	@echo "... vm/operations/14_lldi.s"
+	@echo "... vm/operations/15_lfork.o"
+	@echo "... vm/operations/15_lfork.i"
+	@echo "... vm/operations/15_lfork.s"
+	@echo "... vm/operations/16_aff.o"
+	@echo "... vm/operations/16_aff.i"
+	@echo "... vm/operations/16_aff.s"
+	@echo "... vm/operations/1_live.o"
+	@echo "... vm/operations/1_live.i"
+	@echo "... vm/operations/1_live.s"
+	@echo "... vm/operations/2_ld.o"
+	@echo "... vm/operations/2_ld.i"
+	@echo "... vm/operations/2_ld.s"
+	@echo "... vm/operations/3_st.o"
+	@echo "... vm/operations/3_st.i"
+	@echo "... vm/operations/3_st.s"
+	@echo "... vm/operations/4_add.o"
+	@echo "... vm/operations/4_add.i"
+	@echo "... vm/operations/4_add.s"
+	@echo "... vm/operations/5_sub.o"
+	@echo "... vm/operations/5_sub.i"
+	@echo "... vm/operations/5_sub.s"
+	@echo "... vm/operations/6_and.o"
+	@echo "... vm/operations/6_and.i"
+	@echo "... vm/operations/6_and.s"
+	@echo "... vm/operations/7_or.o"
+	@echo "... vm/operations/7_or.i"
+	@echo "... vm/operations/7_or.s"
+	@echo "... vm/operations/8_xor.o"
+	@echo "... vm/operations/8_xor.i"
+	@echo "... vm/operations/8_xor.s"
+	@echo "... vm/operations/9_zjmp.o"
+	@echo "... vm/operations/9_zjmp.i"
+	@echo "... vm/operations/9_zjmp.s"
 	@echo "... vm/playground_prep.o"
 	@echo "... vm/playground_prep.i"
 	@echo "... vm/playground_prep.s"
@@ -2772,6 +3369,9 @@ help:
 	@echo "... vm/read_args.o"
 	@echo "... vm/read_args.i"
 	@echo "... vm/read_args.s"
+	@echo "... vm/uncode_args.o"
+	@echo "... vm/uncode_args.i"
+	@echo "... vm/uncode_args.s"
 .PHONY : help
 
 

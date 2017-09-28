@@ -13,6 +13,8 @@ stdlib.h
 -
 unistd.h
 -
+stdint.h
+-
 
 /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/libft/includes/libftprintf.h
 unistd.h
@@ -342,7 +344,17 @@ stdio.h
 vm.h
 /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/vm.h
 
+/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/check_magic.c
+vm.h
+/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/vm.h
+stdio.h
+-
+
 /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/corewar_main.c
+vm.h
+/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/vm.h
+
+/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/fetch.c
 vm.h
 /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/vm.h
 
@@ -351,11 +363,79 @@ vm.h
 /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/vm.h
 
 /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/ft_usage.c
-vm.h
-/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/vm.h
+../op.h
+/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/op.h
 
 /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/general_struct.c
 vm.h
+/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/vm.h
+
+/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/op.c
+vm.h
+/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/vm.h
+
+/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/10_ldi.c
+../vm.h
+/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/vm.h
+
+/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/11_sti.c
+../vm.h
+/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/vm.h
+
+/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/12_fork.c
+../vm.h
+/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/vm.h
+
+/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/13_lld.c
+../vm.h
+/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/vm.h
+
+/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/14_lldi.c
+../vm.h
+/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/vm.h
+
+/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/15_lfork.c
+../vm.h
+/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/vm.h
+
+/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/16_aff.c
+../vm.h
+/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/vm.h
+
+/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/1_live.c
+../vm.h
+/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/vm.h
+
+/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/2_ld.c
+../vm.h
+/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/vm.h
+
+/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/3_st.c
+../vm.h
+/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/vm.h
+
+/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/4_add.c
+../vm.h
+/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/vm.h
+
+/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/5_sub.c
+../vm.h
+/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/vm.h
+
+/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/6_and.c
+../vm.h
+/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/vm.h
+
+/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/7_or.c
+../vm.h
+/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/vm.h
+
+/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/8_xor.c
+../vm.h
+/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/vm.h
+
+/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/operations/9_zjmp.c
+../vm.h
 /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/vm.h
 
 /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/playground_prep.c
@@ -371,6 +451,10 @@ vm.h
 /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/vm.h
 
 /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/read_args.c
+vm.h
+/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/vm.h
+
+/nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/uncode_args.c
 vm.h
 /nfs/2016/n/nyatsulk/projects/corewar/04_08_2017/vm/vm.h
 
