@@ -28,7 +28,7 @@ int		main(int ar, char **av)
         ft_usage();
     gen = gen_init();
 	read_args(ar, av, gen);
-	visualization(gen);
+    printf("dsfds\n");
 	while (!gen->game_over)
 	{
 		process(gen);

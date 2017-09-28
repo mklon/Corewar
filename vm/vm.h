@@ -120,4 +120,18 @@ void				aff_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
 
 void				put_numb_on_field(t_general *gen, size_t copy_pc, int args);
 
+void				visualization(t_general *gen);
+void				map_display(t_general *gen, int i, int j);
+void				players_info(t_general *gen);
+void				initial_info(t_general *gen);
+void				dashboard(t_general *gen);
+void				start_graph(void);
+void				draw_border(void);
+void				color_init(void);
+int					kbhit(void);
+
+
+
+
+
 #endif
