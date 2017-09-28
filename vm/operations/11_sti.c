@@ -14,7 +14,7 @@ void		sti_op(t_general *gen, t_process *process, int op_num, uint32_t *args)
 		first = ((args[1] == T_REG) ? process->reg[args_val[1]] : args_val[1]);
 		second = ((args[2] == T_REG) ? process->reg[args_val[2]] : args_val[2]);
 		sum_go = (first + second) % IDX_MOD;
-//		sum_go = check_pc(process->pc + sum_go); // for ldi
-//		process->reg[args_val[0]] = convert_arg(gen->field, &sum_go, REG_SIZE);
+		sum_go = check_pc(process->pc + sum_go);
+		put_numb_on_field(gen, sum_go, args_val[0]);
 	}
 }

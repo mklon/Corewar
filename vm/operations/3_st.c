@@ -3,7 +3,7 @@
 void	st_op(t_general *gen, t_process *process, int op_num, uint32_t *args)
 {
 	uint32_t		args_val[MAX_ARGS_NUMBER];
-	size_t		copy_pc;
+	size_t			copy_pc;
 
 	copy_pc = 0;
 	args_copy(args, args_val, op[op_num].nbr_arg);
