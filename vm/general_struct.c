@@ -40,9 +40,9 @@ t_general		*gen_init(void)
 	return(gen);
 }
 
-t_general		*gen_del(void)
-{
-	size_t	i;
-
-	i = 0;
-}
+//t_general		*gen_del(void)
+//{
+//	size_t	i;
+//
+//	i = 0;
+//}
