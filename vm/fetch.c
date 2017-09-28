@@ -68,8 +68,9 @@ void		fetch(t_general *gen, t_process *process, int op_num)
 	step = 1;
 	if (check_cod_byte(op_num, gen->field[curr], &step, args))
 	{
+		if (op_num == 8 && process->carry == 1)
+			step = 0;
 		op[op_num].f(gen, process, op_num, args);
 	}
-	if (op_num != 8) // not jump
-		process->pc += step;
+	process->pc += step;
 }
