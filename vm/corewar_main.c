@@ -28,10 +28,12 @@ int		main(int ar, char **av)
         ft_usage();
     gen = gen_init();
 	read_args(ar, av, gen);
-    printf("dsfds\n");
+	visual_init(gen);
 	while (!gen->game_over)
 	{
 		process(gen);
+		visual_apd(gen);
+
 		(gen->total_cycles)++;
 //		ft_printf("%u\n", gen->total_cycles);
 		(gen->current_cycles)++;

@@ -21,9 +21,9 @@ void	map_display(t_general *gen, int i, int j)
 		{
 			if (i < 4096)
 			{
-				wattron(gen->map, COLOR_PAIR(6));
+				wattron(gen->map, COLOR_PAIR(gen->colors[i]));
 				wprintw(gen->map, "%02x", gen->field[i]);
-				wattroff(gen->map, COLOR_PAIR(6));
+				wattroff(gen->map, COLOR_PAIR(gen->colors[i]));
 			}
 			if (i != j * 64 - 1)
 				wprintw(gen->map, " ");
@@ -42,50 +42,40 @@ void	players_info(t_general *gen)
 	while (++i <= gen->champ_num)
 	{
 		wprintw(gen->board, "Player %d : ", (i - 2 * i),  gen->players[i - 1]);
-		attron(COLOR_PAIR(10));
+		wattron(gen->board, COLOR_PAIR(i));
 		wprintw(gen->board, "%s\n", gen->players[i - 1]->name);
-		attroff(COLOR_PAIR(10));
-		wprintw(gen->board, "	Last live : %d\n", 0);
-		wprintw(gen->board, "	Lives in current period : %d\n\n", 0);
+		wattroff(gen->board, COLOR_PAIR(i));
+		wprintw(gen->board, "	Last live : %d\n", gen->players[i - 1]->last_live);
+		wprintw(gen->board, "	Lives in current period : %d\n\n",
+				gen->players[i - 1]->declared_live);
 	}
 	
 }
 
 void	initial_info(t_general *gen)
 {
-	wprintw(gen->board, "# PAUSED  #\n\n");
-	wprintw(gen->board, "Cycles/second limit : %d\n\n\n", 1);
-	wprintw(gen->board, "Cycle : %d\n\n\n", 1);
+	wmove(gen->board, 0, 0);
+	gen->pause == 1 ? wprintw(gen->board, "# PAUSED  #\n\n") :
+					wprintw(gen->board, "# RUNNING #\n\n");
+	wprintw(gen->board, "Cycles/second limit : %d\n\n\n", gen->limit);
+	wprintw(gen->board, "Cycle : %d\n\n\n", gen->total_cycles);
 	wprintw(gen->board, "Processes :%d\n\n", 1);
 	players_info(gen);
-}
+	wprintw(gen->board, "Live breakdown for current period :\n");
+	
+	//!!!!!!!!!!!
+	wattron(gen->board, COLOR_PAIR(6));
+	wprintw(gen->board, "[--------------------------------------------------]\n\n");
+	wattroff(gen->board, COLOR_PAIR(6));
+	wprintw(gen->board, "Live breakdown for last period :\n");
+	wattron(gen->board, COLOR_PAIR(6));
+	wprintw(gen->board, "[--------------------------------------------------]\n\n");
+	wattroff(gen->board, COLOR_PAIR(6));
+	//!!!!!!!!!!!
 
-void	dashboard(t_general *gen)
-{
-	int		i = -1;
-	char	c;
+	wprintw(gen->board, "CYCLE_TO_DIE :%d\n\n", gen->cycle_to_die);
+	wprintw(gen->board, "CYCLE_DELTA :%d\n\n", 1);
+	wprintw(gen->board, "NBR_LIVE :%d\n\n", 1);
+	wprintw(gen->board, "MAX_CHECKS :%d\n\n", 1);
 
-	i < 0 ? wprintw(gen->board, "# PAUSED  #") : wprintw(gen->board, "# RUNNING #");
-	attron(COLOR_PAIR(7));
-	while (true)
-	{
-		wmove(gen->board, 0, 0);
-		wmove(gen->text, 0, 0);
-		if (kbhit())
-		{
-			c = wgetch(gen->text);
-			if (c == 'p')
-			{
-				i *= -1;
-				i < 0 ? wprintw(gen->board, "# PAUSED  #") : wprintw(gen->board, "# RUNNING #");
-			}
-			else if (c == 'z')
-			{
-				system("clear");
-				exit(1);
-			}
-		}
-		wrefresh(gen->board);
-	}
-	attroff(COLOR_PAIR(7));
 }

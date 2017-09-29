@@ -2,7 +2,7 @@
 
 void	dump_map(unsigned char *line)
 {
-	size_t	i;
+	/*size_t	i;
 	size_t	k;
 	size_t	j;
 
@@ -17,7 +17,7 @@ void	dump_map(unsigned char *line)
 			ft_printf("%.2hhx ", line[k++]);
 		}
 		ft_printf("\n");
-	}
+	}*/
 }
 
 void 	write_to_map(t_general *gen)
@@ -40,6 +40,7 @@ void 	write_to_map(t_general *gen)
 		gen->process = head;
 		ptr = gen->players[j]->opcode;
 		ft_memcpy(gen->field + i, ptr, gen->players[j]->size);
+		ft_memset(&gen->colors[i], j + 1, gen->players[j]->size);
 		j++;
 		i += step;
 	}

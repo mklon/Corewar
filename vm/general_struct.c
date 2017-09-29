@@ -21,6 +21,7 @@ t_general		*gen_init(void)
 		ft_error("Error in allocation");
 //	gen->field = ft_memalloc(MEM_SIZE);
 	ft_bzero(gen->field, MEM_SIZE);
+	ft_memset(gen->colors, 6, MEM_SIZE);
 	gen->total_cycles = 0;
 	gen->current_cycles = 0;
 	gen->nbr_process = 0;
@@ -30,7 +31,8 @@ t_general		*gen_init(void)
 	gen->dump = -1;
 	gen->aff = 0;
 	gen->v = 0;
-	gen->pause = 0;
+	gen->pause = 1;
+	gen->limit = 1;
 	gen->players = NULL;
 	gen->champ_num = 0;
 	gen->game_over = 0;

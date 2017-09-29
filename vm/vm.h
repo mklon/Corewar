@@ -4,6 +4,7 @@
 # include "../op.h"
 # include <stdint.h>
 # include <ncurses.h>
+# include <unistd.h> 
 
 typedef struct s_general	t_general;
 typedef struct s_player		t_player;
@@ -13,6 +14,7 @@ typedef struct s_op			t_op;
 struct				s_general
 {
 	unsigned char	field[MEM_SIZE];
+	unsigned char	colors[MEM_SIZE];
 //	unsigned char	*field;
 	unsigned int	total_cycles;
 	unsigned int	current_cycles;
@@ -24,6 +26,7 @@ struct				s_general
 	int 			aff;
 	int				v;
 	int				pause;
+	int				limit;
 	WINDOW			*map;
 	WINDOW			*text;
 	WINDOW			*board;
@@ -60,7 +63,8 @@ struct				s_process //processing
 
 struct				s_op
 {
-	void			(*f)(t_general *gen, t_process *current, int op_num, uint32_t *args);
+	void			(*f)(t_general *gen, t_process *current, int op_num,
+					uint32_t *args);
 	int				nbr_arg;
 	int				arg[MAX_ARGS_NUMBER];
 	int				op_code;
@@ -94,10 +98,12 @@ size_t				kill_process(t_process **head);
 
 size_t				check_pc(size_t pc);
 void				fetch(t_general *gen, t_process *process, int op_num);
-int					check_cod_byte(int op_num, unsigned char codbyte, int *step, uint32_t *args);
+int					check_cod_byte(int op_num, unsigned char codbyte,
+					int *step, uint32_t *args);
 int					validate_cod_byte(int op_num, uint32_t *args);
 
-void				uncode_args(unsigned char *field, t_process *proc, int op_num, uint32_t *args);
+void				uncode_args(unsigned char *field, t_process *proc,
+					int op_num, uint32_t *args);
 uint32_t			convert_arg(unsigned char *field, size_t *curr, int size);
 void				args_copy(uint32_t *args, uint32_t *args_val, int nbr_arg);
 
@@ -120,18 +126,15 @@ void				aff_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
 
 void				put_numb_on_field(t_general *gen, size_t copy_pc, int args);
 
-void				visualization(t_general *gen);
+void				visual_init(t_general *gen);
 void				map_display(t_general *gen, int i, int j);
 void				players_info(t_general *gen);
 void				initial_info(t_general *gen);
-void				dashboard(t_general *gen);
+void				pressing(t_general *gen);
 void				start_graph(void);
 void				draw_border(void);
 void				color_init(void);
 int					kbhit(void);
-
-
-
-
+void				visual_apd(t_general *gen);
 
 #endif
