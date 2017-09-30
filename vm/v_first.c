@@ -72,8 +72,8 @@ void	start_graph(void)
 	curs_set(0);
 	cbreak();
 	noecho();
-	halfdelay(1);
-	//nodelay(stdscr, TRUE);
+	//halfdelay(0);
+	nodelay(stdscr, TRUE);
 	scrollok(stdscr, TRUE);
 	draw_border();
 }

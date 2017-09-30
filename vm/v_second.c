@@ -41,12 +41,12 @@ void	players_info(t_general *gen)
 	i = 0;
 	while (++i <= gen->champ_num)
 	{
-		wprintw(gen->board, "Player %d : ", (i - 2 * i),  gen->players[i - 1]);
+		wprintw(gen->board, "Player %d > ", (i - 2 * i),  gen->players[i - 1]);
 		wattron(gen->board, COLOR_PAIR(i));
 		wprintw(gen->board, "%s\n", gen->players[i - 1]->name);
 		wattroff(gen->board, COLOR_PAIR(i));
-		wprintw(gen->board, "	Last live : %d\n", gen->players[i - 1]->last_live);
-		wprintw(gen->board, "	Lives in current period : %d\n\n",
+		wprintw(gen->board, "	Last live > %d\n", gen->players[i - 1]->last_live);
+		wprintw(gen->board, "	Lives in current period > %d\n\n",
 				gen->players[i - 1]->declared_live);
 	}
 	
@@ -57,9 +57,9 @@ void	initial_info(t_general *gen)
 	wmove(gen->board, 0, 0);
 	gen->pause == 1 ? wprintw(gen->board, "# PAUSED  #\n\n") :
 					wprintw(gen->board, "# RUNNING #\n\n");
-	wprintw(gen->board, "Cycles/second limit : %d\n\n\n", gen->limit);
-	wprintw(gen->board, "Cycle : %d\n\n\n", gen->total_cycles);
-	wprintw(gen->board, "Processes :%d\n\n", 1);
+	wprintw(gen->board, "Cycles/second limit > %d\n\n\n", gen->limit);
+	wprintw(gen->board, "Cycle > %d\n\n\n", gen->total_cycles);
+	wprintw(gen->board, "Processes > %d\n\n", 1);
 	players_info(gen);
 	wprintw(gen->board, "Live breakdown for current period :\n");
 	
@@ -73,9 +73,9 @@ void	initial_info(t_general *gen)
 	wattroff(gen->board, COLOR_PAIR(6));
 	//!!!!!!!!!!!
 
-	wprintw(gen->board, "CYCLE_TO_DIE :%d\n\n", gen->cycle_to_die);
-	wprintw(gen->board, "CYCLE_DELTA :%d\n\n", 1);
-	wprintw(gen->board, "NBR_LIVE :%d\n\n", 1);
-	wprintw(gen->board, "MAX_CHECKS :%d\n\n", 1);
+	wprintw(gen->board, "CYCLE_TO_DIE > %d\n\n", gen->cycle_to_die);
+	wprintw(gen->board, "CYCLE_DELTA > %d\n\n", 1);
+	wprintw(gen->board, "NBR_LIVE > %d\n\n", 1);
+	wprintw(gen->board, "MAX_CHECKS > %d\n\n", 1);
 
 }

@@ -32,22 +32,30 @@ void	visual_apd(t_general *gen)
 {
 	pressing(gen);
 	initial_info(gen);
+	while(gen->pause > 0)
+	{
+		pressing(gen);
+		initial_info(gen);
+	}
+	timeout(1000 / gen->limit);
 }
 
 void	pressing(t_general *gen)
 {
-	int		i = -1;
 	char	c;
 
 	wmove(gen->text, 0, 0);
-	//if (kbhit())
-	//{
+	if (kbhit())
+	{
 		c = wgetch(gen->text);
 		if (c == 'p')
-			gen->pause *= -1;
+		{
+			gen->pause *= -1;s
+			wmove(gen->board, 50, 50);
+			wprintw(gen->board, "asfsdfdsf");
+		}
 		limit_handel(gen, c);
-	//}
-	usleep(1000);
+	}
 	wrefresh(gen->board);
 }
 
