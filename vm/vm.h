@@ -130,11 +130,12 @@ void				visual_init(t_general *gen);
 void				map_display(t_general *gen, int i, int j);
 void				players_info(t_general *gen);
 void				initial_info(t_general *gen);
-void				pressing(t_general *gen);
+int					pressing(t_general *gen);
 void				start_graph(void);
 void				draw_border(void);
 void				color_init(void);
 int					kbhit(void);
 void				visual_apd(t_general *gen);
+void				winner(t_general *gen);
 
 #endif

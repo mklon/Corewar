@@ -45,9 +45,10 @@ int		main(int ar, char **av)
 		if (gen->current_cycles == gen->cycle_to_die)
 			check_lives(gen);
 	}
-	the_winner_is(gen);
-//	while(1)
-//		;
+	if (!gen->v)
+		the_winner_is(gen);
+	else
+		winner(gen);
 	return (0);
 }
 
