@@ -1,6 +1,6 @@
 #include "../vm.h"
 
-void				lld_op(t_general *gen, t_process *process, int op_num, uint32_t *args)
+void	lld_op(t_general *gen, t_process *process, int op_num, uint32_t *args)
 {
 	uncode_args(gen->field, process, op_num, args);
 	if (args[1] >= 1 && args[1] <= 16)
