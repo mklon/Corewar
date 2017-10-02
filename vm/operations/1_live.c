@@ -6,7 +6,7 @@ void	live_op(t_general *gen, t_process *process, int op_num, uint32_t *args)
 
 	uncode_args(gen->field, process, op_num, args);
 	player_num = -1 * ((int)args[0]);
-	ft_printf("player_num: %d\n", player_num); // test
+//	ft_printf("player_num: %d\n", player_num); // test
 	if (player_num > 0 && player_num <= gen->champ_num)
 	{
 		(gen->players[player_num - 1]->declared_live)++;

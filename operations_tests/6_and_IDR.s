@@ -2,6 +2,6 @@
 .comment "and"
 
 	live %1
-	st r1, 250
-	and 1, %4, r1
-	st r1, 300
+	st r1, 200
+	and 1, %3825205248, r1
+	st r1, 190

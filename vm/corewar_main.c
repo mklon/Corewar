@@ -42,6 +42,7 @@ int		main(int ar, char **av)
 		if (gen->current_cycles == gen->cycle_to_die)
 			check_lives(gen);
 	}
+	dump_map(gen->field); // debug
 	the_winner_is(gen);
 //	while(1)
 //		;

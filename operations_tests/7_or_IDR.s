@@ -2,6 +2,6 @@
 .comment "or"
 
 	live %1
-	st r1, 250
-	or 1, %3, r1
-	st r1, 300
+	st r1, 190
+	or 513, %513, r1
+	st r1, 304

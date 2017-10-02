@@ -58,5 +58,5 @@ void 	write_to_map(t_general *gen)
 		i += step;
 	}
 	gen->nbr_process = (uint32_t)gen->champ_num;
-	dump_map(gen->field); //test
+//	dump_map(gen->field); //test
 }
