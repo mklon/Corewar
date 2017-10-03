@@ -22,7 +22,7 @@ void	the_winner_is(t_general *gen)
 
 int		main(int ar, char **av)
 {
-    t_general   	*gen;
+    t_general	*gen;
 
     if (ar == 1)
         ft_usage();
@@ -33,9 +33,7 @@ int		main(int ar, char **av)
 	{
 		process(gen);
 		visual_apd(gen);
-
 		(gen->total_cycles)++;
-//		ft_printf("%u\n", gen->total_cycles);
 		(gen->current_cycles)++;
 		if (gen->dump >= 0 && gen->total_cycles == gen->dump)
 		{

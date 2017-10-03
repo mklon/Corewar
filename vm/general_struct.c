@@ -21,7 +21,7 @@ t_general		*gen_init(void)
 		ft_error("Error in allocation");
 //	gen->field = ft_memalloc(MEM_SIZE);
 	ft_bzero(gen->field, MEM_SIZE);
-	ft_memset(gen->colors, 6, MEM_SIZE);
+	ft_memset(gen->colors, 11, MEM_SIZE);
 	gen->total_cycles = 0;
 	gen->current_cycles = 0;
 	gen->nbr_process = 0;

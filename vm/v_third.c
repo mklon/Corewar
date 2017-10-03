@@ -12,6 +12,26 @@
 
 #include "vm.h"
 
+void	pc_color(t_general *gen)
+{
+	t_process	*next;
+
+	next = gen->process;
+	wmove(gen->board, 50, 0);
+	while (next != NULL)
+	{
+		if (gen->colors[next->pc] == 1)
+			gen->colors[next->pc] = 5;
+		else if (gen->colors[next->pc] == 2)
+			gen->colors[next->pc] = 6;
+		else if (gen->colors[next->pc] == 3)
+			gen->colors[next->pc] = 7;
+		else if (gen->colors[next->pc] == 4)
+			gen->colors[next->pc] = 8;
+		next = next->next;
+	}
+}
+
 void	winner(t_general *gen)
 {
 	int 	w;
@@ -48,7 +68,11 @@ void	limit_handel(t_general *gen, char c)
 
 void	visual_apd(t_general *gen)
 {	
+	if (!gen->v)
+		return ;
 	wrefresh(gen->board);
+	map_display(gen, 0, 1);
+	wrefresh(gen->map);
 	if (pressing(gen) == 1)
 		return ;
 	initial_info(gen);
@@ -60,7 +84,7 @@ void	visual_apd(t_general *gen)
 		initial_info(gen);
 		wrefresh(gen->board);
 	}
-	timeout(1000 / gen->limit);
+	usleep(900000 / gen->limit);
 	wrefresh(gen->board);
 
 }
@@ -69,9 +93,9 @@ int		pressing(t_general *gen)
 {
 	char	c;
 
-	wmove(gen->text, 0, 0);
 	if (kbhit())
 	{
+		//printf("\a");
 		c = wgetch(gen->text);
 		if (c == 'p')
 			gen->pause *= -1;

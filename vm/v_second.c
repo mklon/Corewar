@@ -64,13 +64,13 @@ void	initial_info(t_general *gen)
 	wprintw(gen->board, "Live breakdown for current period :\n");
 	
 	//!!!!!!!!!!!
-	wattron(gen->board, COLOR_PAIR(6));
+	wattron(gen->board, COLOR_PAIR(11));
 	wprintw(gen->board, "[--------------------------------------------------]\n\n");
-	wattroff(gen->board, COLOR_PAIR(6));
+	wattroff(gen->board, COLOR_PAIR(11));
 	wprintw(gen->board, "Live breakdown for last period :\n");
-	wattron(gen->board, COLOR_PAIR(6));
+	wattron(gen->board, COLOR_PAIR(11));
 	wprintw(gen->board, "[--------------------------------------------------]\n\n");
-	wattroff(gen->board, COLOR_PAIR(6));
+	wattroff(gen->board, COLOR_PAIR(11));
 	//!!!!!!!!!!!
 
 	wprintw(gen->board, "CYCLE_TO_DIE > %d\n\n", gen->cycle_to_die);
