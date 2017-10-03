@@ -31,9 +31,9 @@ int		main(int ar, char **av)
 	while (!gen->game_over)
 	{
 		process(gen);
-		gen->total_cycles++;
+		(gen->total_cycles)++;
 //		ft_printf("%u\n", gen->total_cycles);
-		gen->current_cycles++;
+		(gen->current_cycles)++;
 		if (gen->dump >= 0 && gen->total_cycles == gen->dump)
 		{
 			dump_map(gen->field);
@@ -42,6 +42,7 @@ int		main(int ar, char **av)
 		if (gen->current_cycles == gen->cycle_to_die)
 			check_lives(gen);
 	}
+	dump_map(gen->field); // debug
 	the_winner_is(gen);
 //	while(1)
 //		;

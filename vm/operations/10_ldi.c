@@ -1,16 +1,21 @@
 #include "../vm.h"
 
-void	ldi(t_general *gen, t_process *process, int op_num, int *args)
+void	ldi_op(t_general *gen, t_process *process, int op_num, uint32_t *args)
 {
-	int		index;
+	uint32_t		args_val[MAX_ARGS_NUMBER];
+	uint32_t		first;
+	uint32_t		second;
+	size_t			sum_go;
 
-	index = 0;
-	if (args[1] >= 0 && args[1] <= 16 && args[2] >= 0 && args[2] <= 16
-		&& args[3] >= 0 && args[3] <= 16)
-	{
-		index = args[1] + args[2];
-		index = index % IDX_MOD;
-		args[3] = index;
-		// process->carry = (proc->reg[args[3]] == 0) ? 1 : 0;//??
-	}
+	args_copy(args, args_val, op[op_num].nbr_arg);
+	uncode_args(gen->field, process, op_num, args_val);
+	if (!(args_val[2] >= 1 && args_val[2] <= 16)
+		|| (args[1] == T_REG && !(args_val[1] >= 1 && args_val[1] <= 16))
+		|| (args[0] == T_REG && !(args_val[0] >= 1 && args_val[0] <= 16)))
+		return ;
+	first = ((args[0] == T_REG) ? process->reg[args_val[0]] : args_val[0]);
+	second = ((args[1] == T_REG) ? process->reg[args_val[1]] : args_val[1]);
+	sum_go = (first + second) % IDX_MOD;
+	sum_go = check_pc(process->pc + sum_go);
+	process->reg[args_val[2]] = convert_arg(gen->field, &sum_go, REG_SIZE);
 }

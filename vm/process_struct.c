@@ -1,14 +1,16 @@
 #include "vm.h"
 
-void	new_process(t_process *parent, t_process **head)
+void	new_process(t_process *parent, t_process **head, uint32_t arg, int idx)
 {
 	t_process	*new;
 	size_t		i;
 
 	i = 0;
 	new = (t_process *)malloc(sizeof(t_process));
-//	new->pc = parent->pc + 1st arg; //fork
-//	new->pc = parent->pc + (1st arg % IDX_MOD); // lfork
+	if (idx)
+		new->pc = check_pc(parent->pc + (arg % IDX_MOD));
+	else
+		new->pc = check_pc(parent->pc + arg);
 	new->carry = parent->carry;
 	new->live = 0;
 	while (i < REG_NUMBER)
@@ -18,8 +20,6 @@ void	new_process(t_process *parent, t_process **head)
 	}
 	new->next = *head;
 	*head = new;
-
-//	gen->nbr_process++; //in previous function
 }
 
 size_t		kill_process(t_process **head)
