@@ -2,9 +2,10 @@
 .comment "Ha, Ha, Ha"
 
 sti	r1, %:live, %1
+add r3, r4, r3
 
 forkkkkk:
-fork %24
+fork %3
 
 live:
 live %4
