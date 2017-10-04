@@ -12,7 +12,9 @@ void	new_process(t_process *parent, t_process **head, uint32_t arg, int idx)
 	else
 		new->pc = check_pc(parent->pc + arg);
 	new->carry = parent->carry;
+	new->color = parent->color;
 	new->live = 0;
+	new->on_hold = 0;
 	while (i < REG_NUMBER)
 	{
 		new->reg[i] = parent->reg[i];

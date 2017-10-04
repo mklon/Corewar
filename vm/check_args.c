@@ -24,7 +24,10 @@ int		validate_champ(unsigned char *line, int i)
 	magic = magic << 8;
 	magic |= (unsigned int)line[3];
 	if (!(magic == COREWAR_EXEC_MAGIC))
+	{
 		ft_error("Wrong magic number\n");
+//		return (0);
+	}
 	magic = (unsigned int)line[136];
 	magic = magic << 8;
 	magic |= (unsigned int)line[137];
@@ -33,7 +36,10 @@ int		validate_champ(unsigned char *line, int i)
 	magic = magic << 8;
 	magic |= (unsigned int)line[139];
 	if (!(magic == i - PROG_HEADER_LENGTH) || magic > CHAMP_MAX_SIZE)
+	{
 		ft_error("Program size mismatch\n");
+//		return (0);
+	}
 	return (1);
 }
 
@@ -46,7 +52,6 @@ int 	is_valid_champ(char *arg, t_general *gen, size_t j)
 //	ft_printf("FILE_MAX_LENGTH: %u\n", FILE_MAX_LENGTH); // test
 	gen->line = ft_memalloc(FILE_MAX_LENGTH);
 	fd = open(arg, O_RDONLY);
-// 	fd = open("/nfs/2016/m/msymkany/Documents/corewar/repo/champs/zork.cor", O_RDONLY);
 	len = read(fd, gen->line, FILE_MAX_LENGTH);
 //	ft_printf("len: %u\n", len); // test
 	if (fd == -1 || len == -1)
@@ -60,7 +65,6 @@ int 	is_valid_champ(char *arg, t_general *gen, size_t j)
 		write_player(gen, j);
 		free(gen->line);
 		gen->line = NULL;
-//		ft_printf("valid champion\n"); // test
 	}
 	return (1);
 }

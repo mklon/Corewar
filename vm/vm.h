@@ -58,13 +58,13 @@ struct				s_process //processing
 	uint32_t		reg[REG_NUMBER + 1];
 	unsigned int	live;
 	int				on_hold;
+	int				color;
 	t_process		*next;
 };
 
 struct				s_op
 {
-	void			(*f)(t_general *gen, t_process *current, int op_num,
-					uint32_t *args);
+	void			(*f)(t_general *gen, t_process *current, int op_num, uint32_t *args);
 	int				nbr_arg;
 	int				arg[MAX_ARGS_NUMBER];
 	int				op_code;
@@ -98,12 +98,9 @@ size_t				kill_process(t_process **head);
 
 size_t				check_pc(size_t pc);
 void				fetch(t_general *gen, t_process *process, int op_num);
-int					check_cod_byte(int op_num, unsigned char codbyte,
-					int *step, uint32_t *args);
+int					check_cod_byte(int op_num, unsigned char codbyte, int *step, uint32_t *args);
 int					validate_cod_byte(int op_num, uint32_t *args);
-
-void				uncode_args(unsigned char *field, t_process *proc,
-					int op_num, uint32_t *args);
+void				uncode_args(unsigned char *field, t_process *proc, int op_num, uint32_t *args);
 uint32_t			convert_arg(unsigned char *field, size_t *curr, int size);
 void				args_copy(uint32_t *args, uint32_t *args_val, int nbr_arg);
 
@@ -124,7 +121,7 @@ void				lldi_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
 void				lfork_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
 void				aff_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
 
-void				put_numb_on_field(t_general *gen, size_t copy_pc, int args);
+void				put_numb_on_field(t_general *gen, size_t copy_pc, int args, int colors);
 
 void				visual_init(t_general *gen);
 void				map_display(t_general *gen, int i, int j);
