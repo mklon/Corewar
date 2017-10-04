@@ -34,6 +34,8 @@ int		main(int ar, char **av)
 		(gen->total_cycles)++;
 //		ft_printf("%u\n", gen->total_cycles);
 		(gen->current_cycles)++;
+//		ft_printf("%d\n", gen->players[1]->last_live);
+//		ft_printf("%d\n", gen->players[1]->declared_live);
 		if (gen->dump >= 0 && gen->total_cycles == gen->dump)
 		{
 			dump_map(gen->field);

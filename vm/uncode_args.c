@@ -56,8 +56,8 @@ void	uncode_args(unsigned char *field, t_process *proc, int op_num, uint32_t *ar
 			args[i] = convert_arg(field, &curr, op[op_num].flag_direct_size);
 		else if (args[i] == T_IND)
 		{
-			args[i] = convert_arg(field, &curr, IND_READ);
-			if (op_num != 12 && op_num != 13 && op_num != 9) // not lld, lldi, ldi
+			args[i] = check_pc(convert_arg(field, &curr, IND_READ));
+			if (op_num != 12 && op_num != 13)// && op_num != 9) // not lld, lldi, not!! ldi
 				args[i] = args[i] % IDX_MOD;
 			if (op_num != 2) // not st
 				args[i] = get_ind(field, (proc->pc + args[i]));
