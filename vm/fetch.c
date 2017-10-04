@@ -72,5 +72,6 @@ void		fetch(t_general *gen, t_process *process, int op_num)
 			step = 0;
 		op[op_num].f(gen, process, op_num, args);
 	}
+	pc_color_down(gen, process->pc);
 	process->pc += step;
 }

@@ -12,7 +12,7 @@
 
 #include "vm.h"
 
-void	pc_color(t_general *gen)
+void	pc_color_up(t_general *gen)
 {
 	t_process	*next;
 
@@ -70,6 +70,7 @@ void	visual_apd(t_general *gen)
 {	
 	if (!gen->v)
 		return ;
+	pc_color_up(gen);
 	wrefresh(gen->board);
 	map_display(gen, 0, 1);
 	wrefresh(gen->map);

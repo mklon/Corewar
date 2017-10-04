@@ -74,8 +74,8 @@ void	initial_info(t_general *gen)
 	//!!!!!!!!!!!
 
 	wprintw(gen->board, "CYCLE_TO_DIE > %d\n\n", gen->cycle_to_die);
-	wprintw(gen->board, "CYCLE_DELTA > %d\n\n", 1);
-	wprintw(gen->board, "NBR_LIVE > %d\n\n", 1);
-	wprintw(gen->board, "MAX_CHECKS > %d\n\n", 1);
+	wprintw(gen->board, "CYCLE_DELTA > %d\n\n", 0);
+	wprintw(gen->board, "NBR_LIVE > %d\n\n", 0);
+	wprintw(gen->board, "MAX_CHECKS > %d\n\n", 0);
 
 }

@@ -137,6 +137,7 @@ void				color_init(void);
 int					kbhit(void);
 void				visual_apd(t_general *gen);
 void				winner(t_general *gen);
-void				pc_color(t_general *gen);
+void				pc_color_up(t_general *gen);
+void				pc_color_down(t_general *gen, size_t i);
 
 #endif

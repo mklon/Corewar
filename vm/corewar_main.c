@@ -34,7 +34,6 @@ int		main(int ar, char **av)
 		process(gen);
 		visual_apd(gen);
 		(gen->total_cycles)++;
-//		ft_printf("%u\n", gen->total_cycles);
 		(gen->current_cycles)++;
 		if (gen->dump >= 0 && gen->total_cycles == gen->dump)
 		{
@@ -44,12 +43,9 @@ int		main(int ar, char **av)
 		if (gen->current_cycles == gen->cycle_to_die)
 			check_lives(gen);
 	}
-	dump_map(gen->field); // debug
 	if (!gen->v)
 		the_winner_is(gen);
 	else
 		winner(gen);
-	//	while(1)
-	//		;
 	return (0);
 }

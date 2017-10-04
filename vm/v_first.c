@@ -88,7 +88,7 @@ void	visual_init(t_general *gen)
 	gen->board = newwin(64, 52, 2, 200);
 	refresh();
 	
-	pc_color(gen);
+	pc_color_up(gen);
 	map_display(gen, 0, 1);
 	initial_info(gen);
 	wrefresh(gen->map);
