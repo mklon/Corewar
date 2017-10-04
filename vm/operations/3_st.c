@@ -15,8 +15,9 @@ void	st_op(t_general *gen, t_process *process, int op_num, uint32_t *args)
 	else
 	{
 		copy_pc = check_pc(process->pc + args_val[1]);
-		put_numb_on_field(gen, copy_pc, args_val[0]);
+		put_numb_on_field(gen, copy_pc, process->reg[args_val[0]]);
 	}
+//	dump_map(gen->field); // debug
 }
 
 void	put_numb_on_field(t_general *gen, size_t copy_pc, int args)

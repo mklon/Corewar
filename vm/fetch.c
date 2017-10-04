@@ -11,7 +11,7 @@ int		validate_cod_byte(int op_num, uint32_t *args)
 			return (0);
 		i++;
 	}
-	if (args[i]) // to much args
+	if (args[i])
 		return (0);
 	return (1);
 }
@@ -39,7 +39,7 @@ int		check_cod_byte(int op_num, unsigned char codbyte, int *step, uint32_t *args
 	if (!op[op_num].coding_byte)
 	{
 		args[i] = (uint32_t)op[op_num].arg[0];
-		get_step(op_num, step, args[i]); //wtf?
+		get_step(op_num, step, args[i]);
 		return (1);
 	}
 	(*step)++;
@@ -48,7 +48,7 @@ int		check_cod_byte(int op_num, unsigned char codbyte, int *step, uint32_t *args
 		args[i] = (uint32_t)(codbyte >> shift) & 3;
 		if (args[i] == IND_CODE)
 			args[i] = T_IND;
-		get_step(op_num, step, args[i]); //wtf?
+		get_step(op_num, step, args[i]);
 		shift -= 2;
 		i++;
 	}
@@ -68,8 +68,9 @@ void		fetch(t_general *gen, t_process *process, int op_num)
 	step = 1;
 	if (check_cod_byte(op_num, gen->field[curr], &step, args))
 	{
+		if (op_num == 8 && process->carry == 1)
+			step = 0;
 		op[op_num].f(gen, process, op_num, args);
 	}
-	if (op_num != 8) // not jump
-		process->pc += step;
+	process->pc += step;
 }
