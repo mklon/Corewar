@@ -123,6 +123,10 @@ void				aff_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
 
 void				put_numb_on_field(t_general *gen, size_t copy_pc, int args, int colors);
 
+/*
+** visual part
+*/
+
 void				visual_init(t_general *gen);
 void				map_display(t_general *gen, int i, int j);
 void				players_info(t_general *gen);
@@ -136,5 +140,6 @@ void				visual_apd(t_general *gen);
 void				winner(t_general *gen);
 void				pc_color_up(t_general *gen);
 void				pc_color_down(t_general *gen, size_t i);
+void				scroll_tool(t_general *gen, int i, int j);
 
 #endif

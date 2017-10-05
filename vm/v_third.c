@@ -17,7 +17,6 @@ void	pc_color_up(t_general *gen)
 	t_process	*next;
 
 	next = gen->process;
-	wmove(gen->board, 50, 0);
 	while (next != NULL)
 	{
 		if (gen->colors[next->pc] == 1)
