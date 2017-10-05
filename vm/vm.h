@@ -53,7 +53,7 @@ struct				s_player
 
 struct				s_process //processing
 {
-	size_t			pc;
+	uint32_t		pc;
 	char			carry;
 	uint32_t		reg[REG_NUMBER + 1];
 	unsigned int	live;
@@ -96,7 +96,7 @@ void				process(t_general *gen);
 void				new_process(t_process *parent, t_process **head, uint32_t arg, int idx);
 size_t				kill_process(t_process **head);
 
-size_t				check_pc(size_t pc);
+uint32_t			check_pc(size_t pc);
 void				fetch(t_general *gen, t_process *process, int op_num);
 int					check_cod_byte(int op_num, unsigned char codbyte, int *step, uint32_t *args);
 int					validate_cod_byte(int op_num, uint32_t *args);

@@ -1,10 +1,10 @@
 #include "vm.h"
 
-size_t		check_pc(size_t pc)
+uint32_t	check_pc(size_t pc)
 {
 	if (pc >= MEM_SIZE)
 		pc = pc % MEM_SIZE;
-	return (pc);
+	return ((uint32_t)pc);
 }
 
 void		check_lives(t_general *gen)

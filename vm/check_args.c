@@ -52,6 +52,7 @@ int 	is_valid_champ(char *arg, t_general *gen, size_t j)
 //	ft_printf("FILE_MAX_LENGTH: %u\n", FILE_MAX_LENGTH); // test
 	gen->line = ft_memalloc(FILE_MAX_LENGTH);
 	fd = open(arg, O_RDONLY);
+//	fd = open("/nfs/2016/m/msymkany/Documents/corewar/repo/operations_tests/3_st_RI_negat.cor", O_RDONLY);
 	len = read(fd, gen->line, FILE_MAX_LENGTH);
 //	ft_printf("len: %u\n", len); // test
 	if (fd == -1 || len == -1)

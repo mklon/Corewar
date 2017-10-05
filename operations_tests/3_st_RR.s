@@ -2,10 +2,10 @@
 .comment "st"
 
 	live %1
-	ld %55, r2
-	ld %56, r3
-	st r2, 100
-	st r3, 150
+	ld %255, r2
+	ld %65503, r3
+	st r2, 186
+	st r3, 186
 	st r2, r3
-	st r2, 200
-	st r3, 250
+	st r2, 300
+	st r3, 300
