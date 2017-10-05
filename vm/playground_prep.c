@@ -50,7 +50,7 @@ void 	write_to_map(t_general *gen)
 		head = (t_process *)ft_memalloc(sizeof(t_process));
 		(head->reg)[1] = (gen->players)[j]->num;
 		head->pc = i;
-		head->color = j;
+		head->color = j + 1;
 		head->next = gen->process;
 		gen->process = head;
 		if (!gen->v)

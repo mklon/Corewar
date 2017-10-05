@@ -43,7 +43,13 @@ void		process(t_general *gen)
 		curr_byte = gen->field[ptr->pc];
 		if (!ptr->on_hold)
 		{
-			(curr_byte && curr_byte < 17) ? (ptr->on_hold)++ : (ptr->pc)++;
+			if (curr_byte && curr_byte < 17)
+				(ptr->on_hold)++;
+			else
+			{
+				pc_color_down(gen, ptr->pc);
+				(ptr->pc)++;
+			}
 			ptr->pc = check_pc(ptr->pc);
 		}
 		else

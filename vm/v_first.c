@@ -30,6 +30,10 @@ void	color_init(void)
 	start_color();
 	init_color(COLOR_WHITE, 999, 999, 999);
 	init_color(COLOR_MAGENTA, 400, 400, 400);
+	init_color(COLOR_YELLOW, 999, 500, 0);
+	init_color(COLOR_BLUE, 0, 400, 999);
+	init_color(COLOR_GREEN, 0, 500, 0);
+
 	init_pair(1, COLOR_RED, COLOR_BLACK);
 	init_pair(5, COLOR_WHITE, COLOR_RED);
 	init_pair(2, COLOR_GREEN, COLOR_BLACK);
