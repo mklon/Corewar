@@ -97,7 +97,7 @@ int		pressing(t_general *gen)
 	{
 		//printf("\a");
 		c = wgetch(gen->text);
-		if (c == 'p')
+		if (c == ' ')
 			gen->pause *= -1;
 		else if (gen->pause && c == 's')
 			return (1);

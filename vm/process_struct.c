@@ -4,17 +4,21 @@ void	new_process(t_process *parent, t_process **head, uint32_t arg, int idx)
 {
 	t_process	*new;
 	size_t		i;
+	short 		con;
 
 	i = 0;
 	new = (t_process *)malloc(sizeof(t_process));
 	if (idx)
-		new->pc = check_pc(parent->pc + (arg % IDX_MOD));
+	{
+		con = (short)arg;
+		new->pc = check_pc(parent->pc + (con % IDX_MOD));
+	}
 	else
 		new->pc = check_pc(parent->pc + arg);
 	new->carry = parent->carry;
 	new->color = parent->color;
-//	new->live = parent->live;
-	new->live = 0;
+	new->live = parent->live;
+//	new->live = 0;
 	new->on_hold = 0;
 	while (i < REG_NUMBER)
 	{
