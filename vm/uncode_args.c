@@ -42,7 +42,7 @@ void	uncode_args(unsigned char *field, t_process *proc, int op_num, uint32_t *ar
 {
 	size_t		i;
 	size_t		curr;
-	int 		ind;
+	short 		ind;
 
 	curr = check_pc(proc->pc + 1 + (op[op_num].coding_byte));
 	i = 0;
@@ -57,19 +57,15 @@ void	uncode_args(unsigned char *field, t_process *proc, int op_num, uint32_t *ar
 			args[i] = convert_arg(field, &curr, op[op_num].flag_direct_size);
 		else if (args[i] == T_IND)
 		{
-			ind = convert_arg(field, &curr, IND_READ);
-			if (ind >= MEM_SIZE)
-				ind = ind % MEM_SIZE - MEM_SIZE;
+			ind = (short)convert_arg(field, &curr, IND_READ);
+//			if (ind >= MEM_SIZE)
+//				ind = ind % MEM_SIZE - MEM_SIZE;
 			if (op_num != 12 && op_num != 13)// && op_num != 9) // not lld, lldi, not!! ldi
 				ind = ind % IDX_MOD;
 			if (op_num != 2) // not st
-				ind = get_ind(field, (proc->pc + ind));
-			args[i] = (uint32_t)ind;
-//			args[i] = check_pc(convert_arg(field, &curr, IND_READ));
-//			if (op_num != 12 && op_num != 13)// && op_num != 9) // not lld, lldi, not!! ldi
-//				args[i] = args[i] % IDX_MOD;
-//			if (op_num != 2) // not st
-//				args[i] = get_ind(field, (proc->pc + args[i]));
+				args[i] = get_ind(field, (proc->pc + ind));
+			else
+				args[i] = (uint32_t)ind;
 		}
 		i++;
 	}

@@ -2,5 +2,5 @@
 .comment	"lfork"
 
 live:
-	lfork %:live
+	lfork %-513
 	
