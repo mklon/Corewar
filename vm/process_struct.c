@@ -29,27 +29,19 @@ void	new_process(t_process *parent, t_process **head, uint32_t arg, int idx)
 	*head = new;
 }
 
-size_t		kill_process(t_process **head)
+size_t		kill_them_all(t_general *gen, t_process *ptr, size_t dead_process)
 {
-	size_t		dead_process;
-	t_process	*ptr;
 	t_process	*tail;
 
-	dead_process = 0;
-	ptr = *head;
-	if (!(*head)->live)
-	{
-		*head = NULL;
-		return (1);
-	}
 	while (ptr->next)
 	{
-		ptr->live = 0; // null last node
+		ptr->live = 0;
 		if (!ptr->next->live)
 		{
 			tail = ptr->next->next;
-//			free(ptr->next);
-//			ptr->next = NULL;
+			pc_color_down(gen, ptr->next->pc);
+			free(ptr->next);
+			ptr->next = NULL;
 			ptr->next = tail;
 			dead_process++;
 		}
@@ -58,4 +50,27 @@ size_t		kill_process(t_process **head)
 	}
 	ptr->live = 0;
 	return (dead_process);
+}
+
+size_t		kill_process(t_general *gen)
+{
+	size_t		dead_process;
+	t_process	*ptr;
+
+	dead_process = 0;
+	ptr = gen->process;
+	while (ptr && !ptr->live)
+	{
+		gen->process = ptr->next;
+		pc_color_down(gen, ptr->pc);
+		free(ptr);
+		ptr = NULL;
+		ptr = gen->process;
+		dead_process++;
+	}
+	if (!ptr)
+		return (dead_process);
+	else
+		return (kill_them_all(gen, ptr, dead_process));
+
 }

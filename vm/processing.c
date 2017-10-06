@@ -13,7 +13,7 @@ void		check_lives(t_general *gen)
 
 	i = 0;
 	if (gen->process)
-		gen->nbr_process -= kill_process(&gen->process);
+		gen->nbr_process -= kill_process(gen);
 	while (i < gen->champ_num)
 	{
 		gen->players[i]->declared_live = 0;
