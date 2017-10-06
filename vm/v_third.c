@@ -27,6 +27,8 @@ void	pc_color_up(t_general *gen)
 			gen->colors[next->pc] = 7;
 		else if (gen->colors[next->pc] == 4)
 			gen->colors[next->pc] = 8;
+		else if (gen->colors[next->pc] == 11)
+			gen->colors[next->pc] = 13;
 		next = next->next;
 	}
 }
@@ -35,7 +37,7 @@ void	winner(t_general *gen)
 {
 	int 	w;
 
-	wmove(gen->board, 43, 0);
+	wmove(gen->board, 53, 0);
 	w = ((gen->winner) ? gen->winner : gen->champ_num);
 	wprintw(gen->board, "Player %d (", gen->winner);
 	wattron(gen->board, COLOR_PAIR(w));
@@ -97,7 +99,7 @@ int		pressing(t_general *gen)
 	{
 		//printf("\a");
 		c = wgetch(gen->text);
-		if (c == 'p')
+		if (c == ' ')
 			gen->pause *= -1;
 		else if (gen->pause && c == 's')
 			return (1);

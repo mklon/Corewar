@@ -22,7 +22,7 @@ int		kbhit(void)
 		return ch;
 	}
 	else
-		return 0;
+		return (0);
 }
 
 void	color_init(void)
@@ -45,6 +45,8 @@ void	color_init(void)
 	init_pair(10, COLOR_MAGENTA, COLOR_MAGENTA);
 	init_pair(11, COLOR_MAGENTA, COLOR_BLACK);
 	init_pair(12, COLOR_WHITE, COLOR_BLACK);
+	init_pair(13, COLOR_BLACK, COLOR_MAGENTA);
+
 }
 
 void	draw_border(void)
@@ -76,7 +78,6 @@ void	start_graph(void)
 	curs_set(0);
 	cbreak();
 	noecho();
-	//halfdelay(0);
 	nodelay(stdscr, TRUE);
 	scrollok(stdscr, TRUE);
 	draw_border();
@@ -91,11 +92,9 @@ void	visual_init(t_general *gen)
 	gen->text = newwin(1, 1, 67, 256);
 	gen->board = newwin(64, 52, 2, 200);
 	refresh();
-	
 	pc_color_up(gen);
 	map_display(gen, 0, 1);
 	initial_info(gen);
 	wrefresh(gen->map);
 	wrefresh(gen->board);
-
 }

@@ -23,6 +23,7 @@ SOURCE = corewar_main.c \
         v_second.c \
         v_third.c \
         v_fourth.c \
+        v_fifth.c \
         operations/1_live.c \
         operations/2_ld.c \
         operations/3_st.c \

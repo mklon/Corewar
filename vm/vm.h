@@ -124,23 +124,46 @@ void				aff_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
 void				put_numb_on_field(t_general *gen, size_t copy_pc, int args, int colors);
 
 /*
-** visual part
+**			visual part
 */
 
+/*
+** v_first.c
+*/
 void				visual_init(t_general *gen);
-void				map_display(t_general *gen, int i, int j);
-void				players_info(t_general *gen);
-void				initial_info(t_general *gen);
-int					pressing(t_general *gen);
 void				start_graph(void);
 void				draw_border(void);
 void				color_init(void);
 int					kbhit(void);
-void				visual_apd(t_general *gen);
-void				winner(t_general *gen);
+
+/*
+** v_second.c
+*/
+void				initial_info(t_general *gen);
+void				players_info(t_general *gen);
+void				map_display(t_general *gen, int i, int j);
+
+/*
+** v_third.c
+*/
 void				pc_color_up(t_general *gen);
-void				pc_color_down(t_general *gen, size_t i);
-void				scroll_tool(t_general *gen, int i, int j);
+void				winner(t_general *gen);
+void				limit_handel(t_general *gen, char c);
+void				visual_apd(t_general *gen);
+int					pressing(t_general *gen);
+
+/*
+** v_fourth.c
+*/
+void				scroll_tool(t_general *gen, int i, int index, int sum);
+void				scroll_loop(t_general *gen, int array[4]);
+
+/*
+** v_fifth.c
+*/
+int					scroll_base(t_general *gen);
 int					scroll_check(t_general *gen);
+void				print_symbol(t_general *gen, char c, int i);
+void				pc_color_down(t_general *gen, size_t i);
 
 #endif

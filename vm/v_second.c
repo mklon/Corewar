@@ -62,10 +62,10 @@ void	initial_info(t_general *gen)
 	wprintw(gen->board, "Processes > %d\n\n", gen->nbr_process);
 	players_info(gen);
 	wprintw(gen->board, "Live breakdown for last period :\n");
-	scroll_tool(gen, -1, -1);
+	scroll_tool(gen, -1, 0, 0);
 	wprintw(gen->board, "CYCLE_TO_DIE > %d\n\n", gen->cycle_to_die);
-	wprintw(gen->board, "CYCLE_DELTA > %d\n\n", 0);
-	wprintw(gen->board, "NBR_LIVE > %d\n\n", 0);
-	wprintw(gen->board, "MAX_CHECKS > %d\n\n", 0);
+	wprintw(gen->board, "CYCLE_DELTA > %d\n\n", CYCLE_DELTA);
+	wprintw(gen->board, "NBR_LIVE > %d\n\n", NBR_LIVE);
+	wprintw(gen->board, "MAX_CHECKS > %d\n\n", MAX_CHECKS);
 
 }
