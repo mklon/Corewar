@@ -47,5 +47,7 @@ int		main(int ar, char **av)
 		the_winner_is(gen);
 	else
 		winner(gen);
+//	while (1)
+//		;
 	return (0);
 }
