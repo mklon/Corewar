@@ -27,6 +27,8 @@ struct				s_general
 	int				v;
 	int				pause;
 	int				limit;
+	int				*arr;
+	int				mark;
 	WINDOW			*map;
 	WINDOW			*text;
 	WINDOW			*board;
@@ -165,5 +167,6 @@ int					scroll_base(t_general *gen);
 int					scroll_check(t_general *gen);
 void				print_symbol(t_general *gen, char c, int i);
 void				pc_color_down(t_general *gen, size_t i);
+void				scroll_array(t_general *gen, int array[4]);
 
 #endif

@@ -12,7 +12,7 @@
 
 #include "vm.h"
 
-void	scroll_down(t_general *gen, int array[4])
+void	scroll_down(t_general *gen, int *array)
 {
 	//wprintw(gen->board, "Live breakdown for last period :\n");
 	print_symbol(gen, '[', 11);
@@ -54,7 +54,7 @@ void	scroll_tool(t_general *gen, int i, int index, int sum)
 	int			mass[4];
 	int			array[4];
 
-	if (scroll_base(gen) == 1)
+	if (scroll_base(gen) == 1 && gen->arr[0] == 0)
 		return ;
 	print_symbol(gen, '[', 11);
 	while (++i < gen->champ_num)
@@ -68,12 +68,17 @@ void	scroll_tool(t_general *gen, int i, int index, int sum)
 	scroll_loop(gen, array);
 	print_symbol(gen, ']', 11);
 	wprintw(gen->board, "\nLive breakdown for last period :\n");
-	if (gen->total_cycles && scroll_check(gen) == -1)
-		scroll_down(gen, array);
-	/*else
+	if (gen->mark + 1 == gen->cycle_to_die)
+	{
+		scroll_array(gen, array);
+		gen->mark = 0;
+	}
+	if (gen->total_cycles > CYCLE_TO_DIE)
+		scroll_down(gen, gen->arr);
+	else
 	{
 		wattron(gen->board, COLOR_PAIR(11));
 		wprintw(gen->board, "[--------------------------------------------------]\n");
 		wattroff(gen->board, COLOR_PAIR(11));
-	}*/
+	}
 }

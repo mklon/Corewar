@@ -12,6 +12,15 @@
 
 #include "vm.h"
 
+void	scroll_array(t_general *gen, int *array)
+{
+	int		i;
+
+	i = -1;
+	while (++i < gen->champ_num)
+		gen->arr[i] = array[i];
+}
+
 void	pc_color_down(t_general *gen, size_t i)
 {
 	if (gen->colors[i] == 5)
@@ -32,6 +41,7 @@ void	print_symbol(t_general *gen, char c, int i)
 	wprintw(gen->board, "%c", c);
 	wattroff(gen->board, COLOR_PAIR(i));
 }
+
 int		scroll_check(t_general *gen)
 {
 	int		i;

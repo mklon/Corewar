@@ -86,7 +86,8 @@ void	visual_apd(t_general *gen)
 		initial_info(gen);
 		wrefresh(gen->board);
 	}
-	usleep(900000 / gen->limit);
+	gen->mark++;
+	usleep(850000 / gen->limit);
 	wrefresh(gen->board);
 
 }
