@@ -96,7 +96,7 @@ void				dump_map(unsigned char *line);
 void				check_lives(t_general *gen);
 void				process(t_general *gen);
 void				new_process(t_process *parent, t_process **head, uint32_t arg, int idx);
-size_t				kill_process(t_process **head);
+size_t				kill_process(t_general *gen);//, t_process **head);
 
 uint32_t			check_pc(size_t pc);
 void				fetch(t_general *gen, t_process *process, int op_num);

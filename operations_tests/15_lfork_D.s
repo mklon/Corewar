@@ -1,6 +1,5 @@
 .name		"lfork"
 .comment	"lfork"
 
-live:
-	lfork %-513
-	
+live: live %-1
+	lfork %-1536

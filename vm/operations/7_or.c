@@ -23,5 +23,5 @@ void	or_op(t_general *gen, t_process *process, int op_num, uint32_t *args)
 		process->reg[ar[2]] = ar[0] | ar[1];
 	else
 		return ;
-	process->carry = (char)((process->reg[args[2]] == 0) ? 1 : 0);
+	process->carry = (char)((process->reg[ar[2]] == 0) ? 1 : 0);
 }

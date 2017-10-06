@@ -1,6 +1,6 @@
 .name		"fork"
 .comment	"fork"
 
-live:
-	fork %:live
+live: live %-1
+	fork %-513
 	
