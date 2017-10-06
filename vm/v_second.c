@@ -61,6 +61,7 @@ void	initial_info(t_general *gen)
 	wprintw(gen->board, "Cycle > %d\n\n\n", gen->total_cycles);
 	wprintw(gen->board, "Processes > %d\n\n", gen->nbr_process);
 	players_info(gen);
+	wprintw(gen->board, "Live breakdown for last period :\n");
 	scroll_tool(gen, -1, -1);
 	wprintw(gen->board, "CYCLE_TO_DIE > %d\n\n", gen->cycle_to_die);
 	wprintw(gen->board, "CYCLE_DELTA > %d\n\n", 0);

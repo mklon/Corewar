@@ -141,5 +141,6 @@ void				winner(t_general *gen);
 void				pc_color_up(t_general *gen);
 void				pc_color_down(t_general *gen, size_t i);
 void				scroll_tool(t_general *gen, int i, int j);
+int					scroll_check(t_general *gen);
 
 #endif
