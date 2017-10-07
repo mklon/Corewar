@@ -159,6 +159,7 @@ int					pressing(t_general *gen);
 */
 void				scroll_tool(t_general *gen, int i, int index, int sum);
 void				scroll_loop(t_general *gen, int array[4]);
+void				scroll_down(t_general *gen, int *array);
 
 /*
 ** v_fifth.c

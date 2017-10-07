@@ -18,7 +18,7 @@ void	scroll_array(t_general *gen, int *array)
 
 	i = -1;
 	while (++i < gen->champ_num)
-		gen->arr[i] = array[i];
+		;//gen->arr[i] = array[i];
 }
 
 void	pc_color_down(t_general *gen, size_t i)

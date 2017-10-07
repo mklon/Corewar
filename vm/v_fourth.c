@@ -56,7 +56,6 @@ void	scroll_tool(t_general *gen, int i, int index, int sum)
 
 	if (scroll_base(gen) == 1 && gen->arr[0] == 0)
 		return ;
-	print_symbol(gen, '[', 11);
 	while (++i < gen->champ_num)
 	{
 		mass[i] = gen->players[i]->declared_live;
@@ -65,9 +64,8 @@ void	scroll_tool(t_general *gen, int i, int index, int sum)
 	i = -1;
 	while (++i < gen->champ_num)
 		array[i] = 50 * mass[i] / sum;
-	scroll_loop(gen, array);
-	print_symbol(gen, ']', 11);
-	wprintw(gen->board, "\nLive breakdown for last period :\n");
+	scroll_down(gen, array);
+	wprintw(gen->board, "Live breakdown for last period :\n");
 	if (gen->mark + 1 == gen->cycle_to_die)
 	{
 		scroll_array(gen, array);
