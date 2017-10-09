@@ -45,10 +45,3 @@ t_general		*gen_init(void)
 	init_array(gen->no_flag, (MAX_PLAYERS + 1));
 	return(gen);
 }
-
-// t_general		*gen_del(void)
-// {
-// 	size_t	i;
-
-// 	i = 0;
-// }
