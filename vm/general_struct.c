@@ -29,6 +29,7 @@ t_general		*gen_init(void)
 	gen->live_checks = MAX_CHECKS;
 	gen->dump = -1;
 	gen->aff = 0;
+	gen->debug = 0;
 	gen->visual = 0;
 	gen->pause = 1;
 	gen->limit = 50;

@@ -56,10 +56,11 @@ int		is_flag(char **args, size_t *i, t_general *gen)
 			if (!args[*i + 1])
 				ft_error("Not enough argumets\n");
 			gen->dump = is_valid_num(args[++(*i)], 'd');
-//			ft_printf("Dumps %d cycles\n", gen->dump); // test
 		}
 		else if (ft_strequ(args[*i], "-n"))
 			is_n_flag(args, i, gen);
+		else if (ft_strequ(args[*i], "-g"))
+			gen->debug = 1;
 		else
 			ft_error("Invalid flag\n"); // proper error message
 		return (1);
@@ -87,7 +88,7 @@ void	read_args(int ar, char **av, t_general *gen)
 	j = 1;
 	while (++i < ar)
 	{
-		if (is_flag(av, &i, gen)) // checks if arg is a flag and adds to struct
+		if (is_flag(av, &i, gen))
 			;
 		else if (is_champ(av[i]))
 		{
