@@ -85,7 +85,7 @@ void	start_graph(void)
 
 void	visual_init(t_general *gen)
 {
-	if (!gen->v)
+	if (!gen->visual)
 		return ;
 	start_graph();
 	gen->map = newwin(65, 193, 2, 4);

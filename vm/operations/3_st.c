@@ -25,7 +25,7 @@ void	put_numb_on_field(t_general *gen, size_t copy_pc, int args, int color)
 	gen->field[check_pc(copy_pc + 1)] = (unsigned char)(args >> 16);
 	gen->field[check_pc(copy_pc + 2)] = (unsigned char)(args >> 8);
 	gen->field[check_pc(copy_pc + 3)] = (unsigned char)(args);
-	if (gen->v)
+	if (gen->visual)
 	{
 		gen->colors[copy_pc] = color;
 		gen->colors[check_pc(copy_pc + 1)] = color;

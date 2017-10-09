@@ -69,7 +69,7 @@ void	limit_handel(t_general *gen, char c)
 
 void	visual_apd(t_general *gen)
 {	
-	if (!gen->v)
+	if (!gen->visual)
 		return ;
 	pc_color_up(gen);
 	wrefresh(gen->board);

@@ -15,7 +15,6 @@ struct				s_general
 {
 	unsigned char	field[MEM_SIZE];
 	unsigned char	colors[MEM_SIZE];
-//	unsigned char	*field;
 	unsigned int	total_cycles;
 	unsigned int	current_cycles;
 	unsigned int	nbr_process;
@@ -24,11 +23,11 @@ struct				s_general
 	unsigned int	live_checks;
 	int				dump;
 	int 			aff;
-	int				v;
+	int				visual;
 	int				pause;
 	int				limit;
-	int				*arr;
 	int				mark;
+	int				low;
 	WINDOW			*map;
 	WINDOW			*text;
 	WINDOW			*board;
@@ -158,16 +157,15 @@ int					pressing(t_general *gen);
 ** v_fourth.c
 */
 void				scroll_tool(t_general *gen, int i, int index, int sum);
-void				scroll_loop(t_general *gen, int array[4]);
+void				scroll_loop(t_general *gen, int *array);
 void				scroll_down(t_general *gen, int *array);
 
 /*
 ** v_fifth.c
 */
-int					scroll_base(t_general *gen);
 int					scroll_check(t_general *gen);
 void				print_symbol(t_general *gen, char c, int i);
 void				pc_color_down(t_general *gen, size_t i);
-void				scroll_array(t_general *gen, int array[4]);
+void				scroll_array(t_general *gen, int *array, int *m);
 
 #endif

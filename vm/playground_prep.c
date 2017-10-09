@@ -43,7 +43,7 @@ void 	write_to_map(t_general *gen)
 	j = 0;
 //	dump_map(gen->field); //test
 	step = (size_t)(MEM_SIZE) / gen->champ_num;
-	if (!gen->v)
+	if (!gen->visual)
 		ft_printf("Introducing contestants...\n");
 	while (j < gen->champ_num)
 	{
@@ -53,7 +53,7 @@ void 	write_to_map(t_general *gen)
 		head->color = j + 1;
 		head->next = gen->process;
 		gen->process = head;
-		if (!gen->v)
+		if (!gen->visual)
 			introduce_contestants((gen->players)[j]);
 		ptr = gen->players[j]->opcode;
 		ft_memcpy(gen->field + i, ptr, gen->players[j]->size);
