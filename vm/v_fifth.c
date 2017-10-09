@@ -12,6 +12,16 @@
 
 #include "vm.h"
 
+void	scroll_array(t_general *gen, int *array, int *m)
+{
+	int		i;
+
+	i = -1;
+	while (++i < gen->champ_num)
+		m[i] = array[i];
+	gen->mark = 0;
+}
+
 void	pc_color_down(t_general *gen, size_t i)
 {
 	if (gen->colors[i] == 5)
@@ -32,6 +42,7 @@ void	print_symbol(t_general *gen, char c, int i)
 	wprintw(gen->board, "%c", c);
 	wattroff(gen->board, COLOR_PAIR(i));
 }
+
 int		scroll_check(t_general *gen)
 {
 	int		i;
@@ -40,21 +51,5 @@ int		scroll_check(t_general *gen)
 	while (++i < gen->champ_num)
 		if (gen->players[i]->declared_live != 0)
 			return (0);
-	if (gen->total_cycles)
-		return (-1);
-	return (1);
-}
-
-int		scroll_base(t_general *gen)
-{
-	if (scroll_check(gen) == 0)
-		return (0);
-	wattron(gen->board, COLOR_PAIR(11));
-	wprintw(gen->board, "[--------------------------------------------------]\n");
-	wattroff(gen->board, COLOR_PAIR(11));
-	wprintw(gen->board, "Live breakdown for last period :\n");
-	wattron(gen->board, COLOR_PAIR(11));
-	wprintw(gen->board, "[--------------------------------------------------]\n");
-	wattroff(gen->board, COLOR_PAIR(11));
 	return (1);
 }

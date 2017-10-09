@@ -44,7 +44,7 @@ int		main(int ar, char **av)
 		}
 		visual_apd(gen);
 	}
-	if (!gen->v)
+	if (!gen->visual)
 		the_winner_is(gen);
 	else
 		winner(gen);

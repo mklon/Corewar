@@ -41,7 +41,7 @@ void	init_process(t_general *gen, size_t j, size_t i)
 	head->color = j + 1;
 	head->next = gen->process;
 	gen->process = head;
-	if (!gen->v)
+	if (!gen->visual)
 		introduce_contestants((gen->players)[j]);
 }
 
@@ -55,7 +55,7 @@ void		write_to_map(t_general *gen)
 	i = 0;
 	j = 0;
 	step = (size_t)(MEM_SIZE) / gen->champ_num;
-	if (!gen->v)
+	if (!gen->visual)
 		ft_printf("Introducing contestants...\n");
 	else
 		gen->dump = -1;

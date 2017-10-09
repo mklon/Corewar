@@ -69,7 +69,7 @@ void	limit_handel(t_general *gen, char c)
 
 void	visual_apd(t_general *gen)
 {	
-	if (!gen->v)
+	if (!gen->visual)
 		return ;
 	pc_color_up(gen);
 	wrefresh(gen->board);
@@ -86,7 +86,8 @@ void	visual_apd(t_general *gen)
 		initial_info(gen);
 		wrefresh(gen->board);
 	}
-	usleep(900000 / gen->limit);
+	gen->mark++;
+	usleep(850000 / gen->limit);
 	wrefresh(gen->board);
 
 }

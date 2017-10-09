@@ -19,7 +19,6 @@ t_general		*gen_init(void)
 	gen = (t_general *)malloc(sizeof(t_general));
 	if (!gen)
 		ft_error("Error in allocation");
-//	gen->field = ft_memalloc(MEM_SIZE);
 	ft_bzero(gen->field, MEM_SIZE);
 	ft_memset(gen->colors, 11, MEM_SIZE);
 	gen->total_cycles = 0;
@@ -30,22 +29,25 @@ t_general		*gen_init(void)
 	gen->live_checks = MAX_CHECKS;
 	gen->dump = -1;
 	gen->aff = 0;
-	gen->v = 0;
+	gen->visual = 0;
 	gen->pause = 1;
-	gen->limit = 50;
+	gen->limit = 1000;
 	gen->players = NULL;
 	gen->champ_num = 0;
 	gen->game_over = 0;
 	gen->winner = 0;
 	gen->line = NULL;
 	gen->process = NULL;
+	gen->mark = 0;
+	gen->low = 0;
 	init_array(gen->n_flag, (MAX_PLAYERS + 1));
 	init_array(gen->no_flag, (MAX_PLAYERS + 1));
 	return(gen);
 }
-//t_general		*gen_del(void)
-//{
-//	size_t	i;
-//
-//	i = 0;
-//}
+
+// t_general		*gen_del(void)
+// {
+// 	size_t	i;
+
+// 	i = 0;
+// }

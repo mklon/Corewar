@@ -12,17 +12,27 @@
 
 #include "vm.h"
 
-void	scroll_down(t_general *gen, int array[4])
+void	scroll_down(t_general *gen, int *array)
 {
-	//wprintw(gen->board, "Live breakdown for last period :\n");
-	print_symbol(gen, '[', 11);
-	scroll_loop(gen, array);
-	print_symbol(gen, ']', 11);
-	wprintw(gen->board, "\n");
+	int		i;
+
+	i = -1;
+	if (gen->low)
+		while (++i < gen->champ_num)
+			if (array[i] != 0)
+			{
+				print_symbol(gen, '[', 11);
+				scroll_loop(gen, array);
+				print_symbol(gen, ']', 11);
+				wprintw(gen->board, "\n");
+				return ;
+			}
+	wattron(gen->board, COLOR_PAIR(11));
+	wprintw(gen->board, "[--------------------------------------------------]\n");
 	wattroff(gen->board, COLOR_PAIR(11));
 }
 
-void	scroll_loop(t_general *gen, int array[4])
+void	scroll_loop(t_general *gen, int *array)
 {
 	int		index;
 	int		color;
@@ -51,29 +61,35 @@ void	scroll_loop(t_general *gen, int array[4])
 
 void	scroll_tool(t_general *gen, int i, int index, int sum)
 {
-	int			mass[4];
-	int			array[4];
+	int			mass[MAX_PLAYERS];
+	int			curr[MAX_PLAYERS];
+	static int	last[MAX_PLAYERS];
 
-	if (scroll_base(gen) == 1)
-		return ;
-	print_symbol(gen, '[', 11);
 	while (++i < gen->champ_num)
+		curr[i] = 0;
+	if (!scroll_check(gen))
 	{
-		mass[i] = gen->players[i]->declared_live;
-		sum += mass[i];
+		i = -1;
+		gen->low = 1;
+		while (++i < gen->champ_num)
+		{
+			mass[i] = gen->players[i]->declared_live;
+			sum += mass[i];
+		}
+		i = -1;
+		while (++i < gen->champ_num)
+			curr[i] = 50 * mass[i] / sum;
 	}
-	i = -1;
-	while (++i < gen->champ_num)
-		array[i] = 50 * mass[i] / sum;
-	scroll_loop(gen, array);
-	print_symbol(gen, ']', 11);
-	wprintw(gen->board, "\nLive breakdown for last period :\n");
-	if (gen->total_cycles && scroll_check(gen) == -1)
-		scroll_down(gen, array);
-	/*else
-	{
-		wattron(gen->board, COLOR_PAIR(11));
-		wprintw(gen->board, "[--------------------------------------------------]\n");
-		wattroff(gen->board, COLOR_PAIR(11));
-	}*/
+	scroll_down(gen, curr);
+	wprintw(gen->board, "Live breakdown for last period :\n");
+	if (gen->mark + 1 == gen->cycle_to_die)
+		scroll_array(gen, curr, last);
+	scroll_down(gen, last);
 }
+
+/*
+else
+	{
+		
+	}
+*/
