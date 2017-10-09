@@ -87,9 +87,8 @@ void	visual_apd(t_general *gen)
 		wrefresh(gen->board);
 	}
 	gen->mark++;
-	usleep(850000 / gen->limit);
+	usleep(1000000 / (gen->nbr_process * gen->limit));
 	wrefresh(gen->board);
-
 }
 
 int		pressing(t_general *gen)
