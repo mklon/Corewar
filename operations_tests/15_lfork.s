@@ -2,4 +2,4 @@
 .comment	"lfork"
 
 live: live %-1
-	lfork %-1536
+	lfork %1536

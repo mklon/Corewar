@@ -38,6 +38,7 @@ void	init_process(t_general *gen, size_t j, size_t i)
 	head = (t_process *)ft_memalloc(sizeof(t_process));
 	(head->reg)[1] = (uint32_t)(gen->players)[j]->num;
 	head->pc = i;
+	head->num = j + 1;
 	head->color = j + 1;
 	head->next = gen->process;
 	gen->process = head;
@@ -58,7 +59,10 @@ void		write_to_map(t_general *gen)
 	if (!gen->visual)
 		ft_printf("Introducing contestants...\n");
 	else
+	{
 		gen->dump = -1;
+		gen->debug = 0;
+	}
 	while (j < gen->champ_num)
 	{
 		init_process(gen, j, i);

@@ -23,6 +23,7 @@ struct				s_general
 	unsigned int	live_checks;
 	int				dump;
 	int 			aff;
+	int				debug;
 	int				visual;
 	int				pause;
 	int				limit;
@@ -38,7 +39,7 @@ struct				s_general
 	size_t			n_flag[MAX_PLAYERS + 1];
 	size_t			no_flag[MAX_PLAYERS + 1];
 	unsigned char	*line;
-	t_process		*process; //processing
+	t_process		*process;
 };
 
 struct				s_player
@@ -54,12 +55,13 @@ struct				s_player
 
 struct				s_process //processing
 {
-	uint32_t		pc;
-	char			carry;
 	uint32_t		reg[REG_NUMBER + 1];
-	unsigned int	live;
+	uint32_t		pc;
+	uint32_t		live;
+	uint32_t		num;
 	int				on_hold;
 	int				color;
+	char			carry;
 	t_process		*next;
 };
 

@@ -29,6 +29,7 @@ t_general		*gen_init(void)
 	gen->live_checks = MAX_CHECKS;
 	gen->dump = -1;
 	gen->aff = 0;
+	gen->debug = 0;
 	gen->visual = 0;
 	gen->pause = 1;
 	gen->limit = 50;
@@ -44,10 +45,3 @@ t_general		*gen_init(void)
 	init_array(gen->no_flag, (MAX_PLAYERS + 1));
 	return(gen);
 }
-
-// t_general		*gen_del(void)
-// {
-// 	size_t	i;
-
-// 	i = 0;
-// }
