@@ -3,4 +3,5 @@
 .comment "zjmp"
 
 	live %1
-	zjmp %5
+	add r2, r3, r2
+	zjmp %2900

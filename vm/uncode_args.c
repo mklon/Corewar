@@ -58,9 +58,7 @@ void	uncode_args(unsigned char *field, t_process *proc, int op_num, uint32_t *ar
 		else if (args[i] == T_IND)
 		{
 			ind = (short)convert_arg(field, &curr, IND_READ);
-//			if (ind >= MEM_SIZE)
-//				ind = ind % MEM_SIZE - MEM_SIZE;
-			if (op_num != 12 && op_num != 13)// && op_num != 9) // not lld, lldi, not!! ldi
+			if (op_num != 12 && op_num != 13)
 				ind = ind % IDX_MOD;
 			if (op_num != 2) // not st
 				args[i] = get_ind(field, (proc->pc + ind));

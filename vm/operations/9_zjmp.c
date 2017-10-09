@@ -7,6 +7,6 @@ void	zjmp_op(t_general *gen, t_process *process, int op_num, uint32_t *args)
 	if (process->carry == 1)
 	{
 		pc_color_down(gen, process->pc);
-		process->pc = check_pc(process->pc + args[0]);
+		process->pc = check_pc(process->pc + ((short)args[0] % IDX_MOD));
 	}
 }
