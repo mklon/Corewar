@@ -14,8 +14,13 @@
 
 void	the_winner_is(t_general *gen)
 {
-	int		w;
+	int 	w;
 
+	if (gen->visual)
+	{
+		winner(gen);
+		return ;
+	}
 	w = ((gen->winner) ? gen->winner : gen->champ_num);
 	ft_printf("Player %d (%s) won\n", w, gen->players[w - 1]->name);
 }
@@ -44,9 +49,6 @@ int		main(int ar, char **av)
 		}
 		visual_apd(gen);
 	}
-	if (!gen->visual)
-		the_winner_is(gen);
-	else
-		winner(gen);
+	the_winner_is(gen);
 	return (0);
 }

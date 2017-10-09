@@ -2,6 +2,7 @@
 .comment "lld"
 
 	live %1
-	st r1, 800
-	lld %10, r1
-	st r2, 950
+	ld %2, r4
+	st r4, r5
+	zjmp %2900
+	

@@ -6,7 +6,6 @@
 	st r1, 800
 	st r3, 910
 	lldi r3, r1, r2
-	st r1, 925
 	st r2, 950
-	st r3, 975
+	zjmp %1735
 	

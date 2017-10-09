@@ -2,8 +2,10 @@
 .comment "lldi"
 
 	live %1
+	add r1, r1, r2
+	st r1, 670
 	st r2, 900
-	st r1, 800
-	lldi 10, r1, r2
-	st r1, 925
+	ldi 600, r1, r2
 	st r2, 950
+	zjmp %1735
+
