@@ -31,7 +31,7 @@ t_general		*gen_init(void)
 	gen->aff = 0;
 	gen->visual = 0;
 	gen->pause = 1;
-	gen->limit = 50;
+	gen->limit = 1000;
 	gen->players = NULL;
 	gen->champ_num = 0;
 	gen->game_over = 0;

@@ -87,7 +87,7 @@ void	visual_apd(t_general *gen)
 		wrefresh(gen->board);
 	}
 	gen->mark++;
-	usleep(1000000 / (gen->nbr_process * gen->limit));
+	usleep((1000000 / ((gen->nbr_process + 1)* gen->limit)));
 	wrefresh(gen->board);
 }
 
