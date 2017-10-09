@@ -29,19 +29,20 @@ int		main(int ar, char **av)
     gen = gen_init();
 	read_args(ar, av, gen);
 	visual_init(gen);
+	visual_apd(gen);
 	while (!gen->game_over)
 	{
-		process(gen);
-		visual_apd(gen);
 		(gen->total_cycles)++;
 		(gen->current_cycles)++;
+		process(gen);
+		if (gen->current_cycles == gen->cycle_to_die)
+			check_lives(gen);
 		if (gen->dump >= 0 && gen->total_cycles == gen->dump)
 		{
 			dump_map(gen->field);
 			exit(0);
 		}
-		if (gen->current_cycles == gen->cycle_to_die)
-			check_lives(gen);
+		visual_apd(gen);
 	}
 	if (!gen->v)
 		the_winner_is(gen);

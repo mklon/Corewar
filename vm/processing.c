@@ -56,7 +56,8 @@ void		process(t_general *gen)
 		{
 //			ft_printf("Num of process player: %i\n", ptr->reg[1]); ///test
 //			ft_printf("%d\n", op[curr_byte - 1].cycle); ///test
-			if (ptr->on_hold != op[curr_byte - 1].cycle)
+			if ((ptr->on_hold + 1) != op[curr_byte - 1].cycle)
+//				if ((ptr->on_hold + 1) != op[curr_byte - 1].cycle)
 				ptr->on_hold++;
 			else
 			{
