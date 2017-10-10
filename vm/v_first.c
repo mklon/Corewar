@@ -47,6 +47,12 @@ void	color_init(void)
 	init_pair(12, COLOR_WHITE, COLOR_BLACK);
 	init_pair(13, COLOR_BLACK, COLOR_MAGENTA);
 
+	init_pair(14, COLOR_BLACK, COLOR_RED);
+	init_pair(15, COLOR_BLACK, COLOR_GREEN);
+	init_pair(16, COLOR_BLACK, COLOR_YELLOW);
+	init_pair(17, COLOR_BLACK, COLOR_BLUE);
+
+
 }
 
 void	draw_border(void)

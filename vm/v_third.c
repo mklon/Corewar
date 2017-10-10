@@ -39,7 +39,7 @@ void	winner(t_general *gen)
 
 	wmove(gen->board, 53, 0);
 	w = ((gen->winner) ? gen->winner : gen->champ_num);
-	wprintw(gen->board, "Player %d (", gen->winner);
+	wprintw(gen->board, "Player %d (", w);
 	wattron(gen->board, COLOR_PAIR(w));
 	wprintw(gen->board, "%s", gen->players[w - 1]->name);
 	wattroff(gen->board, COLOR_PAIR(w));
@@ -87,7 +87,8 @@ void	visual_apd(t_general *gen)
 		wrefresh(gen->board);
 	}
 	gen->mark++;
-	usleep((1000000 / ((gen->nbr_process + 1)* gen->limit)));
+	holdup_decrease(gen);
+	usleep((900000 / ((gen->nbr_process + 1)* gen->limit)));
 	wrefresh(gen->board);
 }
 
