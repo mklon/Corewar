@@ -2,7 +2,8 @@
 .comment "sti"
 
 	live %1
-	st r2, 900
-	st r1, 800
-	sti r2, r1, %150
-	st r2, 950
+	ld %255, r1
+	st r1, 190
+	ld %10, r2
+	st r2, 190
+	sti r1, r2, %10

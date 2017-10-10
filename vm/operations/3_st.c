@@ -11,11 +11,17 @@ void	st_op(t_general *gen, t_process *process, int op_num, uint32_t *args)
 	if (!(args_val[0] >= 1 && args_val[0] <= REG_NUMBER))
 		return ;
 	if (args[1] == T_REG && (args_val[1] >= 1 && args_val[1] <= REG_NUMBER))
+	{
 		process->reg[args_val[1]] = process->reg[args_val[0]];
+		if (gen->debug)
+			ft_printf("P%7u | st r%u r%u\n", process->num, args_val[0], args_val[1]);
+	}
 	else
 	{
 		copy_pc = check_pc(process->pc + args_val[1]);
 		put_numb_on_field(gen, copy_pc, process->reg[args_val[0]], process->color);
+		if (gen->debug)
+			ft_printf("P%7u | st r%u %hd\n", process->num, args_val[0], (short)args_val[1]);
 	}
 }
 
