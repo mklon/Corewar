@@ -9,5 +9,11 @@ void		sub_op(t_general *gen, t_process *process, int op_num, uint32_t *args)
 	{
 		process->reg[args[2]] = process->reg[args[0]] - process->reg[args[1]];
 		process->carry = (char)((process->reg[args[2]] == 0) ? 1 : 0);
+		if (gen->debug)
+		{
+			ft_printf("P%7u | sub r%u r%u r%u -> %d - %d = %d\n", process->num,
+					  args[0], args[1], args[2], process->reg[args[0]],
+					  process->reg[args[1]], process->reg[args[2]]);
+		}
 	}
 }
