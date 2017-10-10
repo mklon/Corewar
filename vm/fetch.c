@@ -43,7 +43,7 @@ int		check_cod_byte(int op_num, unsigned char codbyte, int *step, uint32_t *args
 		return (1);
 	}
 	(*step)++;
-	while (i < MAX_ARGS_NUMBER)
+	while (i < op[op_num].nbr_arg)
 	{
 		args[i] = (uint32_t)(codbyte >> shift) & 3;
 		if (args[i] == IND_CODE)
