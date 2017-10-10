@@ -60,6 +60,7 @@ struct				s_process //processing
 	uint32_t		pc;
 	uint32_t		live;
 	uint32_t		num;
+	int 			op_num;
 	int				on_hold;
 	int				color;
 	char			carry;

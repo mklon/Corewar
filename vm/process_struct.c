@@ -19,6 +19,7 @@ void	new_process(t_process *parent, t_process **head, uint32_t arg, int idx)
 	new->color = parent->color;
 	new->live = parent->live;
 	new->on_hold = 0;
+	new->op_num = 0;
 	while (i < REG_NUMBER)
 	{
 		new->reg[i] = parent->reg[i];

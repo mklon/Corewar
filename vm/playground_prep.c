@@ -40,6 +40,7 @@ void	init_process(t_general *gen, size_t j, size_t i)
 	head->pc = i;
 	head->num = j + 1;
 	head->color = j + 1;
+	head->op_num = 0;
 	head->next = gen->process;
 	gen->process = head;
 	if (!gen->visual)
