@@ -15,6 +15,7 @@ struct				s_general
 {
 	unsigned char	field[MEM_SIZE];
 	unsigned char	colors[MEM_SIZE];
+	unsigned char	holdup[MEM_SIZE];
 	unsigned int	total_cycles;
 	unsigned int	current_cycles;
 	unsigned int	nbr_process;
@@ -171,5 +172,6 @@ int					scroll_check(t_general *gen);
 void				print_symbol(t_general *gen, char c, int i);
 void				pc_color_down(t_general *gen, size_t i);
 void				scroll_array(t_general *gen, int *array, int *m);
+void				holdup_decrease(t_general *gen);
 
 #endif
