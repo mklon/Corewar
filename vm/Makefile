@@ -24,22 +24,22 @@ SOURCE = corewar_main.c \
         v_third.c \
         v_fourth.c \
         v_fifth.c \
-        operations/1_live.c \
-        operations/2_ld.c \
-        operations/3_st.c \
-        operations/4_add.c \
-        operations/5_sub.c \
-        operations/6_and.c \
-        operations/7_or.c \
-        operations/8_xor.c \
-        operations/9_zjmp.c \
-        operations/10_ldi.c \
-        operations/11_sti.c \
-        operations/12_fork.c \
-        operations/13_lld.c \
-        operations/14_lldi.c \
-        operations/15_lfork.c \
-        operations/16_aff.c \
+        operations/a1_live.c \
+        operations/a2_ld.c \
+        operations/a3_st.c \
+        operations/a4_add.c \
+        operations/a5_sub.c \
+        operations/a6_and.c \
+        operations/a7_or.c \
+        operations/a8_xor.c \
+        operations/a9_zjmp.c \
+        operations/a10_ldi.c \
+        operations/a11_sti.c \
+        operations/a12_fork.c \
+        operations/a13_lld.c \
+        operations/a14_lldi.c \
+        operations/a15_lfork.c \
+        operations/a16_aff.c \
 
 OBJECTS = $(SOURCE:.c=.o)
 

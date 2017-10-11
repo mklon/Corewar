@@ -7,4 +7,4 @@
 	ld %-1, r2
 	add r1, r2, r3
 	st r3, 100
-	zjmp %-15 
+	zjmp %-15456
