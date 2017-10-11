@@ -129,7 +129,7 @@ void				lfork_op(t_general *gen, t_process *process, int op_num, uint32_t *args)
 void				aff_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
 
 void				put_numb_on_field(t_general *gen, size_t copy_pc, int args, int colors);
-
+int					val_reg(uint32_t type, uint32_t value);
 /*
 **			visual part
 */
