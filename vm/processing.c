@@ -57,20 +57,15 @@ void		process(t_general *gen)
 		}
 		else
 		{
-//			ft_printf("Num of process player: %i\n", ptr->reg[1]); ///test
-//			ft_printf("%d\n", op[curr_byte - 1].cycle); ///test
 			if ((ptr->on_hold + 1) != op[ptr->op_num].cycle)
-//				if ((ptr->on_hold + 1) != op[curr_byte - 1].cycle)
 				ptr->on_hold++;
 			else
 			{
  				fetch(gen, ptr, ptr->op_num);
 				ptr->pc = check_pc(ptr->pc);
 				ptr->on_hold = 0;
-//				dump_map(gen->field); // debug
 			}
 		}
-///		dump_map(gen->field); // debug
 		ptr = ptr->next;
 	}
 }

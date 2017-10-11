@@ -2,28 +2,28 @@
 
 void	st_op(t_general *gen, t_process *process, int op_num, uint32_t *args)
 {
-	uint32_t		args_val[MAX_ARGS_NUMBER];
+	uint32_t		val[MAX_ARGS_NUMBER];
 	size_t			copy_pc;
 
 	copy_pc = 0;
-	args_copy(args, args_val, op[op_num].nbr_arg);
-	uncode_args(gen->field, process, op_num, args_val);
-	if (!(args_val[0] >= 1 && args_val[0] <= REG_NUMBER))
+	args_copy(args, val, op[op_num].nbr_arg);
+	uncode_args(gen->field, process, op_num, val);
+	if (!(val_reg(args[0], val[0])))
 		return ;
-	if (args[1] == T_REG && (args_val[1] >= 1 && args_val[1] <= REG_NUMBER))
+	if (val_reg(args[1], val[1]) == 1)
 	{
-		process->reg[args_val[1]] = process->reg[args_val[0]];
+		process->reg[val[1]] = process->reg[val[0]];
 		if (gen->debug)
-			ft_printf("P%7u | st r%u r%u\n", process->num, args_val[0],
-					args_val[1]);
+			ft_printf("P%7u | st r%u r%u\n", process->num, val[0],
+					val[1]);
 	}
 	else
 	{
-		copy_pc = check_pc(process->pc + args_val[1]);
-		put_numb_on_field(gen, copy_pc, process->reg[args_val[0]], process->color);
+		copy_pc = check_pc(process->pc + val[1]);
+		put_numb_on_field(gen, copy_pc, process->reg[val[0]], process->color);
 		if (gen->debug)
-			ft_printf("P%7u | st r%u %hd (mod)\n", process->num, args_val[0],
-					(short)args_val[1]);
+			ft_printf("P%7u | st r%u %hd (mod)\n", process->num, val[0],
+					(short)val[1]);
 	}
 }
 
