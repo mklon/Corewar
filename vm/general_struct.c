@@ -12,6 +12,21 @@ void		init_array(size_t *arr, size_t size)
 	}
 }
 
+void		*gen_init_next(t_general *gen)
+{
+	gen->limit = 50;
+	gen->players = NULL;
+	gen->champ_num = 0;
+	gen->game_over = 0;
+	gen->winner = 0;
+	gen->line = NULL;
+	gen->process = NULL;
+	gen->mark = 0;
+	gen->low = 0;
+	init_array(gen->n_flag, (MAX_PLAYERS + 1));
+	init_array(gen->no_flag, (MAX_PLAYERS + 1));
+}
+
 t_general		*gen_init(void)
 {
 	t_general	*gen;
@@ -34,16 +49,6 @@ t_general		*gen_init(void)
 	gen->debug = 0;
 	gen->visual = 0;
 	gen->pause = 1;
-	gen->limit = 50;
-	gen->players = NULL;
-	gen->champ_num = 0;
-	gen->game_over = 0;
-	gen->winner = 0;
-	gen->line = NULL;
-	gen->process = NULL;
-	gen->mark = 0;
-	gen->low = 0;
-	init_array(gen->n_flag, (MAX_PLAYERS + 1));
-	init_array(gen->no_flag, (MAX_PLAYERS + 1));
-	return(gen);
+	gen_init_next(gen);
+	return (gen);
 }

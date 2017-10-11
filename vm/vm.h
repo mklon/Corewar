@@ -108,7 +108,7 @@ int					check_cod_byte(int op_num, unsigned char codbyte,
 								int *step, uint32_t *args);
 int					validate_cod_byte(int op_num, uint32_t *args);
 void				uncode_args(unsigned char *field, t_process *proc, int op_num,
-								uint32_t *args);
+								uint32_t *ar);
 uint32_t			convert_arg(unsigned char *field, size_t *curr, int size);
 void				args_copy(uint32_t *args, uint32_t *args_val, int nbr_arg);
 

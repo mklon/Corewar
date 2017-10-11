@@ -22,7 +22,7 @@ void		dump_map(unsigned char *line)
 
 void		introduce_contestants(t_player *bot)
 {
-	char 	col;
+	char	col;
 
 	col = (char)((bot->num == -4) ? (-(bot->num) + '1') : (-(bot->num) + '0'));
 	ft_printf("=== Player %d, weighing %u bytes: ", -(bot->num), bot->size);
@@ -52,7 +52,6 @@ void		write_to_map(t_general *gen)
 	size_t		i;
 	size_t		j;
 	size_t		step;
-	void		*ptr;
 
 	i = 0;
 	j = 0;
@@ -67,8 +66,8 @@ void		write_to_map(t_general *gen)
 	while (j < gen->champ_num)
 	{
 		init_process(gen, j, i);
-		ptr = gen->players[j]->opcode;
-		ft_memcpy(gen->field + i, ptr, gen->players[j]->size);
+		ft_memcpy(gen->field + i, gen->players[j]->opcode,
+				gen->players[j]->size);
 		ft_memset(&gen->colors[i], j + 1, gen->players[j]->size);
 		j++;
 		i += step;

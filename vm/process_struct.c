@@ -4,7 +4,7 @@ void	new_process(t_process *parent, t_process **head, uint32_t arg, int idx)
 {
 	t_process	*new;
 	size_t		i;
-	short 		con;
+	short		con;
 
 	i = 0;
 	new = (t_process *)malloc(sizeof(t_process));
@@ -29,7 +29,7 @@ void	new_process(t_process *parent, t_process **head, uint32_t arg, int idx)
 	*head = new;
 }
 
-size_t		kill_them_all(t_general *gen, t_process *ptr, size_t dead_process)
+size_t	kill_them_all(t_general *gen, t_process *ptr, size_t dead_process)
 {
 	t_process	*tail;
 
@@ -52,7 +52,7 @@ size_t		kill_them_all(t_general *gen, t_process *ptr, size_t dead_process)
 	return (dead_process);
 }
 
-size_t		kill_process(t_general *gen)
+size_t	kill_process(t_general *gen)
 {
 	size_t		dead_process;
 	t_process	*ptr;
@@ -72,5 +72,4 @@ size_t		kill_process(t_general *gen)
 		return (dead_process);
 	else
 		return (kill_them_all(gen, ptr, dead_process));
-
 }

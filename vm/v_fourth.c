@@ -28,8 +28,8 @@ void	scroll_down(t_general *gen, int *array)
 				return ;
 			}
 	wattron(gen->board, COLOR_PAIR(11));
-	wprintw(gen->board, "[-----------------------------
-						---------------------]\n");
+	wprintw(gen->board, "[--------------------------------------------------]"
+			"\n");
 	wattroff(gen->board, COLOR_PAIR(11));
 }
 

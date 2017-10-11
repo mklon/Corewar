@@ -2,7 +2,7 @@
 
 void		args_copy(uint32_t *args, uint32_t *args_val, int nbr_arg)
 {
-	int 	i;
+	int		i;
 
 	i = 0;
 	while (i < nbr_arg)
@@ -30,7 +30,7 @@ uint32_t	convert_arg(unsigned char *field, size_t *curr, int size)
 	return (res);
 }
 
-uint32_t		get_ind(unsigned char *field, size_t curr)
+uint32_t	get_ind(unsigned char *field, size_t curr)
 {
 	uint32_t		arg;
 
@@ -38,32 +38,30 @@ uint32_t		get_ind(unsigned char *field, size_t curr)
 	return (arg);
 }
 
-void	uncode_args(unsigned char *field, t_process *proc, int op_num, uint32_t *args)
+void		uncode_args(unsigned char *field, t_process *proc, int op_num,
+					uint32_t *ar)
 {
 	size_t		i;
 	size_t		curr;
-	short 		ind;
+	short		ind;
 
 	curr = check_pc(proc->pc + 1 + (op[op_num].coding_byte));
 	i = 0;
 	while (i < op[op_num].nbr_arg)
 	{
-		if (args[i] == T_REG)
+		if (ar[i] == T_REG)
 		{
-			args[i] = (uint32_t)field[curr];
+			ar[i] = (uint32_t)field[curr];
 			curr = check_pc(curr + 1);
 		}
-		else if (args[i] == T_DIR)
-			args[i] = convert_arg(field, &curr, op[op_num].flag_direct_size);
-		else if (args[i] == T_IND)
+		else if (ar[i] == T_DIR)
+			ar[i] = convert_arg(field, &curr, op[op_num].flag_direct_size);
+		else if (ar[i] == T_IND)
 		{
 			ind = (short)convert_arg(field, &curr, IND_READ);
-			if (op_num != 12)// && op_num != 13)
+			if (op_num != 12)
 				ind = ind % IDX_MOD;
-			if (op_num != 2)
-				args[i] = get_ind(field, (proc->pc + ind));
-			else
-				args[i] = (uint32_t)ind;
+			ar[i] = ((op_num != 2) ? get_ind(field, (proc->pc + ind)) : ind);
 		}
 		i++;
 	}

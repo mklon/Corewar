@@ -32,6 +32,18 @@ void		check_lives(t_general *gen)
 	gen->live_per_period = 0;
 }
 
+void		process_next(t_general *gen, t_process *ptr)
+{
+	if ((ptr->on_hold + 1) != op[ptr->op_num].cycle)
+		ptr->on_hold++;
+	else
+	{
+		fetch(gen, ptr, ptr->op_num);
+		ptr->pc = check_pc(ptr->pc);
+		ptr->on_hold = 0;
+	}
+}
+
 void		process(t_general *gen)
 {
 	t_process	*ptr;
@@ -51,21 +63,11 @@ void		process(t_general *gen)
 			else
 			{
 				pc_color_down(gen, ptr->pc);
-				(ptr->pc)++;
+				ptr->pc = check_pc(ptr->pc + 1);
 			}
-			ptr->pc = check_pc(ptr->pc);
 		}
 		else
-		{
-			if ((ptr->on_hold + 1) != op[ptr->op_num].cycle)
-				ptr->on_hold++;
-			else
-			{
- 				fetch(gen, ptr, ptr->op_num);
-				ptr->pc = check_pc(ptr->pc);
-				ptr->on_hold = 0;
-			}
-		}
+			process_next(gen, ptr);
 		ptr = ptr->next;
 	}
 }
