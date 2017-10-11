@@ -18,10 +18,11 @@ struct				s_general
 	unsigned char	holdup[MEM_SIZE];
 	unsigned int	total_cycles;
 	unsigned int	current_cycles;
+	unsigned int	total_process;
 	unsigned int	nbr_process;
-	int				cycle_to_die;
 	unsigned int	live_per_period;
 	unsigned int	live_checks;
+	int				cycle_to_die;
 	int				dump;
 	int 			aff;
 	int				debug;

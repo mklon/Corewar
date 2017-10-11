@@ -25,6 +25,7 @@ t_general		*gen_init(void)
 	gen->total_cycles = 0;
 	gen->current_cycles = 0;
 	gen->nbr_process = 0;
+	gen->total_process = 0;
 	gen->cycle_to_die = CYCLE_TO_DIE;
 	gen->live_per_period = 0;
 	gen->live_checks = MAX_CHECKS;

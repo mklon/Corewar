@@ -74,4 +74,5 @@ void		write_to_map(t_general *gen)
 		i += step;
 	}
 	gen->nbr_process = (uint32_t)gen->champ_num;
+	gen->total_process = gen->nbr_process;
 }
