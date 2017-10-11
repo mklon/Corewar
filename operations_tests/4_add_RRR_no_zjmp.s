@@ -7,4 +7,4 @@
 	st r3, 100
 	add r1, r1, r3
 	st r3, 100
-	zjmp %1
+	zjmp %165489
