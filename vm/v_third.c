@@ -72,6 +72,8 @@ void	visual_apd(t_general *gen)
 	if (!gen->visual)
 		return ;
 	pc_color_up(gen);
+	gen->mark++;
+	holdup_decrease(gen);
 	wrefresh(gen->board);
 	map_display(gen, 0, 1);
 	wrefresh(gen->map);
@@ -86,8 +88,7 @@ void	visual_apd(t_general *gen)
 		initial_info(gen);
 		wrefresh(gen->board);
 	}
-	gen->mark++;
-	holdup_decrease(gen);
+	
 	usleep((900000 / ((gen->nbr_process + 1)* gen->limit)));
 	wrefresh(gen->board);
 }
