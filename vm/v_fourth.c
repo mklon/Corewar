@@ -86,10 +86,3 @@ void	scroll_tool(t_general *gen, int i, int index, int sum)
 		scroll_array(gen, curr, last);
 	scroll_down(gen, last);
 }
-
-/*
-else
-	{
-		
-	}
-*/
