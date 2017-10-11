@@ -99,11 +99,10 @@ int		pressing(t_general *gen)
 
 	if (kbhit())
 	{
-		//printf("\a");
 		c = wgetch(gen->text);
 		if (c == ' ')
 			gen->pause *= -1;
-		else if (gen->pause && c == 's')
+		else if (gen->pause == 1 && c == 's')
 			return (1);
 		else
 			limit_handel(gen, c);
