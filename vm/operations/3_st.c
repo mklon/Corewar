@@ -33,7 +33,6 @@ void	put_numb_on_field(t_general *gen, size_t copy_pc, int args, int color)
 	gen->field[check_pc(copy_pc + 3)] = (unsigned char)(args);
 	if (gen->visual)
 	{
-
 		if (color == 1)
 			color = 14;
 		else if (color == 2)
@@ -46,7 +45,6 @@ void	put_numb_on_field(t_general *gen, size_t copy_pc, int args, int color)
 		gen->colors[check_pc(copy_pc + 1)] = color;
 		gen->colors[check_pc(copy_pc + 2)] = color;
 		gen->colors[check_pc(copy_pc + 3)] = color;
-
 		gen->holdup[copy_pc] = 50;
 		gen->holdup[check_pc(copy_pc + 1)] = 50;
 		gen->holdup[check_pc(copy_pc + 2)] = 50;
