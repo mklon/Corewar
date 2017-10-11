@@ -35,7 +35,7 @@ void	pc_color_up(t_general *gen)
 
 void	winner(t_general *gen)
 {
-	int 	w;
+	int		w;
 
 	wmove(gen->board, 53, 0);
 	w = ((gen->winner) ? gen->winner : gen->champ_num);
@@ -68,7 +68,7 @@ void	limit_handel(t_general *gen, char c)
 }
 
 void	visual_apd(t_general *gen)
-{	
+{
 	if (!gen->visual)
 		return ;
 	pc_color_up(gen);
@@ -81,15 +81,14 @@ void	visual_apd(t_general *gen)
 		return ;
 	initial_info(gen);
 	wrefresh(gen->board);
-	while(gen->pause > 0)
+	while (gen->pause > 0)
 	{
 		if (pressing(gen) == 1)
 			return ;
 		initial_info(gen);
 		wrefresh(gen->board);
 	}
-	
-	usleep((900000 / ((gen->nbr_process + 1)* gen->limit)));
+	usleep((900000 / ((gen->nbr_process + 1) * gen->limit)));
 	wrefresh(gen->board);
 }
 
@@ -109,4 +108,3 @@ int		pressing(t_general *gen)
 	}
 	return (0);
 }
-
