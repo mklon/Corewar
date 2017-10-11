@@ -19,7 +19,7 @@ int		kbhit(void)
 	if ((ch = getch()) != ERR)
 	{
 		ungetch(ch);
-		return ch;
+		return (ch);
 	}
 	else
 		return (0);
@@ -33,7 +33,6 @@ void	color_init(void)
 	init_color(COLOR_YELLOW, 999, 500, 0);
 	init_color(COLOR_BLUE, 0, 400, 999);
 	init_color(COLOR_GREEN, 0, 500, 0);
-
 	init_pair(1, COLOR_RED, COLOR_BLACK);
 	init_pair(5, COLOR_WHITE, COLOR_RED);
 	init_pair(2, COLOR_GREEN, COLOR_BLACK);
@@ -46,13 +45,10 @@ void	color_init(void)
 	init_pair(11, COLOR_MAGENTA, COLOR_BLACK);
 	init_pair(12, COLOR_WHITE, COLOR_BLACK);
 	init_pair(13, COLOR_BLACK, COLOR_MAGENTA);
-
 	init_pair(14, COLOR_BLACK, COLOR_RED);
 	init_pair(15, COLOR_BLACK, COLOR_GREEN);
 	init_pair(16, COLOR_BLACK, COLOR_YELLOW);
 	init_pair(17, COLOR_BLACK, COLOR_BLUE);
-
-
 }
 
 void	draw_border(void)
