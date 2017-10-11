@@ -14,7 +14,10 @@ void	ldi_op(t_general *gen, t_process *process, int op_num, uint32_t *args)
 		|| (args[0] == T_REG && !(args_val[0] >= 1 && args_val[0] <= 16)))
 		return ;
 	first = ((args[0] == T_REG) ? process->reg[args_val[0]] : args_val[0]);
-	second = ((args[1] == T_REG) ? process->reg[args_val[1]] : (short)args_val[1]);
+	if (args[0] == T_DIR)
+		first = (short)args_val[0];
+	second = ((args[1] == T_REG) ? process->reg[args_val[1]] :
+			(short)args_val[1]);
 	sum_go = check_pc(process->pc + ((first + second) % IDX_MOD));
 	if (gen->debug)
 	{
