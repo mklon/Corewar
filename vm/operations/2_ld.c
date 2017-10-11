@@ -9,7 +9,5 @@ void	ld_op(t_general *gen, t_process *process, int op_num, uint32_t *args)
 		process->carry = (char)((process->reg[args[1]] == 0) ? 1 : 0);
 	}
 	if (gen->debug)
-	{
 		ft_printf("P%7u | ld %d r%u\n", process->num, args[0], args[1]);
-	}
 }
