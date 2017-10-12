@@ -18,7 +18,7 @@ void	or_op(t_general *gen, t_process *process, int op_num, uint32_t *args)
 	uint32_t		first;
 	uint32_t		sec;
 
-	args_copy(args, ar, op[op_num].nbr_arg);
+	args_copy(args, ar, g_op[op_num].nbr_arg);
 	uncode_args(gen->field, process, op_num, ar);
 	if (!(val_reg(args[2], ar[2]) && val_reg(args[0], ar[0])
 		&& val_reg(args[1], ar[1])))

@@ -56,9 +56,9 @@ void		uncode_args(unsigned char *field, t_process *proc, int op_num,
 	size_t		curr;
 	short		ind;
 
-	curr = check_pc(proc->pc + 1 + (op[op_num].coding_byte));
+	curr = check_pc(proc->pc + 1 + (g_op[op_num].coding_byte));
 	i = 0;
-	while (i < op[op_num].nbr_arg)
+	while (i < g_op[op_num].nbr_arg)
 	{
 		if (ar[i] == T_REG)
 		{
@@ -66,7 +66,7 @@ void		uncode_args(unsigned char *field, t_process *proc, int op_num,
 			curr = check_pc(curr + 1);
 		}
 		else if (ar[i] == T_DIR)
-			ar[i] = convert_arg(field, &curr, op[op_num].flag_direct_size);
+			ar[i] = convert_arg(field, &curr, g_op[op_num].flag_direct_size);
 		else if (ar[i] == T_IND)
 		{
 			ind = (short)convert_arg(field, &curr, IND_READ);

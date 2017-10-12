@@ -12,7 +12,7 @@ void		init_array(size_t *arr, size_t size)
 	}
 }
 
-void		*gen_init_next(t_general *gen)
+void		gen_init_next(t_general *gen)
 {
 	gen->limit = 50;
 	gen->players = NULL;

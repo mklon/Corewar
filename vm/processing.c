@@ -45,7 +45,7 @@ void		check_lives(t_general *gen)
 
 void		process_next(t_general *gen, t_process *ptr)
 {
-	if ((ptr->on_hold + 1) != op[ptr->op_num].cycle)
+	if ((ptr->on_hold + 1) != g_op[ptr->op_num].cycle)
 		ptr->on_hold++;
 	else
 	{

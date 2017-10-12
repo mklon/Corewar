@@ -51,7 +51,7 @@ $(NAME): $(OBJECTS) $(LIBFT_DIR)libft.a
 		$(CC) $(FL) $(OBJECTS) -o $(NAME) -L$(LIBFT_DIR) -lft -lncurses
 
 %.o: %.c
-	$(CC) $(FL) -c $< -o $@
+	$(CC) $(FL) -c $< -o $@ $(INCLUDES)
 
 $(LIBFT_DIR)libft.a:
 		make -C $(LIBFT_DIR)

@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   vm.h                                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: msymkany <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/10/12 13:37:40 by msymkany          #+#    #+#             */
+/*   Updated: 2017/10/12 13:37:46 by msymkany         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef VM_H
 # define VM_H
 
 # include "../op.h"
 # include <stdint.h>
 # include <ncurses.h>
-# include <unistd.h> 
+# include <unistd.h>
 
 typedef struct s_general	t_general;
 typedef struct s_player		t_player;
@@ -13,9 +25,17 @@ typedef struct s_op			t_op;
 
 struct				s_general
 {
+	WINDOW			*map;
+	WINDOW			*text;
+	WINDOW			*board;
+	t_player		**players;
+	unsigned char	*line;
+	t_process		*process;
 	unsigned char	field[MEM_SIZE];
 	unsigned char	colors[MEM_SIZE];
 	unsigned char	holdup[MEM_SIZE];
+	size_t			n_flag[MAX_PLAYERS + 1];
+	size_t			no_flag[MAX_PLAYERS + 1];
 	unsigned int	total_cycles;
 	unsigned int	current_cycles;
 	unsigned int	total_process;
@@ -24,24 +44,16 @@ struct				s_general
 	unsigned int	live_checks;
 	int				cycle_to_die;
 	int				dump;
-	int 			aff;
+	int				aff;
 	int				debug;
 	int				visual;
 	int				pause;
 	int				limit;
 	int				mark;
 	int				low;
-	WINDOW			*map;
-	WINDOW			*text;
-	WINDOW			*board;
-	t_player		**players;
 	int				champ_num;
-	int				game_over; //processing
-	int				winner; //last reported alive
-	size_t			n_flag[MAX_PLAYERS + 1];
-	size_t			no_flag[MAX_PLAYERS + 1];
-	unsigned char	*line;
-	t_process		*process;
+	int				game_over;
+	int				winner;
 };
 
 struct				s_player
@@ -55,22 +67,23 @@ struct				s_player
 	unsigned int	declared_live;
 };
 
-struct				s_process //processing
+struct				s_process
 {
+	t_process		*next;
 	uint32_t		reg[REG_NUMBER + 1];
 	uint32_t		pc;
 	uint32_t		live;
 	uint32_t		num;
-	int 			op_num;
+	int				op_num;
 	int				on_hold;
 	int				color;
 	char			carry;
-	t_process		*next;
 };
 
 struct				s_op
 {
-	void			(*f)(t_general *gen, t_process *current, int op_num, uint32_t *args);
+	void			(*f)(t_general *gen, t_process *current,
+						int op_num, uint32_t *args);
 	int				nbr_arg;
 	int				arg[MAX_ARGS_NUMBER];
 	int				op_code;
@@ -79,7 +92,7 @@ struct				s_op
 	int				flag_direct_size;
 };
 
-t_op op[17];
+t_op g_op[17];
 
 void				ft_usage(void);
 int					ft_error(char *message);
@@ -100,7 +113,7 @@ void				dump_map(unsigned char *line);
 void				check_lives(t_general *gen);
 void				process(t_general *gen);
 void				new_process(t_process *parent, t_process **head, uint32_t arg, int idx);
-size_t				kill_process(t_general *gen);//, t_process **head);
+size_t				kill_process(t_general *gen);
 
 uint32_t			check_pc(size_t pc);
 void				fetch(t_general *gen, t_process *process, int op_num);
@@ -131,6 +144,7 @@ void				aff_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
 
 void				put_numb_on_field(t_general *gen, size_t copy_pc, int args, int colors);
 int					val_reg(uint32_t type, uint32_t value);
+
 /*
 **			visual part
 */

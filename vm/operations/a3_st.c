@@ -18,7 +18,7 @@ void	st_op(t_general *gen, t_process *process, int op_num, uint32_t *args)
 	size_t			copy_pc;
 
 	copy_pc = 0;
-	args_copy(args, val, op[op_num].nbr_arg);
+	args_copy(args, val, g_op[op_num].nbr_arg);
 	uncode_args(gen->field, process, op_num, val);
 	if (!(val_reg(args[0], val[0])))
 		return ;

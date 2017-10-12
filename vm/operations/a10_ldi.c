@@ -19,7 +19,7 @@ void	ldi_op(t_general *gen, t_process *process, int op_num, uint32_t *args)
 	int				second;
 	size_t			sum_go;
 
-	args_copy(args, args_val, op[op_num].nbr_arg);
+	args_copy(args, args_val, g_op[op_num].nbr_arg);
 	uncode_args(gen->field, process, op_num, args_val);
 	if (!(val_reg(args[2], args_val[2]) && val_reg(args[0], args_val[0])
 		&& val_reg(args[1], args_val[1])))
