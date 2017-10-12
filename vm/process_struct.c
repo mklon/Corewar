@@ -9,6 +9,7 @@
 /*   Updated: 2017/10/12 13:07:04 by msymkany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "vm.h"
 
 void	new_process(t_process *parent, t_process **head, uint32_t arg, int idx)

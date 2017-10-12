@@ -9,9 +9,10 @@
 /*   Updated: 2017/10/12 13:06:17 by msymkany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "vm.h"
 
-void	check_n_flag(t_general *gen)
+void		check_n_flag(t_general *gen)
 {
 	int		i;
 	int		k;
@@ -53,7 +54,7 @@ void		is_n_flag(char **args, size_t *i, t_general *gen)
 	gen->champ_num++;
 }
 
-int		is_flag(char **args, size_t *i, t_general *gen)
+int			is_flag(char **args, size_t *i, t_general *gen)
 {
 	if (args[*(i)][0] == '-')
 	{
@@ -78,7 +79,7 @@ int		is_flag(char **args, size_t *i, t_general *gen)
 	return (0);
 }
 
-int 				is_champ(char *arg)
+int			is_champ(char *arg)
 {
 	int		k;
 
@@ -89,7 +90,8 @@ int 				is_champ(char *arg)
 	else
 		return (0);
 }
-void	read_args(int ar, char **av, t_general *gen)
+
+void		read_args(int ar, char **av, t_general *gen)
 {
 	size_t		i;
 	size_t		j;

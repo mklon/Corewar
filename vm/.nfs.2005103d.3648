@@ -1,14 +1,3 @@
-#******************************************************************************#
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: nyatsulk <marvin@42.fr>                    +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2017/10/12 15:31:49 by nyatsulk          #+#    #+#              #
-#    Updated: 2017/10/12 15:31:49 by nyatsulk         ###   ########.fr        #
-#                                                                              #
-#******************************************************************************#
 
 NAME = corewar
 
@@ -62,7 +51,7 @@ $(NAME): $(OBJECTS) $(LIBFT_DIR)libft.a
 		$(CC) $(FL) $(OBJECTS) -o $(NAME) -L$(LIBFT_DIR) -lft -lncurses
 
 %.o: %.c
-	$(CC) $(FL) -c $< -o $@ $(INCLUDES)
+	$(CC) $(FL) -c $< -o $@
 
 $(LIBFT_DIR)libft.a:
 		make -C $(LIBFT_DIR)

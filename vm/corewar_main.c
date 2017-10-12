@@ -14,7 +14,7 @@
 
 void	the_winner_is(t_general *gen)
 {
-	int 	w;
+	int		w;
 
 	if (gen->visual)
 	{

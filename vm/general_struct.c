@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   general_struct.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nyatsulk <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/10/12 15:10:17 by nyatsulk          #+#    #+#             */
+/*   Updated: 2017/10/12 15:10:18 by nyatsulk         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "vm.h"
 
 void		init_array(size_t *arr, size_t size)
@@ -27,7 +39,7 @@ void		gen_init_next(t_general *gen)
 	init_array(gen->no_flag, (MAX_PLAYERS + 1));
 }
 
-t_general		*gen_init(void)
+t_general	*gen_init(void)
 {
 	t_general	*gen;
 
