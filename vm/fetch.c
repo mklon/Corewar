@@ -9,6 +9,7 @@
 /*   Updated: 2017/10/12 13:07:41 by msymkany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "vm.h"
 
 int		validate_cod_byte(int op_num, uint32_t *args)
@@ -40,7 +41,8 @@ void	get_step(int op_num, int *step, uint32_t arg)
 	}
 }
 
-int		check_cod_byte(int op_num, unsigned char codbyte, int *step, uint32_t *args)
+int		check_cod_byte(int op_num, unsigned char codbyte, int *step,
+	uint32_t *args)
 {
 	size_t		i;
 	size_t		shift;
@@ -66,9 +68,9 @@ int		check_cod_byte(int op_num, unsigned char codbyte, int *step, uint32_t *args
 	return (validate_cod_byte(op_num, args));
 }
 
-void		fetch(t_general *gen, t_process *process, int op_num)
+void	fetch(t_general *gen, t_process *process, int op_num)
 {
-	int 		step;
+	int			step;
 	uint32_t	args[MAX_ARGS_NUMBER];
 	size_t		curr;
 

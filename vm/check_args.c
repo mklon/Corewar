@@ -9,6 +9,7 @@
 /*   Updated: 2017/10/12 13:08:33 by msymkany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "vm.h"
 
 int		is_valid_num(char *arg, char flag)
@@ -20,12 +21,12 @@ int		is_valid_num(char *arg, char flag)
 		ft_error("Wrong number after flag in input line\n");
 	if (!((flag == 'n' && num <= MAX_PLAYERS) || flag == 'd'))
 		ft_error("Wrong number of players in input line\n");
-	return(num);
+	return (num);
 }
 
 int		validate_champ(unsigned char *line, int i)
 {
- 	unsigned int	magic;
+	unsigned int	magic;
 
 	magic = (unsigned int)line[0];
 	magic = magic << 8;
@@ -48,10 +49,10 @@ int		validate_champ(unsigned char *line, int i)
 	return (1);
 }
 
-int 	is_valid_champ(char *arg, t_general *gen, size_t j)
+int		is_valid_champ(char *arg, t_general *gen, size_t j)
 {
-	int 	fd;
-	ssize_t len;
+	int		fd;
+	ssize_t	len;
 
 	gen->line = ft_memalloc(FILE_MAX_LENGTH);
 	fd = open(arg, O_RDONLY);
@@ -71,34 +72,36 @@ int 	is_valid_champ(char *arg, t_general *gen, size_t j)
 	return (1);
 }
 
-void		write_player(t_general *gen, size_t j)
+void	write_player(t_general *g, size_t j)
 {
 	unsigned int	size;
 	int				i;
 	int				k;
 
 	i = 0;
-	size = (unsigned int)(gen->line)[136];
+	size = (unsigned int)(g->line)[136];
 	size = size << 8;
-	size |= (unsigned int)(gen->line)[137];
+	size |= (unsigned int)(g->line)[137];
 	size = size << 8;
-	size |= (unsigned int)(gen->line)[138];
+	size |= (unsigned int)(g->line)[138];
 	size = size << 8;
-	size |= (unsigned int)(gen->line)[139];
+	size |= (unsigned int)(g->line)[139];
 	k = (int)size;
-	gen->players[j] = (t_player *)ft_memalloc(sizeof(t_player));
-	(gen->players)[j]->size = (size_t)size;
-	(gen->players)[j]->name = ft_strdup((char *)gen->line + 4);
-	(gen->players)[j]->comment = ft_strdup((char *)gen->line + PROG_NAME_LENGTH + 12);
-	(gen->players)[j]->opcode = (unsigned char *)ft_memalloc((k) * sizeof(unsigned char));
+	g->players[j] = (t_player *)ft_memalloc(sizeof(t_player));
+	(g->players)[j]->size = (size_t)size;
+	(g->players)[j]->name = ft_strdup((char *)g->line + 4);
+	(g->players)[j]->comment =
+			ft_strdup((char *)g->line + PROG_NAME_LENGTH + 12);
+	(g->players)[j]->opcode =
+			(unsigned char *)ft_memalloc((k) * sizeof(unsigned char));
 	while (k--)
 	{
-		(gen->players)[j]->opcode[i] = (char)(gen->line)[i + PROG_HEADER_LENGTH];
+		(g->players)[j]->opcode[i] = (char)(g->line)[i + PROG_HEADER_LENGTH];
 		i++;
 	}
 }
 
-void				read_players(char **av, t_general *gen)
+void	read_players(char **av, t_general *gen)
 {
 	size_t		j;
 	size_t		i;

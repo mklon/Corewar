@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   playground_prep.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nyatsulk <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/10/12 15:04:42 by nyatsulk          #+#    #+#             */
+/*   Updated: 2017/10/12 15:04:43 by nyatsulk         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "vm.h"
 
 void		dump_map(unsigned char *line)
@@ -31,7 +43,7 @@ void		introduce_contestants(t_player *bot)
 	ft_printf("\033[;0m");
 }
 
-void	init_process(t_general *gen, size_t j, size_t i)
+void		init_process(t_general *gen, size_t j, size_t i)
 {
 	t_process	*head;
 

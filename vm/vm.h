@@ -105,14 +105,15 @@ int					validate_champ(unsigned char *line, int i);
 int					is_valid_num(char *arg, char flag);
 t_general			*gen_init(void);
 void				read_players(char **av, t_general *gen);
-void				write_player(t_general *gen, size_t j);
+void				write_player(t_general *g, size_t j);
 
 void				write_to_map(t_general *gen);
 void				dump_map(unsigned char *line);
 
 void				check_lives(t_general *gen);
 void				process(t_general *gen);
-void				new_process(t_process *parent, t_process **head, uint32_t arg, int idx);
+void				new_process(t_process *parent, t_process **head,
+								uint32_t arg, int idx);
 size_t				kill_process(t_general *gen);
 
 uint32_t			check_pc(size_t pc);
@@ -120,29 +121,46 @@ void				fetch(t_general *gen, t_process *process, int op_num);
 int					check_cod_byte(int op_num, unsigned char codbyte,
 								int *step, uint32_t *args);
 int					validate_cod_byte(int op_num, uint32_t *args);
-void				uncode_args(unsigned char *field, t_process *proc, int op_num,
-								uint32_t *ar);
+void				uncode_args(unsigned char *field, t_process *proc,
+								int op_num, uint32_t *ar);
 uint32_t			convert_arg(unsigned char *field, size_t *curr, int size);
 void				args_copy(uint32_t *args, uint32_t *args_val, int nbr_arg);
 
-void				live_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
-void				ld_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
-void				st_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
-void				add_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
-void				sub_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
-void				and_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
-void				or_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
-void				xor_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
-void				zjmp_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
-void				ldi_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
-void				sti_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
-void				fork_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
-void				lld_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
-void				lldi_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
-void				lfork_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
-void				aff_op(t_general *gen, t_process *process, int op_num, uint32_t *args);
+void				live_op(t_general *gen, t_process *process,
+								int op_num, uint32_t *args);
+void				ld_op(t_general *gen, t_process *process,
+								int op_num, uint32_t *args);
+void				st_op(t_general *gen, t_process *process,
+								int op_num, uint32_t *args);
+void				add_op(t_general *gen, t_process *process,
+								int op_num, uint32_t *args);
+void				sub_op(t_general *gen, t_process *process,
+								int op_num, uint32_t *args);
+void				and_op(t_general *gen, t_process *process,
+								int op_num, uint32_t *args);
+void				or_op(t_general *gen, t_process *process,
+								int op_num, uint32_t *args);
+void				xor_op(t_general *gen, t_process *process,
+								int op_num, uint32_t *args);
+void				zjmp_op(t_general *gen, t_process *process,
+								int op_num, uint32_t *args);
+void				ldi_op(t_general *gen, t_process *process,
+								int op_num, uint32_t *args);
+void				sti_op(t_general *gen, t_process *process,
+								int op_num, uint32_t *args);
+void				fork_op(t_general *gen, t_process *process,
+								int op_num, uint32_t *args);
+void				lld_op(t_general *gen, t_process *process,
+								int op_num, uint32_t *args);
+void				lldi_op(t_general *gen, t_process *process,
+								int op_num, uint32_t *args);
+void				lfork_op(t_general *gen, t_process *process,
+								int op_num, uint32_t *args);
+void				aff_op(t_general *gen, t_process *process,
+								int op_num, uint32_t *args);
 
-void				put_numb_on_field(t_general *gen, size_t copy_pc, int args, int colors);
+void				put_numb_on_field(t_general *gen, size_t copy_pc,
+								int args, int colors);
 int					val_reg(uint32_t type, uint32_t value);
 
 /*
