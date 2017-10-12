@@ -45,7 +45,7 @@ int		main(int ar, char **av)
 		if (gen->dump >= 0 && gen->total_cycles == gen->dump)
 		{
 			dump_map(gen->field);
-			exit(0);
+			return (0);
 		}
 		visual_apd(gen);
 	}

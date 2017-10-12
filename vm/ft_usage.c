@@ -15,7 +15,7 @@
 void	ft_usage(void)
 {
 	ft_printf("\n");
-	ft_printf("Usage: ./corewar [-d N | -v] [-a] [[-n N] ");
+	ft_printf("Usage: ./corewar [-d N -g | -v] [-a] [[-n N] ");
 	ft_printf("<champion1.cor>] <champion1.cor> <...>\n");
 	ft_printf("    -a        : Prints output from \"aff\" ");
 	ft_printf("(Default is to hide it)\n");

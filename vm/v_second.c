@@ -15,11 +15,11 @@
 void	map_display(t_general *gen, int i, int j)
 {
 	wmove(gen->map, 0, 0);
-	while (i < 4096)
+	while (i < MEM_SIZE)
 	{
 		while (i < j * 64)
 		{
-			if (i < 4096)
+			if (i < MEM_SIZE)
 			{
 				wattron(gen->map, COLOR_PAIR(gen->colors[i]));
 				wprintw(gen->map, "%02x", gen->field[i]);
