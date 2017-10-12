@@ -12,7 +12,7 @@
 
 #include "vm.h"
 
-t_op    op[17] =
+t_op	op[17] =
 {
 	{live_op, 1, {T_DIR}, 1, 10, 0, 4},
 	{ld_op, 2, {T_DIR | T_IND, T_REG}, 2, 5, 1, 4},

@@ -51,7 +51,6 @@ void		is_n_flag(char **args, size_t *i, t_general *gen)
 	else
 		ft_error("Wrong type of file (-n flag)\n");
 	gen->champ_num++;
-//	ft_printf("adds num to player\n");	// test
 }
 
 int		is_flag(char **args, size_t *i, t_general *gen)
@@ -73,7 +72,7 @@ int		is_flag(char **args, size_t *i, t_general *gen)
 		else if (ft_strequ(args[*i], "-g"))
 			gen->debug = 1;
 		else
-			ft_error("Invalid flag\n"); // proper error message
+			ft_error("Invalid flag\n");
 		return (1);
 	}
 	return (0);

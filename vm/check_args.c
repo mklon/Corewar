@@ -55,7 +55,6 @@ int 	is_valid_champ(char *arg, t_general *gen, size_t j)
 
 	gen->line = ft_memalloc(FILE_MAX_LENGTH);
 	fd = open(arg, O_RDONLY);
-//	fd = open("/nfs/2016/m/msymkany/Documents/corewar/repo/champs/test/9long_jump.cor", O_RDONLY);
 	len = read(fd, gen->line, FILE_MAX_LENGTH);
 	if (fd == -1 || len == -1)
 		ft_error("can't read the file\n");
