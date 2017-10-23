@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   read_args.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: msymkany <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/10/12 13:06:15 by msymkany          #+#    #+#             */
+/*   Updated: 2017/10/12 13:06:17 by msymkany         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "vm.h"
 
-void	check_n_flag(t_general *gen)
+void		check_n_flag(t_general *gen)
 {
-	int		i;
-	int		k;
-	int		j;
+	size_t	i;
+	size_t	k;
+	size_t	j;
 
 	i = 0;
 	j = 1;
@@ -40,17 +52,14 @@ void		is_n_flag(char **args, size_t *i, t_general *gen)
 	else
 		ft_error("Wrong type of file (-n flag)\n");
 	gen->champ_num++;
-//	ft_printf("adds num to player\n");	// test
 }
 
-int		is_flag(char **args, size_t *i, t_general *gen)
+int			is_flag(char **args, size_t *i, t_general *gen)
 {
 	if (args[*(i)][0] == '-')
 	{
 		if (ft_strequ(args[*i], "-v"))
-		{
-			ft_printf("switch on vizualization\n");
-		}
+			gen->visual = 1;
 		else if (ft_strequ(args[*i], "-a"))
 			gen->aff = 1;
 		else if (ft_strequ(args[*i], "-d"))
@@ -58,18 +67,21 @@ int		is_flag(char **args, size_t *i, t_general *gen)
 			if (!args[*i + 1])
 				ft_error("Not enough argumets\n");
 			gen->dump = is_valid_num(args[++(*i)], 'd');
-//			ft_printf("Dumps %d cycles\n", gen->dump); // test
 		}
 		else if (ft_strequ(args[*i], "-n"))
 			is_n_flag(args, i, gen);
+		else if (ft_strequ(args[*i], "-g"))
+			gen->debug = 1;
+		else if (ft_strequ(args[*i], "-l"))
+			gen->alive = 1;
 		else
-			ft_error("Invalid flag\n"); // proper error message
+			ft_error("Invalid flag\n");
 		return (1);
 	}
 	return (0);
 }
 
-int 				is_champ(char *arg)
+int			is_champ(char *arg)
 {
 	int		k;
 
@@ -80,16 +92,17 @@ int 				is_champ(char *arg)
 	else
 		return (0);
 }
-void	read_args(int ar, char **av, t_general *gen)
+
+void		read_args(int ar, char **av, t_general *gen)
 {
 	size_t		i;
 	size_t		j;
 
 	i = 0;
 	j = 1;
-	while (++i < ar)
+	while (++i < (size_t)ar)
 	{
-		if (is_flag(av, &i, gen)) // checks if arg is a flag and adds to struct
+		if (is_flag(av, &i, gen))
 			;
 		else if (is_champ(av[i]))
 		{

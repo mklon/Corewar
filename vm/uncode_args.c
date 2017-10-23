@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   uncode_args.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: msymkany <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/10/12 13:05:00 by msymkany          #+#    #+#             */
+/*   Updated: 2017/10/12 13:05:04 by msymkany         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "vm.h"
 
-void		args_copy(uint32_t *args, uint32_t *args_val, int nbr_arg)
+void		args_copy(uint32_t *args, uint32_t *args_val, size_t nbr_arg)
 {
-	int 	i;
+	size_t		i;
 
 	i = 0;
 	while (i < nbr_arg)
@@ -12,7 +24,7 @@ void		args_copy(uint32_t *args, uint32_t *args_val, int nbr_arg)
 	}
 }
 
-uint32_t	convert_arg(unsigned char *field, size_t *curr, int size)
+uint32_t	convert_arg(unsigned char *field, size_t *curr, size_t size)
 {
 	size_t		j;
 	uint32_t	res;
@@ -30,7 +42,7 @@ uint32_t	convert_arg(unsigned char *field, size_t *curr, int size)
 	return (res);
 }
 
-uint32_t		get_ind(unsigned char *field, size_t curr)
+uint32_t	get_ind(unsigned char *field, size_t curr)
 {
 	uint32_t		arg;
 
@@ -38,29 +50,30 @@ uint32_t		get_ind(unsigned char *field, size_t curr)
 	return (arg);
 }
 
-void	uncode_args(unsigned char *field, t_process *proc, int op_num, uint32_t *args)
+void		uncode_args(unsigned char *field, t_process *proc, int op_num,
+					uint32_t *ar)
 {
 	size_t		i;
 	size_t		curr;
+	short		ind;
 
-	curr = check_pc(proc->pc + 1 + (op[op_num].coding_byte));
+	curr = check_pc(proc->pc + 1 + (g_op[op_num].coding_byte));
 	i = 0;
-	while (i < op[op_num].nbr_arg)
+	while (i < g_op[op_num].nbr_arg)
 	{
-		if (args[i] == T_REG)
+		if (ar[i] == T_REG)
 		{
-			args[i] = (uint32_t)field[curr];
+			ar[i] = (uint32_t)field[curr];
 			curr = check_pc(curr + 1);
 		}
-		else if (args[i] == T_DIR)
-			args[i] = convert_arg(field, &curr, op[op_num].flag_direct_size);
-		else if (args[i] == T_IND)
+		else if (ar[i] == T_DIR)
+			ar[i] = convert_arg(field, &curr, g_op[op_num].flag_direct_size);
+		else if (ar[i] == T_IND)
 		{
-			args[i] = convert_arg(field, &curr, IND_READ);
-			if (op_num != 12 && op_num != 13 && op_num != 9) // not lld, lldi, ldi
-				args[i] = args[i] % IDX_MOD;
-			if (op_num != 2) // not st
-				args[i] = get_ind(field, (proc->pc + args[i]));
+			ind = (short)convert_arg(field, &curr, IND_READ);
+			if (op_num != 12)
+				ind = ind % IDX_MOD;
+			ar[i] = ((op_num != 2) ? get_ind(field, (proc->pc + ind)) : ind);
 		}
 		i++;
 	}

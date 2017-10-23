@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   fetch.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: msymkany <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/10/12 13:07:39 by msymkany          #+#    #+#             */
+/*   Updated: 2017/10/12 13:07:41 by msymkany         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "vm.h"
 
 int		validate_cod_byte(int op_num, uint32_t *args)
@@ -5,9 +17,9 @@ int		validate_cod_byte(int op_num, uint32_t *args)
 	size_t		i;
 
 	i = 0;
-	while (i < op[op_num].nbr_arg)
+	while (i < g_op[op_num].nbr_arg)
 	{
-		if (!(args[i] & op[op_num].arg[i]))
+		if (!(args[i] & g_op[op_num].arg[i]))
 			return (0);
 		i++;
 	}
@@ -16,34 +28,35 @@ int		validate_cod_byte(int op_num, uint32_t *args)
 	return (1);
 }
 
-void	get_step(int op_num, int *step, uint32_t arg)
+void	get_step(int op_num, size_t *step, uint32_t arg)
 {
 	if (arg)
 	{
 		if (arg == REG_CODE)
 			(*step) += REG_READ;
 		else if (arg == DIR_CODE)
-			(*step) += op[op_num].flag_direct_size;
+			(*step) += g_op[op_num].flag_direct_size;
 		else
 			(*step) += IND_READ;
 	}
 }
 
-int		check_cod_byte(int op_num, unsigned char codbyte, int *step, uint32_t *args)
+int		check_cod_byte(int op_num, unsigned char codbyte, size_t *step,
+	uint32_t *args)
 {
 	size_t		i;
 	size_t		shift;
 
 	i = 0;
 	shift = 6;
-	if (!op[op_num].coding_byte)
+	if (!g_op[op_num].coding_byte)
 	{
-		args[i] = (uint32_t)op[op_num].arg[0];
+		args[i] = (uint32_t)g_op[op_num].arg[0];
 		get_step(op_num, step, args[i]);
 		return (1);
 	}
 	(*step)++;
-	while (i < MAX_ARGS_NUMBER)
+	while (i < g_op[op_num].nbr_arg)
 	{
 		args[i] = (uint32_t)(codbyte >> shift) & 3;
 		if (args[i] == IND_CODE)
@@ -55,9 +68,9 @@ int		check_cod_byte(int op_num, unsigned char codbyte, int *step, uint32_t *args
 	return (validate_cod_byte(op_num, args));
 }
 
-void		fetch(t_general *gen, t_process *process, int op_num)
+void	fetch(t_general *gen, t_process *process, int op_num)
 {
-	int 		step;
+	size_t		step;
 	uint32_t	args[MAX_ARGS_NUMBER];
 	size_t		curr;
 
@@ -70,7 +83,8 @@ void		fetch(t_general *gen, t_process *process, int op_num)
 	{
 		if (op_num == 8 && process->carry == 1)
 			step = 0;
-		op[op_num].f(gen, process, op_num, args);
+		g_op[op_num].f(gen, process, op_num, args);
 	}
+	pc_color_down(gen, process->pc);
 	process->pc += step;
 }

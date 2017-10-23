@@ -3,33 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   op.h                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zaz <marvin@42.fr>                         +#+  +:+       +#+        */
+/*   By: msymkany <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2013/10/04 11:33:27 by zaz               #+#    #+#             */
-/*   Updated: 2013/11/06 14:21:46 by zaz              ###   ########.fr       */
+/*   Created: 2017/10/12 14:25:35 by msymkany          #+#    #+#             */
+/*   Updated: 2017/10/12 14:26:37 by msymkany         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*
-** Toutes les tailles sont en octets.
-** On part du principe qu'un int fait 32 bits. Est-ce vrai chez vous ?
-** Allowed functions : open, read, lseek, write, close, malloc, realloc, free, perror, strerror, exit
- */
 
 #ifndef OP_H
 # define OP_H
 
-# include "libft/includes/libft.h"
-# include "libft/includes/libftprintf.h"
+# include "libft/libft.h"
 # include <sys/types.h>
 # include <sys/uio.h>
 # include <unistd.h>
 # include <stdlib.h>
 # include <fcntl.h>
-# include <stdio.h> // perror
 
-
-//# include
 # define IND_SIZE				4
 # define REG_SIZE				4
 # define DIR_SIZE				REG_SIZE
@@ -43,9 +33,9 @@
 
 # define MAX_ARGS_NUMBER		4
 # define MAX_PLAYERS			4
-# define MEM_SIZE				(4*1024) // 4096
-# define IDX_MOD				(MEM_SIZE / 8) // 512
-# define CHAMP_MAX_SIZE			(MEM_SIZE / 6) // 682
+# define MEM_SIZE				(4*1024)
+# define IDX_MOD				(MEM_SIZE / 8)
+# define CHAMP_MAX_SIZE			(MEM_SIZE / 6)
 
 # define COMMENT_CHAR			'#'
 # define LABEL_CHAR				':'
@@ -71,11 +61,11 @@ typedef char	t_arg_type;
 # define T_IND					4
 # define T_LAB					8
 
-# define PROG_NAME_LENGTH		(128) // 132 = 128 + 4
-# define COMMENT_LENGTH			(2048) // 2052 = 2048 + 4
-# define COREWAR_EXEC_MAGIC		0xea83f3 // //15369203
-# define PROG_HEADER_LENGTH		(PROG_NAME_LENGTH + COMMENT_LENGTH + 16) //2192
-# define FILE_MAX_LENGTH		(PROG_HEADER_LENGTH + CHAMP_MAX_SIZE) //2874
+# define PROG_NAME_LENGTH		(128)
+# define COMMENT_LENGTH			(2048)
+# define COREWAR_EXEC_MAGIC		0xea83f3
+# define PROG_HEADER_LENGTH		(PROG_NAME_LENGTH + COMMENT_LENGTH + 16)
+# define FILE_MAX_LENGTH		(PROG_HEADER_LENGTH + CHAMP_MAX_SIZE)
 
 typedef struct		s_header
 {

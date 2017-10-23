@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   processing.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: msymkany <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/10/12 13:06:34 by msymkany          #+#    #+#             */
+/*   Updated: 2017/10/12 13:06:37 by msymkany         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "vm.h"
 
-size_t		check_pc(size_t pc)
+uint32_t	check_pc(size_t pc)
 {
 	if (pc >= MEM_SIZE)
 		pc = pc % MEM_SIZE;
-	return (pc);
+	return ((uint32_t)pc);
 }
 
 void		check_lives(t_general *gen)
@@ -13,7 +25,7 @@ void		check_lives(t_general *gen)
 
 	i = 0;
 	if (gen->process)
-		gen->nbr_process -= kill_process(&gen->process);
+		gen->nbr_process -= kill_process(gen);
 	while (i < gen->champ_num)
 	{
 		gen->players[i]->declared_live = 0;
@@ -32,6 +44,18 @@ void		check_lives(t_general *gen)
 	gen->live_per_period = 0;
 }
 
+void		process_next(t_general *gen, t_process *ptr)
+{
+	if ((ptr->on_hold + 1) != g_op[ptr->op_num].cycle)
+		ptr->on_hold++;
+	else
+	{
+		fetch(gen, ptr, ptr->op_num);
+		ptr->pc = check_pc(ptr->pc);
+		ptr->on_hold = 0;
+	}
+}
+
 void		process(t_general *gen)
 {
 	t_process	*ptr;
@@ -43,24 +67,19 @@ void		process(t_general *gen)
 		curr_byte = gen->field[ptr->pc];
 		if (!ptr->on_hold)
 		{
-			(curr_byte && curr_byte < 17) ? (ptr->on_hold)++ : (ptr->pc)++;
-			ptr->pc = check_pc(ptr->pc);
-		}
-		else
-		{
-//			ft_printf("Num of process player: %i\n", ptr->reg[1]); ///test
-//			ft_printf("%d\n", op[curr_byte - 1].cycle); ///test
-			if (ptr->on_hold != op[curr_byte - 1].cycle)
-				ptr->on_hold++;
+			if (curr_byte && curr_byte < 17)
+			{
+				ptr->op_num = curr_byte - 1;
+				(ptr->on_hold)++;
+			}
 			else
 			{
- 				fetch(gen, ptr, curr_byte - 1);
-				ptr->pc = check_pc(ptr->pc);
-				ptr->on_hold = 0;
-//				dump_map(gen->field); // debug
+				pc_color_down(gen, ptr->pc);
+				ptr->pc = check_pc(ptr->pc + 1);
 			}
 		}
-///		dump_map(gen->field); // debug
+		else
+			process_next(gen, ptr);
 		ptr = ptr->next;
 	}
 }

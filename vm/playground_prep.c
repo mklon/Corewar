@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   playground_prep.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nyatsulk <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/10/12 15:04:42 by nyatsulk          #+#    #+#             */
+/*   Updated: 2017/10/12 15:04:43 by nyatsulk         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "vm.h"
 
-void	dump_map(unsigned char *line)
+void		dump_map(unsigned char *line)
 {
 	size_t	i;
 	size_t	k;
@@ -12,17 +24,18 @@ void	dump_map(unsigned char *line)
 	{
 		i = 0;
 		ft_printf("%-5d: ", (j++ * 64));
-		while (i++ < 64)
+		while (i < 64 && i < MEM_SIZE)
 		{
 			ft_printf("%.2hhx ", line[k++]);
+			i++;
 		}
 		ft_printf("\n");
 	}
 }
 
-void	introduce_contestants(t_player *bot)
+void		introduce_contestants(t_player *bot)
 {
-	char 	col;
+	char	col;
 
 	col = (char)((bot->num == -4) ? (-(bot->num) + '1') : (-(bot->num) + '0'));
 	ft_printf("=== Player %d, weighing %u bytes: ", -(bot->num), bot->size);
@@ -31,32 +44,47 @@ void	introduce_contestants(t_player *bot)
 	ft_printf("\033[;0m");
 }
 
-void 	write_to_map(t_general *gen)
+void		init_process(t_general *gen, size_t j, size_t i)
+{
+	t_process	*head;
+
+	head = (t_process *)ft_memalloc(sizeof(t_process));
+	(head->reg)[1] = (uint32_t)(gen->players)[j]->num;
+	head->pc = i;
+	head->num = j + 1;
+	head->color = j + 1;
+	head->op_num = 0;
+	head->next = gen->process;
+	gen->process = head;
+	if (!gen->visual)
+		introduce_contestants((gen->players)[j]);
+}
+
+void		write_to_map(t_general *gen)
 {
 	size_t		i;
 	size_t		j;
 	size_t		step;
-	void		*ptr;
-	t_process	*head;
 
 	i = 0;
 	j = 0;
-//	dump_map(gen->field); //test
 	step = (size_t)(MEM_SIZE) / gen->champ_num;
-	ft_printf("Introducing contestants...\n");
+	if (!gen->visual)
+		ft_printf("Introducing contestants...\n");
+	else
+	{
+		gen->dump = -1;
+		gen->debug = 0;
+	}
 	while (j < gen->champ_num)
 	{
-		head = (t_process *)ft_memalloc(sizeof(t_process));
-		(head->reg)[1] = (gen->players)[j]->num;
-		head->pc = i;
-		head->next = gen->process;
-		gen->process = head;
-		introduce_contestants((gen->players)[j]);
-		ptr = gen->players[j]->opcode;
-		ft_memcpy(gen->field + i, ptr, gen->players[j]->size);
+		init_process(gen, j, i);
+		ft_memcpy(gen->field + i, gen->players[j]->opcode,
+				gen->players[j]->size);
+		ft_memset(&gen->colors[i], j + 1, gen->players[j]->size);
 		j++;
 		i += step;
 	}
 	gen->nbr_process = (uint32_t)gen->champ_num;
-//	dump_map(gen->field); //test
+	gen->total_process = gen->nbr_process;
 }
